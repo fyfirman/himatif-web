@@ -7,7 +7,7 @@
 			<div class="col m4">
 				<div class="card">
 					<div class="card-image">
-						<img src="http://materializecss.com/images/sample-1.jpg">
+						<img src="{{asset('img/hda-card.jpg')}}">
 						<a href="hda" class="btn-floating btn-large halfway-fab waves-effect waves-light red"><i class="material-icons">send</i></a>
 					</div>
 					<div class="card-content">

@@ -9,6 +9,7 @@
             <li>
                 <a class="nav-button" onclick="showLogin()">
                     <img class="user-thumb" src="{{ asset('img/user-profile-dummy.jpg') }}" style="vertical-align:middle"/>
+                    <span class="grey-text">{{ Session::get('username') }}</span>
                 </a>
             </li>
             
@@ -19,41 +20,54 @@
 
 {{-- Dropdown Content --}}
 <div id="login-form" class="login-form">
-    <form action="" autocomplete="off">
+    <form action="login" autocomplete="off" method="POST">
+        @csrf
         <div class="row">
             <div class="input-field col m12 inline" >
-                <input id="a" type="text" class="validate">
+                <input name="username" id="a" type="text" class="validate">
                 <label for="a">Nomor Pokok Mahasiswa</label>
             </div>
         {{-- </div>
         <div class="row"> --}}
             <div class="input-field col m12 inline" >
-                <input id="password" type="password" class="validate">
+                <input name="password" id="password" type="password" class="validate">
                 <label for="password">Password</label>
             </div>
         </div>
         <div class="row valign-wrapper">
             <div class="col m6">
-                <button class="btn waves-effect waves-light" type="submit" name="action">
+                <button class="btn waves-effect waves-light" type="submit">
                     Login
                 </button>
             </div>
             <div class="col m6">
                 <a href="">Forgot Password</a>
             </div>
-            
-
         </div>
     </form>
 </div>
+
+<div id="logout-form" class="login-form">
+    <a href="logout" class="btn waves-effect waves-light red right">Logout</a>
+</div>
+
 <script>
     function showLogin() {
+        var l = "{{ Session::get('logged_in')}}";
         var x = document.getElementById("login-form");
-        console.log(x.style.display);
-        if (x.style.display == "none" || x.style.display == '') {
-            x.style.display = "block";
-        } else {
-            x.style.display = "none";
+        var y = document.getElementById('logout-form');
+        if(l == 1){
+            if (y.style.display == "none" || y.style.display == '') {
+                y.style.display = "block";
+            } else {
+                y.style.display = "none";
+            }
+        }else{
+            if (x.style.display == "none" || x.style.display == '') {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
         }
     }
 </script>

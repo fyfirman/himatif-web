@@ -50,6 +50,29 @@ class hdaController extends Controller
         return view('hda.homepage', compact('data'));
     }
 
+    public function login(Request $request){
+        $uname = $request->input('username');
+        $pwd = $request->input('password');
+        $client = new Client();
+        $response = $client->request('POST', $this->base_uri.'user/verify', ['form_params' => ['username' => $uname, 'password' => $pwd]]);
+        $result = json_decode($response->getBody()->getContents());
+        if($result->status == 1){
+            $data = array(
+                'username' => $uname,
+                'logged_in' => 1
+            );
+            $request->session()->put($data);
+            return redirect('/');
+        }else{
+            return redirect('/');
+        }
+    }
+
+    public function logout(Request $request){
+        $request->session()->flush();
+        return redirect('/');
+    }
+
     /**
      * Show the form for creating a new resource.
      *

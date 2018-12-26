@@ -12,7 +12,7 @@
         <div class="nav-wrapper orange">
             <a href="{{ url('hda') }}" class="brand-logo">&nbspHimatif Database</a>
             <ul class="right">
-                <li><a href="{{ url('/') }}">Goto Home</a></li>
+                <li><a href="{{ url('/logout') }}">Goto Home</a></li>
             </ul>
         </div>
     </nav>

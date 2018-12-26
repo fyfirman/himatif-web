@@ -1,1 +1,1 @@
-this is footer
+<p>Copyright &copy Nama Team </p>

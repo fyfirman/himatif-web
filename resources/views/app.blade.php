@@ -7,15 +7,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     {!! MaterializeCSS::include_full() !!}
     <link rel="stylesheet" type="text/css" href="{{ mix('/css/app.css') }}">
+
+    {{-- Ada masalah, harusnya sesuai yg ada di file config/app.php --}}
     <title>{{ config('app.name') }}</title>
 </head>
 
 <body>
     @include('partials.nav')
+    <main class="section">
+        @yield('content')
+    </main>
 
-    {{-- <footer class="row">
+    <footer class="row">
         @include('partials.footer')
-    </footer> --}}
+    </footer>
 </body>
 
 </html>

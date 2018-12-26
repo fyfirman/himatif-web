@@ -5,10 +5,14 @@
 // Variables
 @import 'variables';
 
-@import 'nav';
-
 // Materialize
 @import 'materialize';
+
+//Navbar
+@import 'nav';
+
+//Footer
+@import 'footer';
 
 %center-cropped {
   object-fit: cover;

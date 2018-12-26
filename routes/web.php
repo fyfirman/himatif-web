@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('landingPage');
+    return view('content.landing');
 });
 
 Route::get('hda', 'hdaController@index');

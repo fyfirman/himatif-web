@@ -18,3 +18,5 @@ Route::get('/', function () {
 Route::get('hda', 'hdaController@index');
 Route::get('hda/angkatan/{tahun}', 'hdaController@angkatan');
 Route::get('hda/anggota/{bk}', 'hdaController@bk');
+Route::post('login', 'hdaController@login');
+Route::get('logout', 'hdaController@logout');

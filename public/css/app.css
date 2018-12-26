@@ -56,7 +56,10 @@
   color: #d0181e !important;
 }
 
-.materialize-red.darken-2 {
+.materialize-red.darken-2,
+.login-form .materialize-red.btn,
+.login-form .materialize-red.btn-large,
+.login-form .materialize-red.btn-small {
   background-color: #b9151b !important;
 }
 
@@ -136,7 +139,10 @@
   color: #E53935 !important;
 }
 
-.red.darken-2 {
+.red.darken-2,
+.login-form .red.btn,
+.login-form .red.btn-large,
+.login-form .red.btn-small {
   background-color: #D32F2F !important;
 }
 
@@ -248,7 +254,10 @@
   color: #d81b60 !important;
 }
 
-.pink.darken-2 {
+.pink.darken-2,
+.login-form .pink.btn,
+.login-form .pink.btn-large,
+.login-form .pink.btn-small {
   background-color: #c2185b !important;
 }
 
@@ -360,7 +369,10 @@
   color: #8e24aa !important;
 }
 
-.purple.darken-2 {
+.purple.darken-2,
+.login-form .purple.btn,
+.login-form .purple.btn-large,
+.login-form .purple.btn-small {
   background-color: #7b1fa2 !important;
 }
 
@@ -472,7 +484,10 @@
   color: #5e35b1 !important;
 }
 
-.deep-purple.darken-2 {
+.deep-purple.darken-2,
+.login-form .deep-purple.btn,
+.login-form .deep-purple.btn-large,
+.login-form .deep-purple.btn-small {
   background-color: #512da8 !important;
 }
 
@@ -584,7 +599,10 @@
   color: #3949ab !important;
 }
 
-.indigo.darken-2 {
+.indigo.darken-2,
+.login-form .indigo.btn,
+.login-form .indigo.btn-large,
+.login-form .indigo.btn-small {
   background-color: #303f9f !important;
 }
 
@@ -696,7 +714,10 @@
   color: #1E88E5 !important;
 }
 
-.blue.darken-2 {
+.blue.darken-2,
+.login-form .blue.btn,
+.login-form .blue.btn-large,
+.login-form .blue.btn-small {
   background-color: #1976D2 !important;
 }
 
@@ -808,7 +829,10 @@
   color: #039be5 !important;
 }
 
-.light-blue.darken-2 {
+.light-blue.darken-2,
+.login-form .light-blue.btn,
+.login-form .light-blue.btn-large,
+.login-form .light-blue.btn-small {
   background-color: #0288d1 !important;
 }
 
@@ -920,7 +944,10 @@
   color: #00acc1 !important;
 }
 
-.cyan.darken-2 {
+.cyan.darken-2,
+.login-form .cyan.btn,
+.login-form .cyan.btn-large,
+.login-form .cyan.btn-small {
   background-color: #0097a7 !important;
 }
 
@@ -1032,7 +1059,10 @@
   color: #00897b !important;
 }
 
-.teal.darken-2 {
+.teal.darken-2,
+.login-form .teal.btn,
+.login-form .teal.btn-large,
+.login-form .teal.btn-small {
   background-color: #00796b !important;
 }
 
@@ -1144,7 +1174,10 @@
   color: #43A047 !important;
 }
 
-.green.darken-2 {
+.green.darken-2,
+.login-form .green.btn,
+.login-form .green.btn-large,
+.login-form .green.btn-small {
   background-color: #388E3C !important;
 }
 
@@ -1256,7 +1289,10 @@
   color: #7cb342 !important;
 }
 
-.light-green.darken-2 {
+.light-green.darken-2,
+.login-form .light-green.btn,
+.login-form .light-green.btn-large,
+.login-form .light-green.btn-small {
   background-color: #689f38 !important;
 }
 
@@ -1368,7 +1404,10 @@
   color: #c0ca33 !important;
 }
 
-.lime.darken-2 {
+.lime.darken-2,
+.login-form .lime.btn,
+.login-form .lime.btn-large,
+.login-form .lime.btn-small {
   background-color: #afb42b !important;
 }
 
@@ -1424,7 +1463,10 @@
   color: #aeea00 !important;
 }
 
-.yellow {
+.yellow,
+.login-form .btn,
+.login-form .btn-large,
+.login-form .btn-small {
   background-color: #ffeb3b !important;
 }
 
@@ -1432,7 +1474,10 @@
   color: #ffeb3b !important;
 }
 
-.yellow.lighten-5 {
+.yellow.lighten-5,
+.login-form .lighten-5.btn,
+.login-form .lighten-5.btn-large,
+.login-form .lighten-5.btn-small {
   background-color: #fffde7 !important;
 }
 
@@ -1440,7 +1485,10 @@
   color: #fffde7 !important;
 }
 
-.yellow.lighten-4 {
+.yellow.lighten-4,
+.login-form .lighten-4.btn,
+.login-form .lighten-4.btn-large,
+.login-form .lighten-4.btn-small {
   background-color: #fff9c4 !important;
 }
 
@@ -1448,7 +1496,10 @@
   color: #fff9c4 !important;
 }
 
-.yellow.lighten-3 {
+.yellow.lighten-3,
+.login-form .lighten-3.btn,
+.login-form .lighten-3.btn-large,
+.login-form .lighten-3.btn-small {
   background-color: #fff59d !important;
 }
 
@@ -1456,7 +1507,10 @@
   color: #fff59d !important;
 }
 
-.yellow.lighten-2 {
+.yellow.lighten-2,
+.login-form .lighten-2.btn,
+.login-form .lighten-2.btn-large,
+.login-form .lighten-2.btn-small {
   background-color: #fff176 !important;
 }
 
@@ -1464,7 +1518,10 @@
   color: #fff176 !important;
 }
 
-.yellow.lighten-1 {
+.yellow.lighten-1,
+.login-form .lighten-1.btn,
+.login-form .lighten-1.btn-large,
+.login-form .lighten-1.btn-small {
   background-color: #ffee58 !important;
 }
 
@@ -1472,7 +1529,10 @@
   color: #ffee58 !important;
 }
 
-.yellow.darken-1 {
+.yellow.darken-1,
+.login-form .darken-1.btn,
+.login-form .darken-1.btn-large,
+.login-form .darken-1.btn-small {
   background-color: #fdd835 !important;
 }
 
@@ -1480,7 +1540,10 @@
   color: #fdd835 !important;
 }
 
-.yellow.darken-2 {
+.yellow.darken-2,
+.login-form .btn,
+.login-form .btn-large,
+.login-form .btn-small {
   background-color: #fbc02d !important;
 }
 
@@ -1488,7 +1551,10 @@
   color: #fbc02d !important;
 }
 
-.yellow.darken-3 {
+.yellow.darken-3,
+.login-form .darken-3.btn,
+.login-form .darken-3.btn-large,
+.login-form .darken-3.btn-small {
   background-color: #f9a825 !important;
 }
 
@@ -1496,7 +1562,10 @@
   color: #f9a825 !important;
 }
 
-.yellow.darken-4 {
+.yellow.darken-4,
+.login-form .darken-4.btn,
+.login-form .darken-4.btn-large,
+.login-form .darken-4.btn-small {
   background-color: #f57f17 !important;
 }
 
@@ -1504,7 +1573,10 @@
   color: #f57f17 !important;
 }
 
-.yellow.accent-1 {
+.yellow.accent-1,
+.login-form .accent-1.btn,
+.login-form .accent-1.btn-large,
+.login-form .accent-1.btn-small {
   background-color: #ffff8d !important;
 }
 
@@ -1512,7 +1584,10 @@
   color: #ffff8d !important;
 }
 
-.yellow.accent-2 {
+.yellow.accent-2,
+.login-form .accent-2.btn,
+.login-form .accent-2.btn-large,
+.login-form .accent-2.btn-small {
   background-color: #ffff00 !important;
 }
 
@@ -1520,7 +1595,10 @@
   color: #ffff00 !important;
 }
 
-.yellow.accent-3 {
+.yellow.accent-3,
+.login-form .accent-3.btn,
+.login-form .accent-3.btn-large,
+.login-form .accent-3.btn-small {
   background-color: #ffea00 !important;
 }
 
@@ -1528,7 +1606,10 @@
   color: #ffea00 !important;
 }
 
-.yellow.accent-4 {
+.yellow.accent-4,
+.login-form .accent-4.btn,
+.login-form .accent-4.btn-large,
+.login-form .accent-4.btn-small {
   background-color: #ffd600 !important;
 }
 
@@ -1592,7 +1673,10 @@
   color: #ffb300 !important;
 }
 
-.amber.darken-2 {
+.amber.darken-2,
+.login-form .amber.btn,
+.login-form .amber.btn-large,
+.login-form .amber.btn-small {
   background-color: #ffa000 !important;
 }
 
@@ -1704,7 +1788,10 @@
   color: #fb8c00 !important;
 }
 
-.orange.darken-2 {
+.orange.darken-2,
+.login-form .orange.btn,
+.login-form .orange.btn-large,
+.login-form .orange.btn-small {
   background-color: #f57c00 !important;
 }
 
@@ -1816,7 +1903,10 @@
   color: #f4511e !important;
 }
 
-.deep-orange.darken-2 {
+.deep-orange.darken-2,
+.login-form .deep-orange.btn,
+.login-form .deep-orange.btn-large,
+.login-form .deep-orange.btn-small {
   background-color: #e64a19 !important;
 }
 
@@ -1928,7 +2018,10 @@
   color: #6d4c41 !important;
 }
 
-.brown.darken-2 {
+.brown.darken-2,
+.login-form .brown.btn,
+.login-form .brown.btn-large,
+.login-form .brown.btn-small {
   background-color: #5d4037 !important;
 }
 
@@ -2008,7 +2101,10 @@
   color: #546e7a !important;
 }
 
-.blue-grey.darken-2 {
+.blue-grey.darken-2,
+.login-form .blue-grey.btn,
+.login-form .blue-grey.btn-large,
+.login-form .blue-grey.btn-small {
   background-color: #455a64 !important;
 }
 
@@ -2088,7 +2184,10 @@
   color: #757575 !important;
 }
 
-.grey.darken-2 {
+.grey.darken-2,
+.login-form .grey.btn,
+.login-form .grey.btn-large,
+.login-form .grey.btn-small {
   background-color: #616161 !important;
 }
 
@@ -2120,7 +2219,8 @@
   color: #000000 !important;
 }
 
-.white {
+.white,
+.login-form {
   background-color: #FFFFFF !important;
 }
 
@@ -9302,6 +9402,62 @@ nav {
   border: 2px solid #ffd61e;
   height: 40px;
   width: 40px;
+}
+
+.login-form {
+  position: absolute;
+  top: 80px;
+  right: 5px;
+  z-index: 999;
+  width: 250px;
+  display: none;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-color: rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transition-duration: 0.4s;
+  /* label color */
+}
+
+.login-form .row {
+  margin-bottom: 0px;
+}
+
+.login-form .input-field {
+  margin-bottom: 0px;
+  /* label focus color */
+  /* label underline focus color */
+  /* valid color */
+}
+
+.login-form .input-field input[type=text]:focus + label,
+.login-form .input-field input[type=password]:focus + label {
+  color: #fda40c;
+}
+
+.login-form .input-field input[type=text]:focus,
+.login-form .input-field input[type=password]:focus {
+  border-bottom: 1px solid #fda40c;
+  box-shadow: 0 1px 0 0 #fda40c;
+}
+
+.login-form .input-field input[type=text].valid,
+.login-form .input-field input[type=password].valid {
+  border-bottom: 1px solid #fda40c;
+  box-shadow: 0 1px 0 0 #fda40c;
+}
+
+.login-form .input-field:focus label {
+  color: #fda40c;
+}
+
+.login-form input:-webkit-autofill {
+  -webkit-box-shadow: inset 0 0 0px 9999px white !important;
+}
+
+.login-form a {
+  font-size: 9pt;
 }
 
 .user-thumb {

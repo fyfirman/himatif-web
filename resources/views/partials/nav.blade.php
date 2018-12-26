@@ -62,7 +62,7 @@
                     Firmansyah Yanuar
                 </div>
                 <div class="row">
-                    1408101X00XX
+                    {{Session::get('username')}}
                 </div>
             </div>
         </div>

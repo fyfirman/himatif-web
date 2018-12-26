@@ -25,11 +25,52 @@ nav{
 .user-thumb{
 	@extend %center-cropped;
 
-	border-radius: 1000px;
+	border-radius: 10000000px;
 	border: 2px solid $primary-color;
 	height: 40px;
 	width: 40px;
 	
+}
+
+.deep-btn{
+	box-shadow: inset rgba(0, 0, 0, 0.15) 0px 0.5px 2px 0px;
+}
+
+.deep-btn:hover{
+	box-shadow: inset rgba(0, 0, 0, 0.15) 0px 1px 3px 0px;
+}
+
+.deep-btn:active{
+	box-shadow: inset rgba(0, 0, 0, 0.15) 0px 4px 3px 0px;
+}
+
+.login-btn{
+	@extend .yellow,.darken-2;
+}
+
+.login-btn:active{
+	background-color: #e9b228 !important;
+}
+
+.edit-btn{
+	@extend .white,.right;
+	border: solid 1px #ccc;
+	box-shadow: none;
+	color: rgb(75, 75, 75);
+}
+.edit-btn:active{
+	background-color: #f0f0f0 !important;
+	box-shadow: inset rgba(0, 0, 0, 0.15) 0px 1px 3px 0px;
+}
+.logout-btn{
+	@extend .red, .right;
+
+	margin-left: 3%;
+	box-shadow: inset rgba(0, 0, 0, 0.15) 0px 1px 2px 0px;
+}
+
+.logout-btn:active{
+	@extend .darken-1;
 }
 
 .login-form{
@@ -85,8 +126,27 @@ nav{
 	a{
 		font-size: 9pt;
 	}
+}
+
+.logout-form{
+	@extend .login-form;
+	width: 300px;
 	
-	.btn{
-		@extend .yellow, .darken-2;
+	.user-thumb{
+		text-align: center;
+		height: 100px;
+		width: 100px;
+		margin-bottom: 10px;
+		border: none;
+	}
+
+	.info-wrapper{
+		padding-top: 15%;
+		padding-bottom: 15%;
+	}
+
+	.user-name{
+		font-weight: 600;
+		font-size: 12pt;
 	}
 }

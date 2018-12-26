@@ -1,0 +1,33 @@
+nav{
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.brand-logo{
+	margin-left: 15px;
+	margin-right: 15px;
+	font-size: 1.3rem !important;
+
+	img{
+		height: 36px;
+		width: 36px;
+	}
+}
+
+.brand-logo:hover{
+	text-decoration:none;
+}
+
+.nav-button{
+	height: 64px !important;
+}
+
+.user-thumb{
+	@extend %center-cropped;
+
+	border-radius: 1000px;
+	border: 2px solid $primary-color;
+	height: 40px;
+	width: 40px;
+	
+}

@@ -12,5 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('helloworld');
+    return view('landingPage');
 });
+
+Route::get('hda', 'hdaController@index');
+Route::get('hda/angkatan/{tahun}', 'hdaController@angkatan');
+Route::get('hda/anggota/{bk}', 'hdaController@bk');

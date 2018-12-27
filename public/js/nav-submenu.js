@@ -1,3 +1,19 @@
+function isShow(id){
+    let element = document.getElementById(id);
+    if (element.style.display == "none" || element.style.display == '')
+        return false;
+    else return true;
+}
+
+function toogleElement(id){
+    let element = document.getElementById(id);
+    if (element.style.display == "none" || element.style.display == '') {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+
 function toogleAppsMenu() {
     // Mencegah numpuk
     if(isShow('login-form'))
@@ -18,20 +34,4 @@ function toogleAuth(status_login) {
     else
         id = 'login-form';
     toogleElement(id);
-}
-
-function toogleElement(id){
-    let element = document.getElementById(id);
-    if (element.style.display == "none" || element.style.display == '') {
-        element.style.display = "block";
-    } else {
-        element.style.display = "none";
-    }
-}
-
-function isShow(id){
-    let element = document.getElementById(id);
-    if (element.style.display == "none" || element.style.display == '')
-        return false;
-    else return true;
 }

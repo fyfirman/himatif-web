@@ -8,7 +8,7 @@
 				<div class="card">
 					<div class="card-image">
 						<img src="{{asset('img/hda-card.jpg')}}">
-						<a href="hda" class="btn-floating btn-large halfway-fab waves-effect waves-light red"><i class="material-icons">send</i></a>
+						<a href="{{ url('/hda') }}" class="btn-floating btn-large halfway-fab waves-effect waves-light red"><i class="material-icons">send</i></a>
 					</div>
 					<div class="card-content">
 						<span class="card-title">Himatif Database</span>

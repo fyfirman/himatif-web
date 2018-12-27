@@ -28,15 +28,15 @@
 
 {{-- Apps Menu Content --}}
 <div id="apps-wrapper" class="apps-wrapper row">
-    <a href="#" class="col m4 apps-btn">
+    <a href="{{ url('/hda') }}" class="col m4 apps-btn">
         <img src="https://dummyimage.com/100x100/000000/ffffff&text=HDA" alt=""><br>
         <label>Himatif Database</label>
     </a>
-    <a href="#" class="col m4 apps-btn">
+    <a href="{{ url('/pathways') }}" class="col m4 apps-btn">
         <img src="https://dummyimage.com/100x100/000000/ffffff&text=Pathways" alt=""><br>
         <label>Pathways</label>
     </a>
-    <a href="#" class="col m4 apps-btn">
+    <a href="{{ url('/jurnal') }}" class="col m4 apps-btn">
         <img src="https://dummyimage.com/100x100/000000/ffffff&text=Read Djournal" alt=""><br>
         <label>Read Djournal</label>
     </a>

@@ -5,7 +5,7 @@
             <span>Himatif Web</span>
         </a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="#"><i class="material-icons grey-text text-lighten-1">apps</i></a></li>
+            <li><a onclick="showAppsMenu()" class="apps-menu-btn"><i class="material-icons">apps</i></a></li>
             <li>
                 {{-- Kondisi ketika sudah masuk --}}
                 @if(session('logged_in'))
@@ -23,8 +23,24 @@
     </div>
 </nav>
 
+{{-- Apps Menu Content --}}
+<div id="apps-wrapper" class="apps-wrapper row">
+    <a href="#" class="col m4 apps-btn">
+        <img src="https://dummyimage.com/100x100/000000/ffffff&text=HDA" alt=""><br>
+        <label>Himatif Database</label>
+    </a>
+    <a href="#" class="col m4 apps-btn">
+        <img src="https://dummyimage.com/100x100/000000/ffffff&text=Pathways" alt=""><br>
+        <label>Pathways</label>
+    </a>
+    <a href="#" class="col m4 apps-btn">
+        <img src="https://dummyimage.com/100x100/000000/ffffff&text=Read Djournal" alt=""><br>
+        <label>Read Djournal</label>
+    </a>
+</div>
 
-{{-- Dropdown Content --}}
+
+{{-- Login Content --}}
 <div id="login-form" class="login-form">
     <form action="login" autocomplete="off" method="POST">
         @csrf
@@ -51,6 +67,7 @@
     </form>
 </div>
 
+{{-- Logout Content --}}
 <div id="logout-form" class="logout-form">
     <div class="row">
         <div class="col m5 text-center">
@@ -74,6 +91,15 @@
 </div>
 
 <script>
+    function showAppsMenu() {
+        var z = document.getElementById("apps-wrapper");
+        if (z.style.display == "none" || z.style.display == '') {
+            z.style.display = "block";
+        } else {
+            z.style.display = "none";
+        }
+    }
+
     function showLogin() {
         var x = document.getElementById("login-form");
         if (x.style.display == "none" || x.style.display == '') {

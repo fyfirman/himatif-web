@@ -22,6 +22,38 @@ nav{
 	height: 64px !important;
 }
 
+// Apps Button
+.apps-menu-btn{
+	@extend .grey-text, .text-lighten-1;
+}
+
+.apps-menu-btn:hover{
+	@extend .text-darken-1;
+	background-color: white;
+}
+
+.apps-wrapper{
+	@extend .login-form;
+	width: 352px !important;
+	padding: 25px !important;
+
+	.apps-btn{
+		padding: 10px 4px;
+		text-align: center;
+		border-radius: 3px;
+		border: 1px solid #fff;
+
+		img{
+			width: 64px;
+		}
+	}
+
+	.apps-btn:hover{
+		border: 1px solid #e5e5e5;
+	}
+}
+
+// Login Logout Button
 .user-thumb{
 	@extend %center-cropped;
 

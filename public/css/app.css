@@ -44,7 +44,8 @@
   background-color: #ea454b !important;
 }
 
-.materialize-red-text.text-lighten-1 {
+.materialize-red-text.text-lighten-1,
+.materialize-red-text.apps-menu-btn {
   color: #ea454b !important;
 }
 
@@ -53,7 +54,8 @@
   background-color: #d0181e !important;
 }
 
-.materialize-red-text.text-darken-1 {
+.materialize-red-text.text-darken-1,
+.materialize-red-text.apps-menu-btn:hover {
   color: #d0181e !important;
 }
 
@@ -132,7 +134,8 @@
   background-color: #EF5350 !important;
 }
 
-.red-text.text-lighten-1 {
+.red-text.text-lighten-1,
+.red-text.apps-menu-btn {
   color: #EF5350 !important;
 }
 
@@ -142,7 +145,8 @@
   background-color: #E53935 !important;
 }
 
-.red-text.text-darken-1 {
+.red-text.text-darken-1,
+.red-text.apps-menu-btn:hover {
   color: #E53935 !important;
 }
 
@@ -255,7 +259,8 @@
   background-color: #ec407a !important;
 }
 
-.pink-text.text-lighten-1 {
+.pink-text.text-lighten-1,
+.pink-text.apps-menu-btn {
   color: #ec407a !important;
 }
 
@@ -264,7 +269,8 @@
   background-color: #d81b60 !important;
 }
 
-.pink-text.text-darken-1 {
+.pink-text.text-darken-1,
+.pink-text.apps-menu-btn:hover {
   color: #d81b60 !important;
 }
 
@@ -369,7 +375,8 @@
   background-color: #ab47bc !important;
 }
 
-.purple-text.text-lighten-1 {
+.purple-text.text-lighten-1,
+.purple-text.apps-menu-btn {
   color: #ab47bc !important;
 }
 
@@ -378,7 +385,8 @@
   background-color: #8e24aa !important;
 }
 
-.purple-text.text-darken-1 {
+.purple-text.text-darken-1,
+.purple-text.apps-menu-btn:hover {
   color: #8e24aa !important;
 }
 
@@ -483,7 +491,8 @@
   background-color: #7e57c2 !important;
 }
 
-.deep-purple-text.text-lighten-1 {
+.deep-purple-text.text-lighten-1,
+.deep-purple-text.apps-menu-btn {
   color: #7e57c2 !important;
 }
 
@@ -492,7 +501,8 @@
   background-color: #5e35b1 !important;
 }
 
-.deep-purple-text.text-darken-1 {
+.deep-purple-text.text-darken-1,
+.deep-purple-text.apps-menu-btn:hover {
   color: #5e35b1 !important;
 }
 
@@ -597,7 +607,8 @@
   background-color: #5c6bc0 !important;
 }
 
-.indigo-text.text-lighten-1 {
+.indigo-text.text-lighten-1,
+.indigo-text.apps-menu-btn {
   color: #5c6bc0 !important;
 }
 
@@ -606,7 +617,8 @@
   background-color: #3949ab !important;
 }
 
-.indigo-text.text-darken-1 {
+.indigo-text.text-darken-1,
+.indigo-text.apps-menu-btn:hover {
   color: #3949ab !important;
 }
 
@@ -711,7 +723,8 @@
   background-color: #42A5F5 !important;
 }
 
-.blue-text.text-lighten-1 {
+.blue-text.text-lighten-1,
+.blue-text.apps-menu-btn {
   color: #42A5F5 !important;
 }
 
@@ -720,7 +733,8 @@
   background-color: #1E88E5 !important;
 }
 
-.blue-text.text-darken-1 {
+.blue-text.text-darken-1,
+.blue-text.apps-menu-btn:hover {
   color: #1E88E5 !important;
 }
 
@@ -825,7 +839,8 @@
   background-color: #29b6f6 !important;
 }
 
-.light-blue-text.text-lighten-1 {
+.light-blue-text.text-lighten-1,
+.light-blue-text.apps-menu-btn {
   color: #29b6f6 !important;
 }
 
@@ -834,7 +849,8 @@
   background-color: #039be5 !important;
 }
 
-.light-blue-text.text-darken-1 {
+.light-blue-text.text-darken-1,
+.light-blue-text.apps-menu-btn:hover {
   color: #039be5 !important;
 }
 
@@ -939,7 +955,8 @@
   background-color: #26c6da !important;
 }
 
-.cyan-text.text-lighten-1 {
+.cyan-text.text-lighten-1,
+.cyan-text.apps-menu-btn {
   color: #26c6da !important;
 }
 
@@ -948,7 +965,8 @@
   background-color: #00acc1 !important;
 }
 
-.cyan-text.text-darken-1 {
+.cyan-text.text-darken-1,
+.cyan-text.apps-menu-btn:hover {
   color: #00acc1 !important;
 }
 
@@ -1053,7 +1071,8 @@
   background-color: #26a69a !important;
 }
 
-.teal-text.text-lighten-1 {
+.teal-text.text-lighten-1,
+.teal-text.apps-menu-btn {
   color: #26a69a !important;
 }
 
@@ -1062,7 +1081,8 @@
   background-color: #00897b !important;
 }
 
-.teal-text.text-darken-1 {
+.teal-text.text-darken-1,
+.teal-text.apps-menu-btn:hover {
   color: #00897b !important;
 }
 
@@ -1167,7 +1187,8 @@
   background-color: #66BB6A !important;
 }
 
-.green-text.text-lighten-1 {
+.green-text.text-lighten-1,
+.green-text.apps-menu-btn {
   color: #66BB6A !important;
 }
 
@@ -1176,7 +1197,8 @@
   background-color: #43A047 !important;
 }
 
-.green-text.text-darken-1 {
+.green-text.text-darken-1,
+.green-text.apps-menu-btn:hover {
   color: #43A047 !important;
 }
 
@@ -1281,7 +1303,8 @@
   background-color: #9ccc65 !important;
 }
 
-.light-green-text.text-lighten-1 {
+.light-green-text.text-lighten-1,
+.light-green-text.apps-menu-btn {
   color: #9ccc65 !important;
 }
 
@@ -1290,7 +1313,8 @@
   background-color: #7cb342 !important;
 }
 
-.light-green-text.text-darken-1 {
+.light-green-text.text-darken-1,
+.light-green-text.apps-menu-btn:hover {
   color: #7cb342 !important;
 }
 
@@ -1395,7 +1419,8 @@
   background-color: #d4e157 !important;
 }
 
-.lime-text.text-lighten-1 {
+.lime-text.text-lighten-1,
+.lime-text.apps-menu-btn {
   color: #d4e157 !important;
 }
 
@@ -1404,7 +1429,8 @@
   background-color: #c0ca33 !important;
 }
 
-.lime-text.text-darken-1 {
+.lime-text.text-darken-1,
+.lime-text.apps-menu-btn:hover {
   color: #c0ca33 !important;
 }
 
@@ -1515,7 +1541,8 @@
   background-color: #ffee58 !important;
 }
 
-.yellow-text.text-lighten-1 {
+.yellow-text.text-lighten-1,
+.yellow-text.apps-menu-btn {
   color: #ffee58 !important;
 }
 
@@ -1526,7 +1553,8 @@
   background-color: #fdd835 !important;
 }
 
-.yellow-text.text-darken-1 {
+.yellow-text.text-darken-1,
+.yellow-text.apps-menu-btn:hover {
   color: #fdd835 !important;
 }
 
@@ -1637,7 +1665,8 @@
   background-color: #ffca28 !important;
 }
 
-.amber-text.text-lighten-1 {
+.amber-text.text-lighten-1,
+.amber-text.apps-menu-btn {
   color: #ffca28 !important;
 }
 
@@ -1646,7 +1675,8 @@
   background-color: #ffb300 !important;
 }
 
-.amber-text.text-darken-1 {
+.amber-text.text-darken-1,
+.amber-text.apps-menu-btn:hover {
   color: #ffb300 !important;
 }
 
@@ -1751,7 +1781,8 @@
   background-color: #ffa726 !important;
 }
 
-.orange-text.text-lighten-1 {
+.orange-text.text-lighten-1,
+.orange-text.apps-menu-btn {
   color: #ffa726 !important;
 }
 
@@ -1760,7 +1791,8 @@
   background-color: #fb8c00 !important;
 }
 
-.orange-text.text-darken-1 {
+.orange-text.text-darken-1,
+.orange-text.apps-menu-btn:hover {
   color: #fb8c00 !important;
 }
 
@@ -1865,7 +1897,8 @@
   background-color: #ff7043 !important;
 }
 
-.deep-orange-text.text-lighten-1 {
+.deep-orange-text.text-lighten-1,
+.deep-orange-text.apps-menu-btn {
   color: #ff7043 !important;
 }
 
@@ -1874,7 +1907,8 @@
   background-color: #f4511e !important;
 }
 
-.deep-orange-text.text-darken-1 {
+.deep-orange-text.text-darken-1,
+.deep-orange-text.apps-menu-btn:hover {
   color: #f4511e !important;
 }
 
@@ -1979,7 +2013,8 @@
   background-color: #8d6e63 !important;
 }
 
-.brown-text.text-lighten-1 {
+.brown-text.text-lighten-1,
+.brown-text.apps-menu-btn {
   color: #8d6e63 !important;
 }
 
@@ -1988,7 +2023,8 @@
   background-color: #6d4c41 !important;
 }
 
-.brown-text.text-darken-1 {
+.brown-text.text-darken-1,
+.brown-text.apps-menu-btn:hover {
   color: #6d4c41 !important;
 }
 
@@ -2061,7 +2097,8 @@
   background-color: #78909c !important;
 }
 
-.blue-grey-text.text-lighten-1 {
+.blue-grey-text.text-lighten-1,
+.blue-grey-text.apps-menu-btn {
   color: #78909c !important;
 }
 
@@ -2070,7 +2107,8 @@
   background-color: #546e7a !important;
 }
 
-.blue-grey-text.text-darken-1 {
+.blue-grey-text.text-darken-1,
+.blue-grey-text.apps-menu-btn:hover {
   color: #546e7a !important;
 }
 
@@ -2103,7 +2141,8 @@
   background-color: #9e9e9e !important;
 }
 
-.grey-text {
+.grey-text,
+.apps-menu-btn {
   color: #9e9e9e !important;
 }
 
@@ -2111,7 +2150,8 @@
   background-color: #fafafa !important;
 }
 
-.grey-text.text-lighten-5 {
+.grey-text.text-lighten-5,
+.text-lighten-5.apps-menu-btn {
   color: #fafafa !important;
 }
 
@@ -2119,7 +2159,8 @@
   background-color: #f5f5f5 !important;
 }
 
-.grey-text.text-lighten-4 {
+.grey-text.text-lighten-4,
+.text-lighten-4.apps-menu-btn {
   color: #f5f5f5 !important;
 }
 
@@ -2127,7 +2168,8 @@
   background-color: #eeeeee !important;
 }
 
-.grey-text.text-lighten-3 {
+.grey-text.text-lighten-3,
+.text-lighten-3.apps-menu-btn {
   color: #eeeeee !important;
 }
 
@@ -2135,7 +2177,8 @@
   background-color: #e0e0e0 !important;
 }
 
-.grey-text.text-lighten-2 {
+.grey-text.text-lighten-2,
+.text-lighten-2.apps-menu-btn {
   color: #e0e0e0 !important;
 }
 
@@ -2143,7 +2186,8 @@
   background-color: #bdbdbd !important;
 }
 
-.grey-text.text-lighten-1 {
+.grey-text.text-lighten-1,
+.apps-menu-btn {
   color: #bdbdbd !important;
 }
 
@@ -2152,7 +2196,9 @@
   background-color: #757575 !important;
 }
 
-.grey-text.text-darken-1 {
+.grey-text.text-darken-1,
+.text-darken-1.apps-menu-btn,
+.apps-menu-btn:hover {
   color: #757575 !important;
 }
 
@@ -2161,7 +2207,8 @@
   background-color: #616161 !important;
 }
 
-.grey-text.text-darken-2 {
+.grey-text.text-darken-2,
+.text-darken-2.apps-menu-btn {
   color: #616161 !important;
 }
 
@@ -2169,7 +2216,8 @@
   background-color: #424242 !important;
 }
 
-.grey-text.text-darken-3 {
+.grey-text.text-darken-3,
+.text-darken-3.apps-menu-btn {
   color: #424242 !important;
 }
 
@@ -2177,7 +2225,8 @@
   background-color: #212121 !important;
 }
 
-.grey-text.text-darken-4 {
+.grey-text.text-darken-4,
+.text-darken-4.apps-menu-btn {
   color: #212121 !important;
 }
 
@@ -2192,6 +2241,7 @@
 .white,
 .login-form,
 .logout-form,
+.apps-wrapper,
 .edit-btn {
   background-color: #FFFFFF !important;
 }
@@ -9383,6 +9433,30 @@ nav {
   height: 64px !important;
 }
 
+.apps-menu-btn:hover {
+  background-color: white;
+}
+
+.apps-wrapper {
+  width: 352px !important;
+  padding: 25px !important;
+}
+
+.apps-wrapper .apps-btn {
+  padding: 10px 4px;
+  text-align: center;
+  border-radius: 3px;
+  border: 1px solid #fff;
+}
+
+.apps-wrapper .apps-btn img {
+  width: 64px;
+}
+
+.apps-wrapper .apps-btn:hover {
+  border: 1px solid #e5e5e5;
+}
+
 .user-thumb {
   border-radius: 10000000px;
   border: 2px solid #ffd61e;
@@ -9423,7 +9497,8 @@ nav {
 }
 
 .login-form,
-.logout-form {
+.logout-form,
+.apps-wrapper {
   position: absolute;
   top: 80px;
   right: 5px;
@@ -9440,12 +9515,14 @@ nav {
 }
 
 .login-form .row,
-.logout-form .row {
+.logout-form .row,
+.apps-wrapper .row {
   margin-bottom: 0px;
 }
 
 .login-form .input-field,
-.logout-form .input-field {
+.logout-form .input-field,
+.apps-wrapper .input-field {
   margin-bottom: 0px;
   /* label focus color */
   /* label underline focus color */
@@ -9454,39 +9531,48 @@ nav {
 
 .login-form .input-field input[type=text]:focus + label,
 .logout-form .input-field input[type=text]:focus + label,
+.apps-wrapper .input-field input[type=text]:focus + label,
 .login-form .input-field input[type=password]:focus + label,
-.logout-form .input-field input[type=password]:focus + label {
+.logout-form .input-field input[type=password]:focus + label,
+.apps-wrapper .input-field input[type=password]:focus + label {
   color: #fda40c;
 }
 
 .login-form .input-field input[type=text]:focus,
 .logout-form .input-field input[type=text]:focus,
+.apps-wrapper .input-field input[type=text]:focus,
 .login-form .input-field input[type=password]:focus,
-.logout-form .input-field input[type=password]:focus {
+.logout-form .input-field input[type=password]:focus,
+.apps-wrapper .input-field input[type=password]:focus {
   border-bottom: 1px solid #fda40c;
   box-shadow: 0 1px 0 0 #fda40c;
 }
 
 .login-form .input-field input[type=text].valid,
 .logout-form .input-field input[type=text].valid,
+.apps-wrapper .input-field input[type=text].valid,
 .login-form .input-field input[type=password].valid,
-.logout-form .input-field input[type=password].valid {
+.logout-form .input-field input[type=password].valid,
+.apps-wrapper .input-field input[type=password].valid {
   border-bottom: 1px solid #fda40c;
   box-shadow: 0 1px 0 0 #fda40c;
 }
 
 .login-form .input-field:focus label,
-.logout-form .input-field:focus label {
+.logout-form .input-field:focus label,
+.apps-wrapper .input-field:focus label {
   color: #fda40c;
 }
 
 .login-form input:-webkit-autofill,
-.logout-form input:-webkit-autofill {
+.logout-form input:-webkit-autofill,
+.apps-wrapper input:-webkit-autofill {
   -webkit-box-shadow: inset 0 0 0px 9999px white !important;
 }
 
 .login-form a,
-.logout-form a {
+.logout-form a,
+.apps-wrapper a {
   font-size: 9pt;
 }
 

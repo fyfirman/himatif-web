@@ -1,3 +1,6 @@
+{{-- To toogle sub menu on nav --}}
+<script src="{{asset('js/nav-submenu.js')}}"></script>
+
 <nav class="navbar-fixed white">
     <div class="nav-wrapper">
         <a href="#" class="brand-logo grey-text text-darken-1">
@@ -5,16 +8,16 @@
             <span>Himatif Web</span>
         </a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a onclick="showAppsMenu()" class="apps-menu-btn"><i class="material-icons">apps</i></a></li>
+            <li><a onclick="toogleAppsMenu()" class="apps-menu-btn"><i class="material-icons">apps</i></a></li>
             <li>
                 {{-- Kondisi ketika sudah masuk --}}
                 @if(session('logged_in'))
-                    <a class="nav-button" onclick="showLogout()">
+                    <a class="nav-button" onclick="toogleAuth(1)">
                         <img class="user-thumb" src="{{ asset('img/user-profile-dummy.jpg') }}" style="vertical-align:middle"/>
                     </a>
                 {{-- Kondisi ketika belum masuk --}}
                 @else
-                    <a class="deep-btn login-btn btn-small" onclick="showLogin()">Login</a>
+                    <a class="deep-btn login-btn btn-small" onclick="toogleAuth(0)">Login</a>
                 @endif
                 
             </li>
@@ -89,51 +92,3 @@
         <a href="logout" class="btn-small deep-btn edit-btn">Edit Profile</a>
     </div>
 </div>
-
-<script>
-    function showAppsMenu() {
-        // Mencegah numpuk
-        if(isShow('login-form'))
-            showLogin();
-        if(isShow('logout-form'))
-            showLogout();
-
-        let z = document.getElementById("apps-wrapper");
-        if (z.style.display == "none" || z.style.display == '') {
-            z.style.display = "block";
-        } else {
-            z.style.display = "none";
-        }
-    }
-
-    function showLogin() {
-        if(isShow('apps-wrapper'))
-            showAppsMenu();
-        
-        let element = document.getElementById("login-form");
-        if (element.style.display == "none" || element.style.display == '') {
-            element.style.display = "block";
-        } else {
-            element.style.display = "none";
-        }
-    }
-
-    function showLogout(){
-        if(isShow('apps-wrapper'))
-            showAppsMenu();
-
-        let y = document.getElementById('logout-form');
-        if (y.style.display == "none" || y.style.display == '') {
-            y.style.display = "block";
-        } else {
-            y.style.display = "none";
-        }
-    }
-
-    function isShow(id){
-        let element = document.getElementById(id);
-        if (element.style.display == "none" || element.style.display == '')
-            return false;
-        else return true;
-    }
-</script>

@@ -92,7 +92,13 @@
 
 <script>
     function showAppsMenu() {
-        var z = document.getElementById("apps-wrapper");
+        // Mencegah numpuk
+        if(isShow('login-form'))
+            showLogin();
+        if(isShow('logout-form'))
+            showLogout();
+
+        let z = document.getElementById("apps-wrapper");
         if (z.style.display == "none" || z.style.display == '') {
             z.style.display = "block";
         } else {
@@ -101,20 +107,33 @@
     }
 
     function showLogin() {
-        var x = document.getElementById("login-form");
-        if (x.style.display == "none" || x.style.display == '') {
-            x.style.display = "block";
+        if(isShow('apps-wrapper'))
+            showAppsMenu();
+        
+        let element = document.getElementById("login-form");
+        if (element.style.display == "none" || element.style.display == '') {
+            element.style.display = "block";
         } else {
-            x.style.display = "none";
+            element.style.display = "none";
         }
     }
 
     function showLogout(){
-        var y = document.getElementById('logout-form');
+        if(isShow('apps-wrapper'))
+            showAppsMenu();
+
+        let y = document.getElementById('logout-form');
         if (y.style.display == "none" || y.style.display == '') {
             y.style.display = "block";
         } else {
             y.style.display = "none";
         }
+    }
+
+    function isShow(id){
+        let element = document.getElementById(id);
+        if (element.style.display == "none" || element.style.display == '')
+            return false;
+        else return true;
     }
 </script>

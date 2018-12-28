@@ -1,23 +1,25 @@
 {{-- To toogle sub menu on nav --}}
 <script src="{{asset('js/nav-submenu.js')}}"></script>
-
 <nav class="navbar-fixed white">
     <div class="nav-wrapper">
         <a href="#" class="brand-logo grey-text text-darken-1">
             <img src="{{ asset('img/himatif-logo-256x256.png') }}" alt="" style="vertical-align:middle">
-            <span>Himatif Web</span>
+            <span>Himatif Apps</span>
         </a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a onclick="toogleAppsMenu()" class="apps-menu-btn"><i class="material-icons">apps</i></a></li>
             <li>
                 {{-- Kondisi ketika sudah masuk --}}
                 @if(session('logged_in'))
-                    <a class="nav-button" onclick="toogleAuth(1)">
-                        <img class="user-thumb" src="{{ asset('img/user-profile-dummy.jpg') }}" style="vertical-align:middle"/>
-                    </a>
+                    @php $anggota = Cookie::get('anggota'); $anggota=json_decode($anggota); @endphp
+                    @foreach ($anggota as $data)
+                        <a class="nav-button" onclick="toogleAuth(1)">
+                            <img class="user-thumb" src="{{ $data->url_foto }}" style="vertical-align:middle"/>
+                        </a>
+                    @endforeach
                 {{-- Kondisi ketika belum masuk --}}
                 @else
-                    <a class="deep-btn login-btn btn-small" onclick="toogleAuth(0)">Login</a>
+                    <a id="btnLogin" class="deep-btn login-btn btn-small" onclick="toogleAuth(0)">Login</a>
                 @endif
                 
             </li>
@@ -71,24 +73,28 @@
 </div>
 
 {{-- Logout Content --}}
+@if(session('logged_in'))
 <div id="logout-form" class="logout-form">
-    <div class="row">
-        <div class="col m5 text-center">
-            <img class="user-thumb" src="{{ asset('img/user-profile-dummy.jpg') }}" style="vertical-align:middle"/>
-        </div>
-        <div class="col m7">
-            <div class="info-wrapper">
-                <div class="row user-name">
-                    Firmansyah Yanuar
-                </div>
-                <div class="row">
-                    {{Session::get('username')}}
+    @foreach ($anggota as $data)
+        <div class="row">
+            <div class="col m5 text-center">
+                <img class="user-thumb" src="{{ $data->url_foto }}" style="vertical-align:middle"/>
+            </div>
+            <div class="col m7">
+                <div class="info-wrapper">
+                    <div class="row user-name">
+                        {{ $data->nama }}
+                    </div>
+                    <div class="row">
+                        {{ $data->npm }}
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    @endforeach
     <div class="row">
         <a href="logout" class="btn-small deep-btn logout-btn">Logout</a>
         <a href="logout" class="btn-small deep-btn edit-btn">Edit Profile</a>
     </div>
 </div>
+@endif

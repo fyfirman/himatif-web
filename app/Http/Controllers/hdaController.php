@@ -7,47 +7,59 @@ use GuzzleHttp\Client;
 
 class hdaController extends Controller
 {
-    private $base_uri = 'http://localhost/Himatif_Apps/REST-API-himatif/index.php/api/';
+    private $base_uri = 'http://localhost/REST-API-himatif/index.php/api/';
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
+
+    public function getDataAPI($endpoint){
         $client = new Client(['base_uri' => $this->base_uri]);
-        $response = $client->get('data/anggotasemua');
+        $response = $client->get($endpoint);
         $result = json_decode($response->getBody()->getContents());
         if($result->status == true){
-            $data = $result->data;
+            return $result->data;
+        }else{
+            return NULL;
         }
-        return view('hda.homepage', compact('data'));
     }
 
-    public function angkatan($ang){
-        $client = new Client(['base_uri' => $this->base_uri]);
-        $response = $client->get('data/angkatan/'.$ang);
-        $result = json_decode($response->getBody()->getContents());
-        if($result->status == true){
-            $data = $result->data;
+    public function index()
+    {
+        $endpoint = 'data/anggotasemua';
+        $data = $this->getDataAPI($endpoint);
+        if($data != NULL){
+            return view('hda.homepage', compact('data'));
+        }else{
+            return redirect('/');
         }
-        return view('hda.homepage', compact('data'));
+    }
+
+    public function angkatan($tahun){
+        $endpoint = 'data/angkatan/'.$tahun;
+        $data = $this->getDataAPI($endpoint);
+        if($data != NULL){
+            return view('hda.homepage', compact('data'));
+        }else{
+            return redirect('/');
+        }
     }
 
     public function bk($bk){
-        $client = new Client(['base_uri' => $this->base_uri]);
         if($bk == 'dpa'){
-            $response = $client->get('dpa/anggotadpa');
+            $endpoint = 'dpa/anggotadpa';
         }else if($bk == 'be'){
-            $response = $client->get('be/anggotabe');
+            $endpoint = 'be/anggotabe';
         }else if($bk == 'mubes'){
-            $response = $client->get('mubes/anggotamubes');
+            $endpoint = 'mubes/anggotamubes';
         }
-        $result = json_decode($response->getBody()->getContents());
-        if($result->status == true){
-            $data = $result->data;
+        $data = $this->getDataAPI($endpoint);
+        if($data != NULL){
+            return view('hda.homepage', compact('data'));
+        }else{
+            return redirect('/');
         }
-        return view('hda.homepage', compact('data'));
     }
 
     public function login(Request $request){
@@ -62,15 +74,23 @@ class hdaController extends Controller
                 'logged_in' => 1
             );
             $request->session()->put($data);
-            return redirect('/');
+            $npm = $request->session()->get('username');
+            $data = $this->getDataAnggota($npm);
+            $data_json = json_encode($data);
+            return redirect('/')->withCookie(cookie('anggota', $data_json, 120));
         }else{
-            return redirect('/');
+            return redirect('/')->with('login', 'invalid');
         }
     }
 
     public function logout(Request $request){
         $request->session()->flush();
-        return redirect('/');
+        return redirect('/')->withCookie(\Cookie::forget('anggota'));
+    }
+
+    public function getDataAnggota($npm){
+        $endpoint = 'data/anggota/'.$npm;
+        return $this->getDataAPI($endpoint);
     }
 
     /**

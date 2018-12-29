@@ -1,11 +1,17 @@
 {{-- To toogle sub menu on nav --}}
 <script src="{{asset('js/nav-submenu.js')}}"></script>
+
 <nav class="navbar-fixed white">
     <div class="nav-wrapper">
+        <a href=""></a>
         <a href="#" class="brand-logo grey-text text-darken-1">
             <img src="{{ asset('img/himatif-logo-256x256.png') }}" alt="" style="vertical-align:middle">
             <span>Himatif Apps</span>
         </a>
+
+        {{-- Search bar buat di HDA --}}
+        @yield('search-bar')
+
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a onclick="toogleAppsMenu({{Session::get('logged_in')}})" class="apps-menu-btn"><i class="material-icons">apps</i></a></li>
             <li>

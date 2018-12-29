@@ -8,12 +8,33 @@
 
     .input-field{
         @extend .grey, .lighten-4;
-        // margin-top: 8px;
+        border: 1px solid #f5f5f5;
         border-radius: 4px;
 
         .material-icons{
+            @extend .grey-text, .text-darken-1;
+
             position: absolute;
             top: -7px;
         }
+
+        input::placeholder{
+            @extend .grey-text, .text-darken-1;
+        }
+
+        #search-box{
+            border-radius: 4px;
+        }
+
+        #search-box:focus{
+            border: 1px solid rgba(0, 0, 0, 0.12);
+            box-shadow: rgba(0, 0, 0, 0.24) 0 1px 1px 0;
+
+            //supaya ga ngegeser waktu focus
+            position: absolute;
+            top: -1px;
+            left: -1px;
+        }
     }
+
 }

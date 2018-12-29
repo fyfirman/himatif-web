@@ -29,7 +29,7 @@
 </nav>
 
 {{-- Apps Menu Content --}}
-<div id="apps-wrapper" class="apps-wrapper row">
+<div id="apps-wrapper" class="apps-wrapper row hide-on-med-and-down">
     <a href="{{ url('/hda') }}" class="col m4 apps-btn">
         <img src="https://dummyimage.com/100x100/000000/ffffff&text=HDA" alt=""><br>
         <label>Himatif Database</label>
@@ -46,7 +46,7 @@
 
 
 {{-- Login Content --}}
-<div id="login-form" class="login-form">
+<div id="login-form" class="login-form hide-on-med-and-down">
     <form action="login" autocomplete="off" method="POST">
         @csrf
         <div class="row">
@@ -74,7 +74,7 @@
 
 {{-- Logout Content --}}
 @if(session('logged_in'))
-<div id="logout-form" class="logout-form">
+<div id="logout-form" class="logout-form hide-on-med-and-down">
     @foreach ($anggota as $data)
         <div class="row">
             <div class="col m5 text-center">

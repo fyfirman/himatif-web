@@ -7,9 +7,9 @@
             <span>HDA</span>
         </a>
         <div class="search-wrapper left">
-           <form class="hide-on-med-and-down" id="search-form" >
+            <form class="hide-on-med-and-down" id="search-form" autocomplete="off">
                 <div class="input-field">
-                    <input id="search-box" type="search" required onkeyup="">
+                    <input id="search-box" type="search" required onkeyup="" placeholder="Cari dengan NPM">
                     <label class="label-icon" for="search"><i class="material-icons">search</i></label>
                 </div>
             </form> 
@@ -36,7 +36,7 @@
 </nav>
 
 {{-- Apps Menu Content --}}
-<div id="apps-wrapper" class="apps-wrapper row">
+<div id="apps-wrapper" class="apps-wrapper row hide-on-med-and-down">
     <a href="{{ url('/hda') }}" class="col m4 apps-btn">
         <img src="https://dummyimage.com/100x100/000000/ffffff&text=HDA" alt=""><br>
         <label>Himatif Database</label>
@@ -53,7 +53,7 @@
 
 
 {{-- Login Content --}}
-<div id="login-form" class="login-form">
+<div id="login-form" class="login-form hide-on-med-and-down">
     <form action="login" autocomplete="off" method="POST">
         @csrf
         <div class="row">
@@ -81,7 +81,7 @@
 
 {{-- Logout Content --}}
 @if(session('logged_in'))
-<div id="logout-form" class="logout-form">
+<div id="logout-form" class="logout-form hide-on-med-and-down">
     @foreach ($anggota as $data)
         <div class="row">
             <div class="col m5 text-center">

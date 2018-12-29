@@ -1,0 +1,51 @@
+main, footer {
+    margin-left: 300px !important;
+}
+
+@media only screen and (max-width : 992px) {
+    main, footer {
+        margin-left: 0;
+    }   
+}
+
+nav{
+    z-index: 99999;
+}
+
+.sidenav{
+    margin-top:64px;
+    z-index: 1;
+    
+    a{
+        font-size: 13px !important;
+    }
+
+    .collapsible{
+        .collapsible-header{
+            padding-left: 32px;
+        }
+
+        .collapsible-body a{
+            padding-left: 48px;
+
+            font-weight: 400;
+        }
+
+
+        & > .active{
+            & > a{
+                @extend .grey, .lighten-4;
+                color: rgba(0, 0, 0, 0.87) !important;
+            }
+        }
+        
+    }
+    
+    .active{
+        @extend .teal, .lighten-2;
+        
+        & > a{
+            @extend .white-text;
+        }
+    }
+}

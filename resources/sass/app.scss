@@ -6,21 +6,14 @@
 @import 'variables';
 
 // Materialize
-@import 'materialize';
+@import 'materialize/materialize';
 
 //Navbar
-@import 'nav';
-
-//Navbar HDA
-@import "nav-hda";
+@import 'components/nav';
 
 //Footer
-@import 'footer';
+@import 'components/footer';
 
-%center-cropped {
-  object-fit: cover;
-  object-position: center;
-}
 
 .landing-container{
   @extend .container;

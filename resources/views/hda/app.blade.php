@@ -7,13 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     {!! MaterializeCSS::include_full() !!}
     <link rel="stylesheet" type="text/css" href="{{ mix('/css/app.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ mix('/css/hda.css') }}">
     
     <title>{{ config('app.name') }}</title>
 </head>
 
 <body>
     @include('partials.nav-hda')
+    @include('hda.sidenav')
     <main class="section">
+        a
         @yield('content')
     </main>
 

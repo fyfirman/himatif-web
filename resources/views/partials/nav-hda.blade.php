@@ -15,7 +15,7 @@
             </form> 
         </div>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a onclick="toogleAppsMenu()" class="apps-menu-btn"><i class="material-icons">apps</i></a></li>
+            <li><a onclick="toogleAppsMenu({{Session::get('logged_in')}})" class="apps-menu-btn"><i class="material-icons">apps</i></a></li>
             <li>
                 {{-- Kondisi ketika sudah masuk --}}
                 @if(session('logged_in'))

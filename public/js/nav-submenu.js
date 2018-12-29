@@ -14,12 +14,16 @@ function toogleElement(id){
     }
 }
 
-function toogleAppsMenu() {
+function toogleAppsMenu(status_login) {
     // Mencegah numpuk
-    if(isShow('login-form'))
-        toogleAuth(0);
-    if(isShow('logout-form'))
-        toogleAuth(1);
+    if(status_login){
+        if(isShow('logout-form'))
+            toogleAuth(1);
+    }
+    else{
+        if(isShow('login-form'))
+            toogleAuth(0);
+    }
 
     toogleElement('apps-wrapper');
 }

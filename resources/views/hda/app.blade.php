@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    @include('partials.nav')
+    @include('partials.nav-hda')
     <main class="section">
         @yield('content')
     </main>

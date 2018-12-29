@@ -1,0 +1,19 @@
+.search-wrapper{
+    height: 100%;
+    width: 50%;
+    padding: 8px;    
+
+    margin-left: 200px;
+    margin-right: 0 !important;
+
+    .input-field{
+        @extend .grey, .lighten-4;
+        // margin-top: 8px;
+        border-radius: 4px;
+
+        .material-icons{
+            position: absolute;
+            top: -7px;
+        }
+    }
+}

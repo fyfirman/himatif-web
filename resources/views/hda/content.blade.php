@@ -11,7 +11,7 @@
                         </div>
                         <div class="card-content">
                             <span class="card-title activator grey-text text-darken-4">{{ $item->nama }}<i class="material-icons right">more_vert</i></span>
-                            <p><a href="#"><p>{{ $item->npm }}</p>
+                            <p><a><p>{{ $item->npm }}</p>
                             <p>@php echo (isset($item->jabatan) ? $item->jabatan : ''); @endphp</p>
                             <p>@php echo (isset($item->posisi) ? $item->posisi : ''); @endphp</p></a></p>
                         </div>

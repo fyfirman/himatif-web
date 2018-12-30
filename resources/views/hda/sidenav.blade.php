@@ -1,5 +1,5 @@
 <ul id="slide-out" class="sidenav sidenav-fixed">
-    <li><a id="tentang" href="#!" class="waves-effect">Tentang</a></li>
+    <li><a id="tentang" href="{{ url('hda') }}" class="waves-effect">Tentang</a></li>
     <li class="no-padding">
         <ul class="collapsible collapsible-accordion">
             <li class="active">

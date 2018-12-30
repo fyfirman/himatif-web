@@ -4,7 +4,7 @@
     <div class="row">
         @foreach ($data as $item)
             @if ($item != NULL)
-                <div class="col m3 s4 custom-col">
+                <div class="col m3 s6 custom-col">
                     <div class="card">
                         <div class="card-image waves-effect waves-block waves-light">
                             <img class="activator" src="{{ $item->url_foto }}">
@@ -16,8 +16,22 @@
                             <p>@php echo (isset($item->posisi) ? $item->posisi : ''); @endphp</p></a></p>
                         </div>
                         <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-                            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                            <div class="reveal-header">
+                                <span id="reveal-thumb" class="card-title grey-text text-darken-4"><i class="material-icons right white-text">close</i></span>
+                                <br>
+                                <p><img class="user-thumb" src="{{ $item->url_foto }}"/></p>
+                                <p id="name">{{ $item->nama }}</p>
+                                <p>{{ $item->npm }}</p>
+                                <p>Sistem Informasi</p>
+                            </div>
+                            <div class="reveal-info">
+                                <p id="first-child"><i class="material-icons">cake</i> 23 Januari 1999</p>
+                                <p><i class="material-icons">call</i> 089821341222</p>
+                                <p><i class="fab fa-line"></i> fyfirman</p>
+                            </div>
+                            <div class="reveal-action">
+                                <a href="#">More Info</a>
+                            </div>
                         </div>
                     </div>
                 </div>

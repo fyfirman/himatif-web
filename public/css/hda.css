@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@import url(https://use.fontawesome.com/releases/v5.6.3/css/all.css);@charset "UTF-8";
 
 .materialize-red {
   background-color: #e51c23 !important;
@@ -1265,6 +1265,7 @@
 }
 
 .teal,
+.card .card-reveal .reveal-header,
 .sidenav .active {
   background-color: #009688 !important;
 }
@@ -1274,6 +1275,7 @@
 }
 
 .teal.lighten-5,
+.card .card-reveal .lighten-5.reveal-header,
 .sidenav .lighten-5.active {
   background-color: #e0f2f1 !important;
 }
@@ -1283,10 +1285,15 @@
 }
 
 .teal.lighten-4,
+.card .card-reveal .lighten-4.reveal-header,
 .sidenav .lighten-4.active,
 .sidenav .collapsible > .active > a.teal,
+.sidenav .card .card-reveal .collapsible > .active > a.reveal-header,
+.card .card-reveal .sidenav .collapsible > .active > a.reveal-header,
 .sidenav .collapsible > .active > a.active,
 .search-wrapper .teal.input-field,
+.search-wrapper .card .card-reveal .input-field.reveal-header,
+.card .card-reveal .search-wrapper .input-field.reveal-header,
 .search-wrapper .sidenav .input-field.active,
 .sidenav .search-wrapper .input-field.active {
   background-color: #b2dfdb !important;
@@ -1297,6 +1304,7 @@
 }
 
 .teal.lighten-3,
+.card .card-reveal .lighten-3.reveal-header,
 .sidenav .lighten-3.active {
   background-color: #80cbc4 !important;
 }
@@ -1306,7 +1314,10 @@
 }
 
 .teal.lighten-2,
+.card .card-reveal .lighten-2.reveal-header,
 .sidenav .teal.active,
+.sidenav .card .card-reveal .active.reveal-header,
+.card .card-reveal .sidenav .active.reveal-header,
 .sidenav .lighten-2.active,
 .sidenav .active {
   background-color: #4db6ac !important;
@@ -1317,6 +1328,7 @@
 }
 
 .teal.lighten-1,
+.card .card-reveal .lighten-1.reveal-header,
 .sidenav .lighten-1.active {
   background-color: #26a69a !important;
 }
@@ -1327,8 +1339,10 @@
 }
 
 .teal.darken-1,
+.card .card-reveal .darken-1.reveal-header,
 .sidenav .darken-1.active,
 .teal.logout-btn:active,
+.card .card-reveal .logout-btn.reveal-header:active,
 .sidenav .logout-btn.active:active {
   background-color: #00897b !important;
 }
@@ -1362,8 +1376,10 @@
 }
 
 .teal.darken-2,
+.card .card-reveal .darken-2.reveal-header,
 .sidenav .darken-2.active,
 .teal.login-btn,
+.card .card-reveal .login-btn.reveal-header,
 .sidenav .login-btn.active {
   background-color: #00796b !important;
 }
@@ -1373,6 +1389,7 @@
 }
 
 .teal.darken-3,
+.card .card-reveal .darken-3.reveal-header,
 .sidenav .darken-3.active {
   background-color: #00695c !important;
 }
@@ -1382,6 +1399,7 @@
 }
 
 .teal.darken-4,
+.card .card-reveal .darken-4.reveal-header,
 .sidenav .darken-4.active {
   background-color: #004d40 !important;
 }
@@ -1391,6 +1409,7 @@
 }
 
 .teal.accent-1,
+.card .card-reveal .accent-1.reveal-header,
 .sidenav .accent-1.active {
   background-color: #a7ffeb !important;
 }
@@ -1400,6 +1419,7 @@
 }
 
 .teal.accent-2,
+.card .card-reveal .accent-2.reveal-header,
 .sidenav .accent-2.active {
   background-color: #64ffda !important;
 }
@@ -1409,6 +1429,7 @@
 }
 
 .teal.accent-3,
+.card .card-reveal .accent-3.reveal-header,
 .sidenav .accent-3.active {
   background-color: #1de9b6 !important;
 }
@@ -1418,6 +1439,7 @@
 }
 
 .teal.accent-4,
+.card .card-reveal .accent-4.reveal-header,
 .sidenav .accent-4.active {
   background-color: #00bfa5 !important;
 }
@@ -3028,6 +3050,7 @@
 }
 
 .white-text,
+.card .card-reveal .reveal-header,
 .sidenav .active > a {
   color: #FFFFFF !important;
 }
@@ -10494,5 +10517,49 @@ nav {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis !important;
+}
+
+.card .card-reveal {
+  padding: 0;
+}
+
+.card .card-reveal i {
+  font-size: 1rem;
+}
+
+.card .card-reveal .reveal-header {
+  text-align: center;
+  padding: 8px;
+  height: 55%;
+}
+
+.card .card-reveal .reveal-header .user-thumb {
+  width: 100px;
+  height: 100px;
+}
+
+.card .card-reveal .reveal-header #name {
+  font-size: 15px !important;
+}
+
+.card .card-reveal .reveal-header p {
+  font-size: 12px;
+  margin: 0;
+}
+
+.card .card-reveal .reveal-info {
+  padding: 16px;
+  height: 35%;
+}
+
+.card .card-reveal .reveal-info #first-child {
+  margin-top: 0;
+}
+
+.card .card-reveal .reveal-action {
+  height: 10%;
+  border-top: 1px solid rgba(160, 160, 160, 0.2);
+  text-align: center;
+  padding: 6px 0;
 }
 

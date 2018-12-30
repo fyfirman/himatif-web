@@ -1,6 +1,7 @@
+@import 'https://use.fontawesome.com/releases/v5.6.3/css/all.css';
+
 .card{
     .card-image{
-        
         position: relative !important;
         width: 100%;
         padding-top: 150%;
@@ -16,7 +17,6 @@
         padding: 8px 12px;
         
         .card-title{
-            // height: 64px;
             width: 100%;
             height: 32px !important;
             font-size: 18px;
@@ -26,7 +26,49 @@
             white-space: nowrap; 
             text-overflow: ellipsis !important;
         }
+    }
 
+    .card-reveal{
+        padding: 0;
+
+        i{
+            // @extend .white-text;
+            font-size: 1rem;
+        }
+        .reveal-header{
+            @extend .teal, .white-text; 
+            text-align: center;
+            padding: 8px;
+            height: 55%;
+            .user-thumb{
+                width: 100px;
+                height: 100px;
+            }
+            #name{
+                font-size: 15px !important;
+            }
+            
+            p{
+                font-size: 12px;
+                margin: 0;
+            }
+        }
+        
+        .reveal-info{
+            padding: 16px;
+            height: 35%;
+
+            #first-child{
+                margin-top: 0; 
+            }
+        }
+
+        .reveal-action{
+            height: 10%;
+            border-top: 1px solid rgba(160,160,160,0.2);
+            text-align: center;
+            padding: 6px 0;
+        }
     }
 
 }

@@ -7,6 +7,16 @@
             <span>Himatif Apps</span>
         </a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li>@if (session('login') == 'invalid')
+                    <span class="red-text">NPM/Password is Invalid.</span>
+                @elseif(session('login') == 'first')
+                    <span class="orange-text">Please Login First!</span>
+                @elseif(session('update') == 'success')
+                    <span class="orange-text">Update Data Succes.</span>
+                @elseif(session('update') == 'failed')
+                    <span class="red-text">Update Data Failed!</span>
+                @endif
+            </li>
             <li><a onclick="toogleAppsMenu({{Session::get('logged_in')}})" class="apps-menu-btn"><i class="material-icons">apps</i></a></li>
             <li>
                 {{-- Kondisi ketika sudah masuk --}}
@@ -15,6 +25,8 @@
                     @foreach ($anggota as $data)
                         <a class="nav-button" onclick="toogleAuth(1)">
                             <img class="user-thumb" src="{{ $data->url_foto }}" style="vertical-align:middle"/>
+                            @php $arr = explode(" ", $data->nama); $nickname = $arr[0];@endphp
+                            <span style="margin-left:5px;color:grey;font-weight:bold">Welcome, {{ $nickname }}</span>
                         </a>
                     @endforeach
                 {{-- Kondisi ketika belum masuk --}}
@@ -94,7 +106,7 @@
     @endforeach
     <div class="row">
         <a href="logout" class="btn-small deep-btn logout-btn">Logout</a>
-        <a href="logout" class="btn-small deep-btn edit-btn">Edit Profile</a>
+        <a href="{{ route('viewEdit') }}" class="btn-small deep-btn edit-btn">Edit Profile</a>
     </div>
 </div>
 @endif

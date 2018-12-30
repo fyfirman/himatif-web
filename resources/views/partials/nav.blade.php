@@ -2,7 +2,7 @@
 <script src="{{asset('js/nav-submenu.js')}}"></script>
 <nav class="navbar-fixed white">
     <div class="nav-wrapper">
-        <a href="#" class="brand-logo grey-text text-darken-1">
+        <a href="/" class="brand-logo grey-text text-darken-1">
             <img src="{{ asset('img/himatif-logo-256x256.png') }}" alt="" style="vertical-align:middle">
             <span>Himatif Apps</span>
         </a>

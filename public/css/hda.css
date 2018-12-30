@@ -10422,6 +10422,11 @@ footer {
   margin-left: 300px !important;
 }
 
+main {
+  margin-top: 64px;
+  padding: 20px 10px 0 10px;
+}
+
 @media only screen and (max-width: 992px) {
   main,
   footer {

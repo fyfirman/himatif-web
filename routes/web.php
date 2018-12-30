@@ -13,10 +13,13 @@
 
 Route::get('/', function () {
     return view('content.landing');
-});
-
+})->name('homepage');
 Route::get('hda', 'hdaController@index');
 Route::get('hda/angkatan/{tahun}', 'hdaController@angkatan');
 Route::get('hda/anggota/{bk}', 'hdaController@bk');
-Route::post('login', 'hdaController@login');
-Route::get('logout', 'hdaController@logout');
+Route::post('login', 'loginController@login');
+Route::get('logout', 'loginController@logout');
+Route::get('edit', function(){
+    return view('content.editProfile');
+})->name('viewEdit');
+Route::put('editProfile', 'hdaController@edit')->name('editProfile');

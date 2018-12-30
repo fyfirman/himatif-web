@@ -25,28 +25,35 @@ class hdaController extends Controller
         }
     }
 
-    public function index()
+    public function cekSession(Request $request){
+        if($request->session()->get('logged_in')){
+            return true;
+        }
+        return false;
+    }
+
+    public function index(Request $request)
     {
         $endpoint = 'data/anggotasemua';
         $data = $this->getDataAPI($endpoint);
-        if($data != NULL){
+        if($this->cekSession($request) && $data != NULL){
             return view('hda.app', compact('data'));
         }else{
-            return redirect('/');
+            return redirect('/')->with('login', 'first');
         }
     }
 
-    public function angkatan($tahun){
+    public function angkatan($tahun, Request $request){
         $endpoint = 'data/angkatan/'.$tahun;
         $data = $this->getDataAPI($endpoint);
-        if($data != NULL){
+        if($this->cekSession($request) && $data != NULL){
             return view('hda.content', compact('data'));
         }else{
-            return redirect('/');
+            return redirect('/')->with('login', 'first');
         }
     }
 
-    public function bk($bk){
+    public function bk($bk, Request $request){
         if($bk == 'dpa'){
             $endpoint = 'dpa/anggotadpa';
         }else if($bk == 'be'){
@@ -55,37 +62,11 @@ class hdaController extends Controller
             $endpoint = 'mubes/anggotamubes';
         }
         $data = $this->getDataAPI($endpoint);
-        if($data != NULL){
+        if($this->cekSession($request) && $data != NULL){
             return view('hda.content', compact('data'));
         }else{
-            return redirect('/');
+            return redirect('/')->with('login', 'first');
         }
-    }
-
-    public function login(Request $request){
-        $uname = $request->input('username');
-        $pwd = $request->input('password');
-        $client = new Client();
-        $response = $client->request('POST', $this->base_uri.'user/verify', ['form_params' => ['username' => $uname, 'password' => $pwd]]);
-        $result = json_decode($response->getBody()->getContents());
-        if($result->status == 1){
-            $data = array(
-                'username' => $uname,
-                'logged_in' => 1
-            );
-            $request->session()->put($data);
-            $npm = $request->session()->get('username');
-            $data = $this->getDataAnggota($npm);
-            $data_json = json_encode($data);
-            return redirect('/')->withCookie(cookie('anggota', $data_json, 120));
-        }else{
-            return redirect('/')->with('login', 'invalid');
-        }
-    }
-
-    public function logout(Request $request){
-        $request->session()->flush();
-        return redirect('/')->withCookie(\Cookie::forget('anggota'));
     }
 
     public function getDataAnggota($npm){
@@ -131,9 +112,21 @@ class hdaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Request $request)
     {
-        //
+        $endpoint = 'data/updatedata';
+        $client = new Client(['base_uri' => $this->base_uri]);
+        $response = $client->put($endpoint);
+        $result = json_decode($response->getBody()->getContents());
+        if($result->status == 'success'){
+            \Cookie::forget('anggota');
+            $npm = $request->session()->get('username');
+            $data = $this->getDataAnggota($npm);
+            $data_json = json_encode($data);
+            return redirect()->route('viewEdit')->with('update', 'success')->withCookie(cookie('anggota', $data_json, 120));
+        }else{
+            return redirect()->route('viewEdit')->with('update', 'failed');
+        }
     }
 
     /**

@@ -7,8 +7,7 @@
     });
     </script>
     <div class="nav-wrapper">
-        <a href=""></a>
-        <a href="#" class="brand-logo grey-text text-darken-1">
+        <a href="/" class="brand-logo grey-text text-darken-1">
             <img src="{{ asset('img/himatif-logo-256x256.png') }}" alt="" style="vertical-align:middle">
             <span>Himatif Apps</span>
         </a>
@@ -17,6 +16,16 @@
         @yield('search-bar')
 
         <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li>@if (session('login') == 'invalid')
+                    <span class="red-text">NPM/Password is Invalid.</span>
+                @elseif(session('login') == 'first')
+                    <span class="orange-text">Please Login First!</span>
+                @elseif(session('update') == 'success')
+                    <span class="orange-text">Update Data Succes.</span>
+                @elseif(session('update') == 'failed')
+                    <span class="red-text">Update Data Failed!</span>
+                @endif
+            </li>
             <li><a onclick="toogleAppsMenu({{Session::get('logged_in')}})" class="apps-menu-btn"><i class="material-icons">apps</i></a></li>
             <li>
                 {{-- Kondisi ketika sudah masuk --}}
@@ -25,6 +34,8 @@
                     @foreach ($anggota as $data)
                         <a class="nav-button" onclick="toogleAuth(1)">
                             <img class="user-thumb" src="{{ $data->url_foto }}" style="vertical-align:middle"/>
+                            @php $arr = explode(" ", $data->nama); $nickname = $arr[0];@endphp
+                            <span style="margin-left:5px;color:grey;font-weight:bold">Welcome, {{ $nickname }}</span>
                         </a>
                     @endforeach
                 {{-- Kondisi ketika belum masuk --}}
@@ -56,16 +67,17 @@
 
 
 {{-- Login Content --}}
+@if(!session('logged_in'))
 <div id="login-form" class="login-form hide-on-med-and-down">
     <form action="login" autocomplete="off" method="POST">
         @csrf
         <div class="row">
             <div class="input-field col m12 inline" >
-                <input name="username" id="a" type="text" class="validate">
+                <input name="username" id="a" type="text" class="validate" required>
                 <label for="a">Nomor Pokok Mahasiswa</label>
             </div>
             <div class="input-field col m12 inline" >
-                <input name="password" id="password" type="password" class="validate">
+                <input name="password" id="password" type="password" class="validate" required>
                 <label for="password">Password</label>
             </div>
         </div>
@@ -81,6 +93,7 @@
         </div>
     </form>
 </div>
+@endif
 
 {{-- Logout Content --}}
 @if(session('logged_in'))
@@ -104,7 +117,7 @@
     @endforeach
     <div class="row">
         <a href="logout" class="btn-small deep-btn logout-btn">Logout</a>
-        <a href="logout" class="btn-small deep-btn edit-btn">Edit Profile</a>
+        <a href="{{ route('viewEdit') }}" class="btn-small deep-btn edit-btn">Edit Profile</a>
     </div>
 </div>
 @endif

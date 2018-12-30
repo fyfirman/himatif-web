@@ -52,7 +52,7 @@ $(function() {
 
     $(".sidenav > li > a").each(function(){
         let id = $(this).attr("id");
-        if(id == pgurl || pgurl == '')
+        if(id == pgurl || pgurl == ''|| pgurl == 'hda')
             $(this).parent().addClass("active");
     })
 });

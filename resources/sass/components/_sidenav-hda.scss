@@ -1,5 +1,8 @@
 main, footer {
     margin-left: 300px !important;
+    @media only screen and (max-width : 992px) {
+        margin-left: 0 !important;
+    }   
 }
 
 main{
@@ -7,11 +10,6 @@ main{
     padding: 20px 10px 0 10px;
 }
 
-@media only screen and (max-width : 992px) {
-    main, footer {
-        margin-left: 0;
-    }   
-}
 
 nav{
     z-index: 99999;

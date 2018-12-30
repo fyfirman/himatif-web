@@ -1,12 +1,11 @@
 @extends('hda.app')
 
-
 @section('content')
     <div class="row">
         @foreach ($data as $item)
             @if ($item != NULL)
                 @if (isset($item->posisi) && isset($item->jabatan))
-                    <div class="col s2">
+                    <div class="col l2 m3 s4">
                         <div class="card">
                             <div class="card-image">
                                 <img src="{{ $item->url_foto }}">
@@ -21,7 +20,7 @@
                         </div>
                     </div>
                 @elseif(isset($item->jabatan))
-                    <div class="col s2">
+                    <div class="col l2 m3 s4">
                         <div class="card">
                             <div class="card-image">
                                 <img src="{{ $item->url_foto }}">
@@ -35,7 +34,7 @@
                         </div>
                     </div>
                 @else    
-                    <div class="col s2">
+                    <div class="col l2 m3 s4">
                         <div class="card">
                             <div class="card-image">
                                 <img src="{{ $item->url_foto }}">

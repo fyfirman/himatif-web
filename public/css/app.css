@@ -9416,9 +9416,11 @@ input[type=range]::-ms-thumb {
      object-position: center;
 }
 
-nav {
-  padding-left: 5px;
-  padding-right: 5px;
+@media only screen and (min-width: 992px) {
+  nav {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
 }
 
 .brand-logo {

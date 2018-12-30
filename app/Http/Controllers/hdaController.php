@@ -30,7 +30,7 @@ class hdaController extends Controller
         $endpoint = 'data/anggotasemua';
         $data = $this->getDataAPI($endpoint);
         if($data != NULL){
-            return view('hda.homepage', compact('data'));
+            return view('hda.app', compact('data'));
         }else{
             return redirect('/');
         }
@@ -40,7 +40,7 @@ class hdaController extends Controller
         $endpoint = 'data/angkatan/'.$tahun;
         $data = $this->getDataAPI($endpoint);
         if($data != NULL){
-            return view('hda.homepage', compact('data'));
+            return view('hda.content', compact('data'));
         }else{
             return redirect('/');
         }
@@ -56,7 +56,7 @@ class hdaController extends Controller
         }
         $data = $this->getDataAPI($endpoint);
         if($data != NULL){
-            return view('hda.homepage', compact('data'));
+            return view('hda.content', compact('data'));
         }else{
             return redirect('/');
         }

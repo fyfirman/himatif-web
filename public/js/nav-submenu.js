@@ -30,7 +30,7 @@ function toogleAppsMenu(status_login) {
 
 function toogleAuth(status_login) {
     if(isShow('apps-wrapper'))
-        toogleAppsMenu();
+        toogleAppsMenu(status_login);
     
     let id = null;
     if( status_login )

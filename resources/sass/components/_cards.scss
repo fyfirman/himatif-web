@@ -1,4 +1,17 @@
 .card{
+    .card-image{
+        
+        position: relative !important;
+        width: 100%;
+        padding-top: 150%;
+
+        img{
+            @extend %center-cropped;
+            position: absolute;
+            height: 100%;
+        }
+    }
+
     .card-content{
         padding: 8px 12px;
         

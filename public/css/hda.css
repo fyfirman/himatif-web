@@ -10187,6 +10187,7 @@ input[type=range]::-ms-thumb {
   }
 }
 
+.card .card-image img,
 .user-thumb {
   -o-object-fit: cover;
      object-fit: cover;
@@ -10469,6 +10470,17 @@ nav {
     left: auto;
     right: auto;
   }
+}
+
+.card .card-image {
+  position: relative !important;
+  width: 100%;
+  padding-top: 150%;
+}
+
+.card .card-image img {
+  position: absolute;
+  height: 100%;
 }
 
 .card .card-content {

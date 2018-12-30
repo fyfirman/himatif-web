@@ -58,16 +58,17 @@
 
 
 {{-- Login Content --}}
+@if(!session('logged_in'))
 <div id="login-form" class="login-form">
     <form action="login" autocomplete="off" method="POST">
         @csrf
         <div class="row">
             <div class="input-field col m12 inline" >
-                <input name="username" id="a" type="text" class="validate">
+                <input name="username" id="a" type="text" class="validate" required>
                 <label for="a">Nomor Pokok Mahasiswa</label>
             </div>
             <div class="input-field col m12 inline" >
-                <input name="password" id="password" type="password" class="validate">
+                <input name="password" id="password" type="password" class="validate" required>
                 <label for="password">Password</label>
             </div>
         </div>
@@ -83,6 +84,7 @@
         </div>
     </form>
 </div>
+@endif
 
 {{-- Logout Content --}}
 @if(session('logged_in'))

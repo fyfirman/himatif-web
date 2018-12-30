@@ -34,7 +34,6 @@
                     @foreach ($anggota as $data)
                         <a class="nav-button" onclick="toogleAuth(1)">
                             <img class="user-thumb" src="{{ $data->url_foto }}" style="vertical-align:middle"/>
-                            <span style="margin-left:5px;color:grey;font-weight:bold">Welcome, {{ $nickname }}</span>
                         </a>
                     @endforeach
                 {{-- Kondisi ketika belum masuk --}}

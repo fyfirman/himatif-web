@@ -16,7 +16,6 @@
     @include('partials.nav-hda')
     @include('hda.sidenav')
     <main class="section">
-        a
         @yield('content')
     </main>
 

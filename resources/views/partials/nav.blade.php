@@ -1,7 +1,11 @@
 {{-- To toogle sub menu on nav --}}
 <script src="{{asset('js/nav-submenu.js')}}"></script>
-
-<nav class="navbar-fixed white">
+<nav class="navbar-fixed white pushpin">
+    <script>
+    $(document).ready(function(){
+        $('.pushpin').pushpin();
+    });
+    </script>
     <div class="nav-wrapper">
         <a href=""></a>
         <a href="#" class="brand-logo grey-text text-darken-1">

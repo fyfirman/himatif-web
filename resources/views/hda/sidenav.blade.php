@@ -6,13 +6,13 @@
                 <a class="collapsible-header">Angkatan</a>
                 <div class="collapsible-body">
                     <ul>
-                        <li><a href="#!" class="waves-effect">Circle 2012</a></li>
-                        <li><a href="#!" class="waves-effect">Pascal 2013</a></li>
-                        <li><a href="#!" class="waves-effect">Assembly 2014</a></li>
-                        <li><a href="#!" class="waves-effect">Binary 2015</a></li>
-                        <li><a href="#!" class="waves-effect">Cyber 2016</a></li>
-                        <li class="active"><a href="#!" class="waves-effect">Delphi 2017</a></li>
-                        <li><a href="#!" class="waves-effect">Eclipse 2018</a></li>
+                        <li><a href="{{ url('hda/angkatan/2012') }}" class="waves-effect">Circle 2012</a></li>
+                        <li><a href="{{ url('hda/angkatan/2013') }}" class="waves-effect">Pascal 2013</a></li>
+                        <li><a href="{{ url('hda/angkatan/2014') }}" class="waves-effect">Assembly 2014</a></li>
+                        <li><a href="{{ url('hda/angkatan/2015') }}" class="waves-effect">Binary 2015</a></li>
+                        <li><a href="{{ url('hda/angkatan/2016') }}" class="waves-effect">Cyber 2016</a></li>
+                        <li class="active"><a href="{{ url('hda/angkatan/2017') }}" class="waves-effect">Delphi 2017</a></li>
+                        <li><a href="{{ url('hda/angkatan/2018') }}" class="waves-effect">Eclipse 2018</a></li>
                     </ul>
                 </div>
             </li> 
@@ -22,9 +22,9 @@
                 <a class="collapsible-header">Badan Kelengkapan</a>
                 <div class="collapsible-body">
                     <ul>
-                        <li><a href="#!" class="waves-effect">Badan Eksekutif</a></li>
-                        <li><a href="#!" class="waves-effect">Dewan Perwakilan Anggota</a></li>
-                        <li><a href="#!" class="waves-effect">Presidium</a></li>
+                        <li><a href="{{ url('hda/anggota/be') }}" class="waves-effect">Badan Eksekutif</a></li>
+                        <li><a href="{{ url('hda/anggota/dpa') }}" class="waves-effect">Dewan Perwakilan Anggota</a></li>
+                        <li><a href="{{ url('hda/anggota/mubes') }}" class="waves-effect">Presidium</a></li>
                     </ul>
                 </div>
             </li> 

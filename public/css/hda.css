@@ -10461,12 +10461,18 @@ main {
 }
 
 nav {
-  z-index: 99999;
+  z-index: 999 !important;
 }
 
 .sidenav {
   margin-top: 64px;
-  z-index: 1;
+  z-index: 998;
+}
+
+@media only screen and (max-width: 992px) {
+  .sidenav {
+    margin-top: 56px !important;
+  }
 }
 
 .sidenav a {

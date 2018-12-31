@@ -22,7 +22,7 @@
                                 <p><img class="user-thumb" src="{{ $item->url_foto }}"/></p>
                                 <p id="name">{{ $item->nama }}</p>
                                 <p>{{ $item->npm }}</p>
-                                <p>Sistem Informasi</p>
+                                <p>{{ $item->bidang_minat }}</p>
                             </div>
                             <div class="reveal-info">
                                 <p id="first-child"><i class="material-icons">cake</i>{{ $item->tanggal_lahir }}</p>

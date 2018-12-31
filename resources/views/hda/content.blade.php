@@ -25,9 +25,9 @@
                                 <p>Sistem Informasi</p>
                             </div>
                             <div class="reveal-info">
-                                <p id="first-child"><i class="material-icons">cake</i> 23 Januari 1999</p>
-                                <p><i class="material-icons">call</i> 089821341222</p>
-                                <p><i class="fab fa-line"></i> fyfirman</p>
+                                <p id="first-child"><i class="material-icons">cake</i>{{ $item->tanggal_lahir }}</p>
+                                <p><i class="material-icons">call</i> {{ $item->no_hp }}</p>
+                                <p><i class="fab fa-line"></i> {{ $item->line }}</p>
                             </div>
                             <div class="reveal-action">
                                 <a href="#">More Info</a>

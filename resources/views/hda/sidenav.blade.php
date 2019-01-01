@@ -39,6 +39,10 @@ $(document).ready(function(){
     $('.collapsible').collapsible();
 });
 
+$(document).ready(function(){
+    $('.sidenav').sidenav();
+});
+
 //
 $(function() {
     var pgurl = window.location.href.substr(window.location.href.lastIndexOf("/")+1);

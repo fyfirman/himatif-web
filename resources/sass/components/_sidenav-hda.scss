@@ -18,6 +18,7 @@ nav{
 .sidenav{
     margin-top:64px;
     z-index: 998;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2) !important;
     
     @media only screen and (max-width : 992px) {
         margin-top:56px !important;

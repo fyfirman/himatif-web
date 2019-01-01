@@ -34,10 +34,8 @@ class hdaController extends Controller
 
     public function index(Request $request)
     {
-        $endpoint = 'data/anggotasemua';
-        $data = $this->getDataAPI($endpoint);
-        if($this->cekSession($request) && $data != NULL){
-            return view('hda.app', compact('data'));
+        if($this->cekSession($request)){
+            return view('hda.app');
         }else{
             return redirect('/')->with('login', 'first');
         }
@@ -47,7 +45,7 @@ class hdaController extends Controller
         $endpoint = 'data/angkatan/'.$tahun;
         $data = $this->getDataAPI($endpoint);
         if($this->cekSession($request) && $data != NULL){
-            return view('hda.content', compact('data'));
+            return $data;
         }else{
             return redirect('/')->with('login', 'first');
         }
@@ -63,7 +61,7 @@ class hdaController extends Controller
         }
         $data = $this->getDataAPI($endpoint);
         if($this->cekSession($request) && $data != NULL){
-            return view('hda.content', compact('data'));
+            return $data;
         }else{
             return redirect('/')->with('login', 'first');
         }

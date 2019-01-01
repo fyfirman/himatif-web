@@ -1,15 +1,34 @@
 $(document).ready(function () {
-    $('#btn2012').on('click', function(){var key = "2012"; var jenisData = "angkatan";getData(key, jenisData);});
-    $('#btn2013').on('click', function(){var key = "2013"; var jenisData = "angkatan";getData(key, jenisData);});
-    $('#btn2014').on('click', function(){var key = "2014"; var jenisData = "angkatan";getData(key, jenisData);});
-    $('#btn2015').on('click', function(){var key = "2015"; var jenisData = "angkatan";getData(key, jenisData);});
-    $('#btn2016').on('click', function(){var key = "2016"; var jenisData = "angkatan";getData(key, jenisData);});
-    $('#btn2017').on('click', function(){var key = "2017"; var jenisData = "angkatan";getData(key, jenisData);});
-    $('#btn2018').on('click', function(){var key = "2018"; var jenisData = "angkatan";getData(key, jenisData);});
-    $('#btnBE').on('click', function(){var key = "be"; var jenisData = "anggota";getData(key, jenisData);});
-    $('#btnDPA').on('click', function(){var key = "dpa"; var jenisData = "anggota";getData(key, jenisData);});
-    $('#btnMubes').on('click', function(){var key = "mubes"; var jenisData = "anggota";getData(key, jenisData);});
-
+    $('#btn2012').on('click', function(){var key = "2012"; var jenisData = "angkatan";getData(key, jenisData);toogleSideBtn($(this).attr('id'))});
+    $('#btn2013').on('click', function(){var key = "2013"; var jenisData = "angkatan";getData(key, jenisData);toogleSideBtn($(this).attr('id'))});
+    $('#btn2014').on('click', function(){var key = "2014"; var jenisData = "angkatan";getData(key, jenisData);toogleSideBtn($(this).attr('id'))});
+    $('#btn2015').on('click', function(){var key = "2015"; var jenisData = "angkatan";getData(key, jenisData);toogleSideBtn($(this).attr('id'))});
+    $('#btn2016').on('click', function(){var key = "2016"; var jenisData = "angkatan";getData(key, jenisData);toogleSideBtn($(this).attr('id'))});
+    $('#btn2017').on('click', function(){var key = "2017"; var jenisData = "angkatan";getData(key, jenisData);toogleSideBtn($(this).attr('id'))});
+    $('#btn2018').on('click', function(){var key = "2018"; var jenisData = "angkatan";getData(key, jenisData);toogleSideBtn($(this).attr('id'))});
+    $('#btnBE').on('click', function(){var key = "be"; var jenisData = "anggota";getData(key, jenisData);toogleSideBtn($(this).attr('id'))});
+    $('#btnDPA').on('click', function(){var key = "dpa"; var jenisData = "anggota";getData(key, jenisData);toogleSideBtn($(this).attr('id'))});
+    $('#btnMubes').on('click', function(){var key = "mubes"; var jenisData = "anggota";getData(key, jenisData);toogleSideBtn($(this).attr('id'))});
+    
+    function toogleSideBtn(id)
+    {
+        clearActiveBtn();
+        
+        let a = document.getElementById(id);
+        a.parentElement.classList.add("active");
+    }
+    
+    function clearActiveBtn(){
+        //on colapsible button
+        $(".collapsible-body li").each(function(){
+            $(this).removeClass("active");
+        })
+        
+        //on menu (tentang) button
+        $(".sidenav > li").each(function(){
+            $(this).removeClass("active");
+        })
+    }
     function getData(key, jenisData){
         $('#contentHda').empty();
         $.ajax({

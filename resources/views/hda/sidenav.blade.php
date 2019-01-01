@@ -42,23 +42,5 @@ $(document).ready(function(){
 $(document).ready(function(){
     $('.sidenav').sidenav();
 });
-
-//
-$(function() {
-    var pgurl = window.location.href.substr(window.location.href.lastIndexOf("/")+1);
-    
-    //collapsible menu
-    $(".collapsible-body li a").each(function(){
-        let ahref = $(this).attr("href").split('/').pop();
-        if(ahref == pgurl)
-            $(this).parent().addClass("active");
-    })
-
-    $(".sidenav > li > a").each(function(){
-        let id = $(this).attr("id");
-        if(id == pgurl || pgurl == ''|| pgurl == 'hda')
-            $(this).parent().addClass("active");
-    })
-});
 </script>
 <script src="{{asset('js/hda.js')}}"></script>

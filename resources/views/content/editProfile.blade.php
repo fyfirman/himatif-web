@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('content')
-<div class="edit_Container">
+<div class="container">
     <form action="{{ route('editProfile') }}" method="post">
         @method('PUT')
         @csrf

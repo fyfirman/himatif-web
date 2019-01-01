@@ -23,7 +23,7 @@ class loginController extends Controller{
             $npm = $request->session()->get('username');
             $data = $this->getDataAnggota($npm);
             $data_json = json_encode($data);
-            return redirect('/')->withCookie(cookie('anggota', $data_json, 120));
+            return redirect('/')->withCookie(cookie('anggota', $data_json, 1440));
         }else{
             return redirect('/')->with('login', 'invalid');
         }

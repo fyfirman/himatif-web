@@ -9,7 +9,7 @@ $(document).ready(function () {
     $('#btnBE').on('click', function(){var key = "be"; var jenisData = "anggota";getData(key, jenisData);toogleSideBtn($(this).attr('id'))});
     $('#btnDPA').on('click', function(){var key = "dpa"; var jenisData = "anggota";getData(key, jenisData);toogleSideBtn($(this).attr('id'))});
     $('#btnMubes').on('click', function(){var key = "mubes"; var jenisData = "anggota";getData(key, jenisData);toogleSideBtn($(this).attr('id'))});
-    
+
     function toogleSideBtn(id)
     {
         clearActiveBtn();
@@ -72,7 +72,7 @@ $(document).ready(function () {
 '                                        <p><i class="fab fa-line"></i> '+ value.line +'</p>'+
 '                                    </div>'+
 '                                    <div class="reveal-action">'+
-'                                        <a onclick="showInfo()">More Info</a>'+
+'                                        <a onclick="showInfo(' + value.npm + ')">More Info</a>'+
 '                                    </div>'+
 '                                </div>'+
 '                            </div>'+

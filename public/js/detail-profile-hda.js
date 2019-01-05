@@ -4,9 +4,29 @@
 const detailProfile = document.querySelector("#overlay");
 const close = document.querySelector("#header-detail>span>i")
 
-function showInfo(){
-    console.log("Button clicked");
+function showInfo(npm){
     detailProfile.style.display = 'block';
+    $.ajax({
+        type: "GET",
+        url: "/data/anggota/"+npm,
+        success: function (response) {
+            $.each(response, function (index, value) { 
+                $('#user-photo').attr('src', value.url_foto);
+                $('#nama').text(value.nama);
+                $('#npm').text(value.npm);
+                $('#bidang_minat').text(value.bidang_minat);
+                $('#nohp').text(value.no_hp);
+                $('#line').text(value.line);
+                $('#email').text(value.email);
+                $('#jk').text(value.jk);
+                $('#tempat_lahir').text(value.tempat_lahir);
+                $('#tanggal_lahir').text(value.tanggal_lahir);
+                $('#agama').text(value.agama);
+                $('#alamat_rumah').text(value.alamat_rumah);
+                $('#alamat_kos').text(value.alamat_kos);
+            });
+        }
+    });
 }
 
 close.addEventListener('click',function(){

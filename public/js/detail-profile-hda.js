@@ -5,13 +5,12 @@ const detailProfile = document.querySelector("#overlay");
 const close = document.querySelector("#header-detail>span>i")
 
 function showInfo(npm){
-    detailProfile.style.display = 'block';
     $.ajax({
         type: "GET",
         url: "/data/anggota/"+npm,
         success: function (response) {
             $.each(response, function (index, value) { 
-                $('#user-photo').attr('src', value.url_foto);
+                $('#user-photos').attr('src', value.url_foto);
                 $('#nama').text(value.nama);
                 $('#npm').text(value.npm);
                 $('#bidang_minat').text(value.bidang_minat);
@@ -27,6 +26,7 @@ function showInfo(npm){
             });
         }
     });
+    detailProfile.style.display = 'block';
 }
 
 close.addEventListener('click',function(){

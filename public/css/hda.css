@@ -10654,11 +10654,16 @@ nav {
 #header-detail {
   min-height: 53vh;
   text-align: center;
-  padding: 25px 5px 5px 5px;
+  padding: 5px;
   border-radius: 4px 4px 0 0;
 }
 
+#header-detail span > i {
+  cursor: pointer;
+}
+
 #header-detail #user-photos {
+  margin-top: 10px;
   width: 200px;
   height: 200px;
   border: none;

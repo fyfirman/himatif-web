@@ -1,6 +1,7 @@
 <div id="overlay">
     <div id="detail-container" class="container">
         <div id="header-detail">
+            <span class="row"><i class="material-icons right white-text">close</i></span>
             <img id="user-photos" class="user-thumb" src="http://localhost/REST-API-himatif/assets/foto/2017/41.jpg" alt="">
             <h5>Fahmi Auliya</h5>
             <p>140810170041 - Delphi 2017</p>
@@ -59,3 +60,5 @@
 
     </div>
 </div>
+
+<script src="{{asset('js/detail-profile-hda.js')}}"></script>

@@ -8,7 +8,8 @@
   color: #e51c23 !important;
 }
 
-.materialize-red.lighten-5 {
+.materialize-red.lighten-5,
+.materialize-red#body-detail {
   background-color: #fdeaeb !important;
 }
 
@@ -120,7 +121,9 @@
 }
 
 .red.lighten-5,
-.lighten-5.logout-btn {
+.red#body-detail,
+.lighten-5.logout-btn,
+.logout-btn#body-detail {
   background-color: #FFEBEE !important;
 }
 
@@ -278,7 +281,8 @@
   color: #e91e63 !important;
 }
 
-.pink.lighten-5 {
+.pink.lighten-5,
+.pink#body-detail {
   background-color: #fce4ec !important;
 }
 
@@ -420,7 +424,8 @@
   color: #9c27b0 !important;
 }
 
-.purple.lighten-5 {
+.purple.lighten-5,
+.purple#body-detail {
   background-color: #f3e5f5 !important;
 }
 
@@ -562,7 +567,8 @@
   color: #673ab7 !important;
 }
 
-.deep-purple.lighten-5 {
+.deep-purple.lighten-5,
+.deep-purple#body-detail {
   background-color: #ede7f6 !important;
 }
 
@@ -704,7 +710,8 @@
   color: #3f51b5 !important;
 }
 
-.indigo.lighten-5 {
+.indigo.lighten-5,
+.indigo#body-detail {
   background-color: #e8eaf6 !important;
 }
 
@@ -846,7 +853,8 @@
   color: #2196F3 !important;
 }
 
-.blue.lighten-5 {
+.blue.lighten-5,
+.blue#body-detail {
   background-color: #E3F2FD !important;
 }
 
@@ -988,7 +996,8 @@
   color: #03a9f4 !important;
 }
 
-.light-blue.lighten-5 {
+.light-blue.lighten-5,
+.light-blue#body-detail {
   background-color: #e1f5fe !important;
 }
 
@@ -1130,7 +1139,8 @@
   color: #00bcd4 !important;
 }
 
-.cyan.lighten-5 {
+.cyan.lighten-5,
+.cyan#body-detail {
   background-color: #e0f7fa !important;
 }
 
@@ -1265,6 +1275,7 @@
 }
 
 .teal,
+#header-detail,
 .card .card-reveal .reveal-header,
 .sidenav .active {
   background-color: #009688 !important;
@@ -1275,8 +1286,12 @@
 }
 
 .teal.lighten-5,
+.teal#body-detail,
+.lighten-5#header-detail,
 .card .card-reveal .lighten-5.reveal-header,
-.sidenav .lighten-5.active {
+.card .card-reveal .reveal-header#body-detail,
+.sidenav .lighten-5.active,
+.sidenav .active#body-detail {
   background-color: #e0f2f1 !important;
 }
 
@@ -1285,13 +1300,16 @@
 }
 
 .teal.lighten-4,
+.lighten-4#header-detail,
 .card .card-reveal .lighten-4.reveal-header,
 .sidenav .lighten-4.active,
 .sidenav .collapsible > .active > a.teal,
+.sidenav .collapsible > .active > a#header-detail,
 .sidenav .card .card-reveal .collapsible > .active > a.reveal-header,
 .card .card-reveal .sidenav .collapsible > .active > a.reveal-header,
 .sidenav .collapsible > .active > a.active,
 .search-wrapper .teal.input-field,
+.search-wrapper .input-field#header-detail,
 .search-wrapper .card .card-reveal .input-field.reveal-header,
 .card .card-reveal .search-wrapper .input-field.reveal-header,
 .search-wrapper .sidenav .input-field.active,
@@ -1304,6 +1322,7 @@
 }
 
 .teal.lighten-3,
+.lighten-3#header-detail,
 .card .card-reveal .lighten-3.reveal-header,
 .sidenav .lighten-3.active {
   background-color: #80cbc4 !important;
@@ -1314,8 +1333,10 @@
 }
 
 .teal.lighten-2,
+.lighten-2#header-detail,
 .card .card-reveal .lighten-2.reveal-header,
 .sidenav .teal.active,
+.sidenav .active#header-detail,
 .sidenav .card .card-reveal .active.reveal-header,
 .card .card-reveal .sidenav .active.reveal-header,
 .sidenav .lighten-2.active,
@@ -1328,6 +1349,7 @@
 }
 
 .teal.lighten-1,
+.lighten-1#header-detail,
 .card .card-reveal .lighten-1.reveal-header,
 .sidenav .lighten-1.active {
   background-color: #26a69a !important;
@@ -1339,9 +1361,11 @@
 }
 
 .teal.darken-1,
+.darken-1#header-detail,
 .card .card-reveal .darken-1.reveal-header,
 .sidenav .darken-1.active,
 .teal.logout-btn:active,
+.logout-btn#header-detail:active,
 .card .card-reveal .logout-btn.reveal-header:active,
 .sidenav .logout-btn.active:active {
   background-color: #00897b !important;
@@ -1376,9 +1400,11 @@
 }
 
 .teal.darken-2,
+.darken-2#header-detail,
 .card .card-reveal .darken-2.reveal-header,
 .sidenav .darken-2.active,
 .teal.login-btn,
+.login-btn#header-detail,
 .card .card-reveal .login-btn.reveal-header,
 .sidenav .login-btn.active {
   background-color: #00796b !important;
@@ -1389,6 +1415,7 @@
 }
 
 .teal.darken-3,
+.darken-3#header-detail,
 .card .card-reveal .darken-3.reveal-header,
 .sidenav .darken-3.active {
   background-color: #00695c !important;
@@ -1399,6 +1426,7 @@
 }
 
 .teal.darken-4,
+.darken-4#header-detail,
 .card .card-reveal .darken-4.reveal-header,
 .sidenav .darken-4.active {
   background-color: #004d40 !important;
@@ -1409,6 +1437,7 @@
 }
 
 .teal.accent-1,
+.accent-1#header-detail,
 .card .card-reveal .accent-1.reveal-header,
 .sidenav .accent-1.active {
   background-color: #a7ffeb !important;
@@ -1419,6 +1448,7 @@
 }
 
 .teal.accent-2,
+.accent-2#header-detail,
 .card .card-reveal .accent-2.reveal-header,
 .sidenav .accent-2.active {
   background-color: #64ffda !important;
@@ -1429,6 +1459,7 @@
 }
 
 .teal.accent-3,
+.accent-3#header-detail,
 .card .card-reveal .accent-3.reveal-header,
 .sidenav .accent-3.active {
   background-color: #1de9b6 !important;
@@ -1439,6 +1470,7 @@
 }
 
 .teal.accent-4,
+.accent-4#header-detail,
 .card .card-reveal .accent-4.reveal-header,
 .sidenav .accent-4.active {
   background-color: #00bfa5 !important;
@@ -1456,7 +1488,8 @@
   color: #4CAF50 !important;
 }
 
-.green.lighten-5 {
+.green.lighten-5,
+.green#body-detail {
   background-color: #E8F5E9 !important;
 }
 
@@ -1598,7 +1631,8 @@
   color: #8bc34a !important;
 }
 
-.light-green.lighten-5 {
+.light-green.lighten-5,
+.light-green#body-detail {
   background-color: #f1f8e9 !important;
 }
 
@@ -1740,7 +1774,8 @@
   color: #cddc39 !important;
 }
 
-.lime.lighten-5 {
+.lime.lighten-5,
+.lime#body-detail {
   background-color: #f9fbe7 !important;
 }
 
@@ -1884,7 +1919,9 @@
 }
 
 .yellow.lighten-5,
-.lighten-5.login-btn {
+.yellow#body-detail,
+.lighten-5.login-btn,
+.login-btn#body-detail {
   background-color: #fffde7 !important;
 }
 
@@ -2041,7 +2078,8 @@
   color: #ffc107 !important;
 }
 
-.amber.lighten-5 {
+.amber.lighten-5,
+.amber#body-detail {
   background-color: #fff8e1 !important;
 }
 
@@ -2183,7 +2221,8 @@
   color: #ff9800 !important;
 }
 
-.orange.lighten-5 {
+.orange.lighten-5,
+.orange#body-detail {
   background-color: #fff3e0 !important;
 }
 
@@ -2325,7 +2364,8 @@
   color: #ff5722 !important;
 }
 
-.deep-orange.lighten-5 {
+.deep-orange.lighten-5,
+.deep-orange#body-detail {
   background-color: #fbe9e7 !important;
 }
 
@@ -2467,7 +2507,8 @@
   color: #795548 !important;
 }
 
-.brown.lighten-5 {
+.brown.lighten-5,
+.brown#body-detail {
   background-color: #efebe9 !important;
 }
 
@@ -2577,7 +2618,8 @@
   color: #607d8b !important;
 }
 
-.blue-grey.lighten-5 {
+.blue-grey.lighten-5,
+.blue-grey#body-detail {
   background-color: #eceff1 !important;
 }
 
@@ -2680,6 +2722,7 @@
 }
 
 .grey,
+#body-detail,
 .sidenav .collapsible > .active > a,
 .search-wrapper .input-field {
   background-color: #9e9e9e !important;
@@ -2714,6 +2757,7 @@
 }
 
 .grey.lighten-5,
+#body-detail,
 .sidenav .collapsible > .active > a.lighten-5,
 .search-wrapper .lighten-5.input-field {
   background-color: #fafafa !important;
@@ -2748,6 +2792,7 @@
 }
 
 .grey.lighten-4,
+.lighten-4#body-detail,
 .sidenav .collapsible > .active > a,
 .search-wrapper .input-field {
   background-color: #f5f5f5 !important;
@@ -2782,6 +2827,7 @@
 }
 
 .grey.lighten-3,
+.lighten-3#body-detail,
 .sidenav .collapsible > .active > a.lighten-3,
 .search-wrapper .lighten-3.input-field {
   background-color: #eeeeee !important;
@@ -2816,7 +2862,9 @@
 }
 
 .grey.lighten-2,
+.lighten-2#body-detail,
 .sidenav .grey.active,
+.sidenav .active#body-detail,
 .sidenav .collapsible > .active > a.lighten-2,
 .sidenav .collapsible > .active > a.active,
 .search-wrapper .lighten-2.input-field,
@@ -2854,6 +2902,7 @@
 }
 
 .grey.lighten-1,
+.lighten-1#body-detail,
 .sidenav .collapsible > .active > a.lighten-1,
 .search-wrapper .lighten-1.input-field {
   background-color: #bdbdbd !important;
@@ -2888,9 +2937,11 @@
 }
 
 .grey.darken-1,
+.darken-1#body-detail,
 .sidenav .collapsible > .active > a.darken-1,
 .search-wrapper .darken-1.input-field,
 .grey.logout-btn:active,
+.logout-btn#body-detail:active,
 .sidenav .collapsible > .active > a.logout-btn:active,
 .search-wrapper .logout-btn.input-field:active {
   background-color: #757575 !important;
@@ -2929,9 +2980,11 @@
 }
 
 .grey.darken-2,
+.darken-2#body-detail,
 .sidenav .collapsible > .active > a.darken-2,
 .search-wrapper .darken-2.input-field,
 .grey.login-btn,
+.login-btn#body-detail,
 .sidenav .collapsible > .active > a.login-btn,
 .search-wrapper .login-btn.input-field {
   background-color: #616161 !important;
@@ -2966,6 +3019,7 @@
 }
 
 .grey.darken-3,
+.darken-3#body-detail,
 .sidenav .collapsible > .active > a.darken-3,
 .search-wrapper .darken-3.input-field {
   background-color: #424242 !important;
@@ -3000,6 +3054,7 @@
 }
 
 .grey.darken-4,
+.darken-4#body-detail,
 .sidenav .collapsible > .active > a.darken-4,
 .search-wrapper .darken-4.input-field {
   background-color: #212121 !important;
@@ -3042,6 +3097,8 @@
 }
 
 .white,
+#body-detail #biodata,
+#detail-container,
 .login-form,
 .logout-form,
 .apps-wrapper,
@@ -3050,6 +3107,7 @@
 }
 
 .white-text,
+#header-detail,
 .card .card-reveal .reveal-header,
 .sidenav .active > a {
   color: #FFFFFF !important;
@@ -10572,5 +10630,79 @@ nav {
   border-top: 1px solid rgba(160, 160, 160, 0.2);
   text-align: center;
   padding: 6px 0;
+}
+
+#overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  overflow: scroll;
+}
+
+#detail-container {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+#header-detail {
+  height: 56vh !important;
+  text-align: center;
+  padding: 25px 5px 5px 5px;
+}
+
+#header-detail #user-photos {
+  width: 200px;
+  height: 200px;
+  border: none;
+}
+
+#header-detail h5 {
+  font-size: 1.75rem;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+#header-detail p {
+  font-size: 1.3rem;
+  font-weight: 200;
+  margin: 0;
+}
+
+#header-detail .contact {
+  margin-top: 35px;
+  font-weight: 200;
+  font-size: 1.3rem;
+  vertical-align: middle;
+}
+
+#header-detail .contact i {
+  font-size: 1.2rem;
+}
+
+#header-detail .contact .material-icons {
+  top: 5px;
+}
+
+#body-detail {
+  padding: 16px;
+  min-height: 50vh;
+}
+
+#body-detail h4 {
+  padding-left: 20px;
+  margin-top: 0;
+  font-size: 1.3rem;
+}
+
+#body-detail #biodata {
+  padding: 16px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+}
+
+#body-detail #biodata p {
+  margin: 0;
 }
 

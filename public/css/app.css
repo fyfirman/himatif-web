@@ -9512,7 +9512,7 @@ nav {
 .login-form,
 .logout-form,
 .apps-wrapper {
-  position: absolute;
+  position: fixed;
   top: 80px;
   right: 5px;
   z-index: 999;

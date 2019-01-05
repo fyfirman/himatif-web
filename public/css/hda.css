@@ -10639,18 +10639,20 @@ nav {
   top: 0;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 9999;
-  overflow: scroll;
+  overflow-x: auto;
 }
 
 #detail-container {
   margin-top: 80px;
   margin-bottom: 80px;
+  border-radius: 5px;
 }
 
 #header-detail {
-  height: 56vh !important;
+  min-height: 53vh;
   text-align: center;
   padding: 25px 5px 5px 5px;
+  border-radius: 4px 4px 0 0;
 }
 
 #header-detail #user-photos {
@@ -10673,6 +10675,7 @@ nav {
 
 #header-detail .contact {
   margin-top: 35px;
+  margin-bottom: 0;
   font-weight: 200;
   font-size: 1.3rem;
   vertical-align: middle;
@@ -10689,6 +10692,7 @@ nav {
 #body-detail {
   padding: 16px;
   min-height: 50vh;
+  border-radius: 0 0 4px 4px;
 }
 
 #body-detail h4 {

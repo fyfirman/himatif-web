@@ -10632,6 +10632,10 @@ nav {
   padding: 6px 0;
 }
 
+.card .card-reveal .reveal-action a {
+  cursor: pointer;
+}
+
 #overlay {
   position: fixed;
   display: none;

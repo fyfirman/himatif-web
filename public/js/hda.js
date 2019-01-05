@@ -72,7 +72,7 @@ $(document).ready(function () {
 '                                        <p><i class="fab fa-line"></i> '+ value.line +'</p>'+
 '                                    </div>'+
 '                                    <div class="reveal-action">'+
-'                                        <a href="#" onclick="showInfo()">More Info</a>'+
+'                                        <a onclick="showInfo()">More Info</a>'+
 '                                    </div>'+
 '                                </div>'+
 '                            </div>'+

@@ -5,7 +5,6 @@ const detailProfile = document.querySelector("#overlay");
 const close = document.querySelector("#header-detail>span>i")
 
 function showInfo(npm){
-    detailProfile.style.display = 'block';
     $.ajax({
         type: "GET",
         url: "/data/anggota/"+npm,
@@ -27,6 +26,7 @@ function showInfo(npm){
             });
         }
     });
+    detailProfile.style.display = 'block';
 }
 
 $(document).ajaxStart(function(){$('#loadDetail').removeClass('hide');});

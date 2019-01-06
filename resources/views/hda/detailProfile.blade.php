@@ -1,8 +1,21 @@
 <div id="overlay">
     <div id="detail-container" class="container">
         <div id="header-detail">
+            <div id="loadDetail" class="preloader-wrapper active hide">
+                <div class="spinner-layer spinner-yellow-only">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
             <span class="row"><i class="material-icons right white-text">close</i></span>
-            <img id="user-photo" class="user-thumb" src="" alt="">
+            <img id="user-photos" class="user-thumb" src="" alt="">
             <h5 id="nama"></h5>
             <p id="npm"></p>
             <p id="bidang_minat"></p>

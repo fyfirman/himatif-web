@@ -11,7 +11,7 @@ function showInfo(npm){
         url: "/data/anggota/"+npm,
         success: function (response) {
             $.each(response, function (index, value) { 
-                $('#user-photo').attr('src', value.url_foto);
+                $('#user-photos').attr('src', value.url_foto);
                 $('#nama').text(value.nama);
                 $('#npm').text(value.npm);
                 $('#bidang_minat').text(value.bidang_minat);
@@ -28,6 +28,9 @@ function showInfo(npm){
         }
     });
 }
+
+$(document).ajaxStart(function(){$('#loadDetail').removeClass('hide');});
+$(document).ajaxComplete(function(){$('#loadDetail').addClass('hide');});
 
 close.addEventListener('click',function(){
     detailProfile.style.display = 'none';

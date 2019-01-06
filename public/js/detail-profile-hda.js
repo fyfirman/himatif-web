@@ -2,7 +2,7 @@
 // const moreInfo = document.querySelector(".reveal-action a");
 // console.log(moreInfo);
 const detailProfile = document.querySelector("#overlay");
-const close = document.querySelector("#header-detail>span>i")
+const close = document.querySelector("#header-data>span>i")
 
 function showInfo(npm){
     $.ajax({
@@ -30,7 +30,7 @@ function showInfo(npm){
 }
 
 $(document).ajaxStart(function(){$('#loadDetail').removeClass('hide');});
-$(document).ajaxComplete(function(){$('#loadDetail').addClass('hide');});
+$(document).ajaxComplete(function(){$('#loadDetail').addClass('hide');$('#header-data').removeClass('hide');$('#body-detail').removeClass('hide')});
 
 close.addEventListener('click',function(){
     detailProfile.style.display = 'none';

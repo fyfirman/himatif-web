@@ -14,24 +14,26 @@
                     </div>
                 </div>
             </div>
-            <span class="row"><i class="material-icons right white-text">close</i></span>
-            <img id="user-photos" class="user-thumb" src="" alt="">
-            <h5 id="nama"></h5>
-            <p id="npm"></p>
-            <p id="bidang_minat"></p>
-            <div class="contact row">
-                <div class="col m4">
-                    <i class="material-icons">call</i> <span id="nohp"></span>
-                </div>
-                <div class="col m4">
-                    <i class="fab fa-line"></i> <span id="line"></span>
-                </div>
-                <div class="col m4">
-                    <i class="material-icons">email</i> <span id="email"></span>
+            <div id="header-data" class="hide">
+                <span class="row"><i class="material-icons right white-text">close</i></span>
+                <img id="user-photos" class="user-thumb" src="" alt="">
+                <h5 id="nama"></h5>
+                <p id="npm"></p>
+                <p id="bidang_minat"></p>
+                <div class="contact row">
+                    <div class="col m4">
+                        <i class="material-icons">call</i> <span id="nohp"></span>
+                    </div>
+                    <div class="col m4">
+                        <i class="fab fa-line"></i> <span id="line"></span>
+                    </div>
+                    <div class="col m4">
+                        <i class="material-icons">email</i> <span id="email"></span>
+                    </div>
                 </div>
             </div>
         </div>
-        <div id="body-detail">
+        <div id="body-detail" class="hide">
             <h4>Biodata</h4>
             <div id="biodata">
                 <div class="row">

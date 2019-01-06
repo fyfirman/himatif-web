@@ -99,9 +99,10 @@ class hdaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function search($key)
     {
-        //
+        $endpoint = 'data/search/'.$key;
+        return $this->getDataAPI($endpoint);
     }
 
     /**

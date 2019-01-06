@@ -18,6 +18,7 @@ Route::get('hda', 'hdaController@index');
 Route::get('hda/angkatan/{tahun}', 'hdaController@angkatan');
 Route::get('hda/anggota/{bk}', 'hdaController@bk');
 Route::get('data/anggota/{npm}', 'hdaController@getDataAnggota');
+Route::get('data/search/{key}', 'hdaController@search');
 Route::post('login', 'loginController@login');
 Route::get('logout', 'loginController@logout');
 Route::get('edit', function(){

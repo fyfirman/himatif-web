@@ -24,4 +24,4 @@ Route::get('logout', 'loginController@logout');
 Route::get('edit', function(){
     return view('content.editProfile');
 })->name('viewEdit');
-Route::put('editProfile', 'hdaController@edit')->name('editProfile');
+Route::post('editProfile', 'hdaController@edit')->name('editProfile');

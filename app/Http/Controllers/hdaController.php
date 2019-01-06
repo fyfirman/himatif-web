@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use GuzzleHttp\Client;
+use Illuminate\Support\Facades\Input;
 
 class hdaController extends Controller
 {
@@ -115,7 +116,21 @@ class hdaController extends Controller
     {
         $endpoint = 'data/updatedata';
         $client = new Client(['base_uri' => $this->base_uri]);
-        $response = $client->put($endpoint);
+        $response = $client->request('PUT', $endpoint, ['form_params' => [
+            'nama' => Input::get('nama'),
+            'npm' => Input::get('npm'),
+			'jk' => Input::get('jk'),
+			'agama' => Input::get('agama'),
+			'goldar' => Input::get('goldar'),
+			'tempat_lahir' => Input::get('tempat_lahir'),
+			'tanggal_lahir' => Input::get('tanggal_lahir'),
+			'alamat_rumah' => Input::get('alamat_rumah'),
+			'alamat_kos' => Input::get('alamat_kos'),
+			'no_hp' => Input::get('no_hp'),
+			'line' => Input::get('line'),
+			'bidang_minat' => Input::get('bidang_minat'),
+			'status' => Input::get('status')
+        ]]);
         $result = json_decode($response->getBody()->getContents());
         if($result->status == 'success'){
             \Cookie::forget('anggota');

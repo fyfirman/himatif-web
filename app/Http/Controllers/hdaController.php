@@ -4,11 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use GuzzleHttp\Client;
+use GuzzleHttp\Exception\RequestException;
 use Illuminate\Support\Facades\Input;
 
 class hdaController extends Controller
 {
-    private $base_uri = 'http://localhost/REST-API-himatif/index.php/api/';
+    private $baseUrl = 'http://localhost:8000/api/v1/';
     /**
      * Display a listing of the resource.
      *
@@ -16,11 +17,11 @@ class hdaController extends Controller
      */
 
     public function getDataAPI($endpoint){
-        $client = new Client(['base_uri' => $this->base_uri]);
+        $client = new Client(['base_uri' => $this->baseUrl]);
         $response = $client->get($endpoint);
         $result = json_decode($response->getBody()->getContents());
-        if($result->status == true){
-            return $result->data;
+        if($result->status == 'Authorized'){
+            return $result->response;
         }else{
             return NULL;
         }
@@ -43,7 +44,7 @@ class hdaController extends Controller
     }
 
     public function angkatan($tahun, Request $request){
-        $endpoint = 'data/angkatan/'.$tahun;
+        $endpoint = 'anggota/search?type=angkatan&q='.$tahun;
         $data = $this->getDataAPI($endpoint);
         if($this->cekSession($request) && $data != NULL){
             return $data;
@@ -53,13 +54,7 @@ class hdaController extends Controller
     }
 
     public function bk($bk, Request $request){
-        if($bk == 'dpa'){
-            $endpoint = 'dpa/anggotadpa';
-        }else if($bk == 'be'){
-            $endpoint = 'be/anggotabe';
-        }else if($bk == 'mubes'){
-            $endpoint = 'mubes/anggotamubes';
-        }
+        $endpoint = $bk;
         $data = $this->getDataAPI($endpoint);
         if($this->cekSession($request) && $data != NULL){
             return $data;
@@ -69,7 +64,7 @@ class hdaController extends Controller
     }
 
     public function getDataAnggota($npm){
-        $endpoint = 'data/anggota/'.$npm;
+        $endpoint = 'anggota/search?type=npm&q='.$npm;
         return $this->getDataAPI($endpoint);
     }
 
@@ -102,7 +97,7 @@ class hdaController extends Controller
      */
     public function search($key)
     {
-        $endpoint = 'data/search/'.$key;
+        $endpoint = 'anggota/search?type=default&q='.$key;
         return $this->getDataAPI($endpoint);
     }
 
@@ -114,25 +109,8 @@ class hdaController extends Controller
      */
     public function edit(Request $request)
     {
-        $endpoint = 'data/updatedata';
-        $client = new Client(['base_uri' => $this->base_uri]);
-        $response = $client->request('PUT', $endpoint, ['form_params' => [
-            'nama' => Input::get('nama'),
-            'npm' => Input::get('npm'),
-			'jk' => Input::get('jk'),
-			'agama' => Input::get('agama'),
-			'goldar' => Input::get('goldar'),
-			'tempat_lahir' => Input::get('tempat_lahir'),
-			'tanggal_lahir' => Input::get('tanggal_lahir'),
-			'alamat_rumah' => Input::get('alamat_rumah'),
-			'alamat_kos' => Input::get('alamat_kos'),
-			'no_hp' => Input::get('no_hp'),
-			'line' => Input::get('line'),
-			'bidang_minat' => Input::get('bidang_minat'),
-			'status' => Input::get('status')
-        ]]);
-        $result = json_decode($response->getBody()->getContents());
-        if($result->status == 'success'){
+        $result = $this->update($request);
+        if($result != NULL && $result->status == 'Update Success'){
             \Cookie::forget('anggota');
             $npm = $request->session()->get('username');
             $data = $this->getDataAnggota($npm);
@@ -150,9 +128,39 @@ class hdaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        $endpoint = 'update/anggota/data';
+        $client = new Client(['base_uri' => $this->baseUrl]);
+        try{
+            $response = $client->request('PUT', $endpoint, ['form_params' => [
+                'nama' => Input::get('nama'),
+                'npm' => Input::get('npm'),
+                'jk' => Input::get('jk'),
+                'agama' => Input::get('agama'),
+                'goldar' => Input::get('goldar'),
+                'tempat_lahir' => Input::get('tempat_lahir'),
+                'tanggal_lahir' => Input::get('tanggal_lahir'),
+                'alamat_rumah' => Input::get('alamat_rumah'),
+                'alamat_kos' => Input::get('alamat_kos'),
+                'no_hp' => Input::get('no_hp'),
+                'line' => Input::get('line'),
+                'bidang_minat' => Input::get('bidang_minat'),
+                'status' => Input::get('status'),
+                'angkatan' => Input::get('angkatan'),
+                'nama_ayah' => Input::get('nama_ayah'),
+                'nama_ibu' => Input::get('nama_ibu'),
+                'no_tlp_ortu' => Input::get('no_tlp_ortu'),
+                'email' => Input::get('email'),
+                'fb' => Input::get('fb'),
+                'twitter' => Input::get('twitter'),
+                'instagram' => Input::get('instagram'),
+                'hobi' => Input::get('hobi')
+            ]]);
+            return json_decode($response->getBody()->getContents());
+        }catch(RequestException $req){
+            return NULL;
+        }
     }
 
     /**

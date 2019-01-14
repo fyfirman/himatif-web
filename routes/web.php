@@ -21,7 +21,5 @@ Route::get('data/anggota/{npm}', 'hdaController@getDataAnggota');
 Route::get('data/search/{key}', 'hdaController@search');
 Route::post('login', 'loginController@login');
 Route::get('logout', 'loginController@logout');
-Route::get('edit', function(){
-    return view('content.editProfile');
-})->name('viewEdit');
-Route::post('editProfile', 'hdaController@edit')->name('editProfile');
+Route::get('updateProfile', 'hdaController@viewEdit')->name('viewEdit');
+Route::post('updateProfile', 'hdaController@edit')->name('update');

@@ -101,6 +101,14 @@ class hdaController extends Controller
         return $this->getDataAPI($endpoint);
     }
 
+    public function viewEdit(Request $request){
+        if($this->cekSession($request)){
+            return view('content.editProfile');
+        }else{
+            return redirect('/')->with('login', 'first');
+        }
+    }
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -109,31 +117,11 @@ class hdaController extends Controller
      */
     public function edit(Request $request)
     {
-        $result = $this->update($request);
-        if($result != NULL && $result->status == 'Update Success'){
-            \Cookie::forget('anggota');
-            $npm = $request->session()->get('username');
-            $data = $this->getDataAnggota($npm);
-            $data_json = json_encode($data);
-            return redirect()->route('viewEdit')->with('update', 'success')->withCookie(cookie('anggota', $data_json, 120));
-        }else{
-            return redirect()->route('viewEdit')->with('update', 'failed');
-        }
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request)
-    {
         $endpoint = 'update/anggota/data';
         $client = new Client(['base_uri' => $this->baseUrl]);
+        $token = $request->session()->get('remember_token');
         try{
-            $response = $client->request('PUT', $endpoint, ['form_params' => [
+            $data = array(
                 'nama' => Input::get('nama'),
                 'npm' => Input::get('npm'),
                 'jk' => Input::get('jk'),
@@ -156,11 +144,33 @@ class hdaController extends Controller
                 'twitter' => Input::get('twitter'),
                 'instagram' => Input::get('instagram'),
                 'hobi' => Input::get('hobi')
-            ]]);
-            return json_decode($response->getBody()->getContents());
+            );  
+            $response = $client->request('PUT', $endpoint, ['form_params' => $data, 'headers' => ['remember_token' => $token]]);
+            $result = json_decode($response->getBody()->getContents());
         }catch(RequestException $req){
-            return NULL;
+            $result = NULL;
         }
+        if($result != NULL && $result->status == 'Update Success'){
+            \Cookie::forget('anggota');
+            $npm = $request->session()->get('username');
+            $data = $this->getDataAnggota($npm);
+            $data_json = json_encode($data);
+            return redirect()->route('viewEdit')->with('update', 'success')->withCookie(cookie('anggota', $data_json, 120));
+        }else{
+            return redirect()->route('viewEdit')->with('update', 'failed');
+        }
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request)
+    {
+
     }
 
     /**

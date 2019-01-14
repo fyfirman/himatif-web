@@ -38,7 +38,6 @@ $(document).ready(function () {
                 $.each(response, function(index, value){
                     if(typeof value.jabatan == 'undefined'){value.jabatan = '';value.posisi = '';}
                     else if(typeof value.posisi == 'undefined'){value.posisi = '';}
-                    else if(typeof value.no_hp == 'undefined'){value.tanggal_lahir = '';value.no_hp = '';value.line = '';value.bidang_minat = '';}
                     $('#contentHda').append(
                         '<div class="col m3 s6 custom-col">'+
 '                            <div class="card">'+
@@ -91,7 +90,6 @@ $(document).ready(function () {
                         $.each(response, function (index, value) { 
                             if(typeof value.jabatan == 'undefined'){value.jabatan = '';value.posisi = '';}
                             else if(typeof value.posisi == 'undefined'){value.posisi = '';}
-                            else if(typeof value.no_hp == 'undefined'){value.tanggal_lahir = '';value.no_hp = '';value.line = '';value.bidang_minat = '';}
                             $('#contentHda').append(
                                 '<div class="col m3 s6 custom-col">'+
         '                            <div class="card">'+

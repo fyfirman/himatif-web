@@ -18,7 +18,8 @@ class loginController extends Controller{
             $result = json_decode($response->getBody()->getContents());
             if($result->status == 'Login Berhasil'){
                 $data = array(
-                    'username' => $uname,
+                    'username' => $result->user->username,
+                    'remember_token' => $result->user->remember_token, 
                     'logged_in' => 1
                 );
                 $request->session()->put($data);

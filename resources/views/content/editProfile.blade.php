@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <form action="{{ route('editProfile') }}" method="post">
+    <form action="{{ route('update') }}" method="post">
         @csrf
         @php $anggota=Cookie::get('anggota');$anggota=json_decode($anggota); @endphp
         @foreach ($anggota as $data)
@@ -56,20 +56,17 @@
                         <label for="alamat_kos">Alamat Kos</label>
                     </div>
             </div>
-        </div>
-        <div id="contact-info">
-            <h5>2. Informasi Kontak</h5>
             <div class="row">
                 <div class="input-field m12 inline">
-                    <input type="number" name="no_hp" id="no_hp" value="{{ $data->no_hp }}" required>
-                    <label for="no_hp">Nomor Handphone</label>
+                    <input type="text" name="angkatan" id="angkatan" value="{{ $data->angkatan }}" required>
+                    <label for="angkatan">Angkatan</label>
                 </div>
                 <div class="input-field m12 inline">
-                    <input type="text" name="line" id="line" value="{{ $data->line }}" required>
-                    <label for="line">ID Line</label>
+                    <input type="text" name="hobi" id="hobi" value="{{ $data->hobi }}" required>
+                    <label for="hobi">Hobi</label>
                 </div>
             </div>
-            <div id="organisasi">
+            <div id="organisasi" class="row">
                 <div class="input-field m12 inline">
                     <input type="text" name="status" id="status" value="{{ $data->status }}" required>
                     <label for="status">Status Anggota</label>
@@ -77,6 +74,58 @@
                 <div class="input-field m12 inline">
                     <input type="text" name="bidang_minat" id="bidang_minat" value="{{ $data->bidang_minat }}" required>
                     <label for="bidang_minat">Bidang Minat</label>
+                </div>
+            </div>
+        </div>
+        <div id="contact-info">
+            <h5>2. Informasi Kontak</h5>
+            <div class="row">
+                <div class="input-field m12 inline">
+                    <input type="email" name="email" id="email" value="{{ $data->email }}" required>
+                    <label for="email">Email</label>
+                </div>
+                <div class="input-field m12 inline">
+                    <input type="number" name="no_hp" id="no_hp" value="{{ $data->no_hp }}" required>
+                    <label for="no_hp">Nomor Handphone</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field m12 inline">
+                    <input type="text" name="line" id="line" value="{{ $data->line }}" required>
+                    <label for="line">ID Line</label>
+                </div>
+                <div class="input-field m12 inline">
+                    <input type="text" name="fb" id="fb" value="{{ $data->fb }}" required>
+                    <label for="fb">Facebook</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field m12 inline">
+                    <input type="text" name="instagram" id="instagram" value="{{ $data->instagram }}" required>
+                    <label for="instagram">Instagram</label>
+                </div>
+                <div class="input-field m12 inline">
+                    <input type="text" name="twitter" id="twitter" value="{{ $data->twitter }}" required>
+                    <label for="twitter">Twitter</label>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h5>3. Data Orang Tua</h5>
+            <div class="row">
+                <div class="input-field m12 inline">
+                    <input type="text" name="nama_ayah" id="nama_ayah" value="{{ $data->nama_ayah }}" required>
+                    <label for="nama_ayah">Nama Ayah</label>
+                </div>
+                <div class="input-field m12 inline">
+                    <input type="text" name="nama_ibu" id="nama_ibu" value="{{ $data->nama_ibu }}" required>
+                    <label for="nama_ibu">Nama Ibu</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field m12 inline">
+                    <input type="number" name="no_tlp_ortu" id="no_tlp_ortu" value="{{ $data->no_tlp_ortu }}" required>
+                    <label for="no_tlp_ortu">Nomor Telepon Orang Tua</label>
                 </div>
             </div>
         </div>

@@ -1,17 +1,20 @@
 $(document).ready(function () {
-    $('#btn2012').on('click', function(){var key = "2012"; var jenisData = "angkatan";getData(key, jenisData);toogleSideBtn($(this).attr('id'))});
-    $('#btn2013').on('click', function(){var key = "2013"; var jenisData = "angkatan";getData(key, jenisData);toogleSideBtn($(this).attr('id'))});
-    $('#btn2014').on('click', function(){var key = "2014"; var jenisData = "angkatan";getData(key, jenisData);toogleSideBtn($(this).attr('id'))});
-    $('#btn2015').on('click', function(){var key = "2015"; var jenisData = "angkatan";getData(key, jenisData);toogleSideBtn($(this).attr('id'))});
-    $('#btn2016').on('click', function(){var key = "2016"; var jenisData = "angkatan";getData(key, jenisData);toogleSideBtn($(this).attr('id'))});
-    $('#btn2017').on('click', function(){var key = "2017"; var jenisData = "angkatan";getData(key, jenisData);toogleSideBtn($(this).attr('id'))});
-    $('#btn2018').on('click', function(){var key = "2018"; var jenisData = "angkatan";getData(key, jenisData);toogleSideBtn($(this).attr('id'))});
-    $('#btnBE').on('click', function(){var key = "be"; var jenisData = "anggota";getData(key, jenisData);toogleSideBtn($(this).attr('id'))});
-    $('#btnDPA').on('click', function(){var key = "dpa"; var jenisData = "anggota";getData(key, jenisData);toogleSideBtn($(this).attr('id'))});
-    $('#btnMubes').on('click', function(){var key = "mubes"; var jenisData = "anggota";getData(key, jenisData);toogleSideBtn($(this).attr('id'))});
+    window.onload = getData('2018','angkatan');
 
-    function toogleSideBtn(id)
+    $('#btn2012').on('click', function(){var key = "2012"; var jenisData = "angkatan";getData(key, jenisData);toggleButton($(this).attr('id'))});
+    $('#btn2013').on('click', function(){var key = "2013"; var jenisData = "angkatan";getData(key, jenisData);toggleButton($(this).attr('id'))});
+    $('#btn2014').on('click', function(){var key = "2014"; var jenisData = "angkatan";getData(key, jenisData);toggleButton($(this).attr('id'))});
+    $('#btn2015').on('click', function(){var key = "2015"; var jenisData = "angkatan";getData(key, jenisData);toggleButton($(this).attr('id'))});
+    $('#btn2016').on('click', function(){var key = "2016"; var jenisData = "angkatan";getData(key, jenisData);toggleButton($(this).attr('id'))});
+    $('#btn2017').on('click', function(){var key = "2017"; var jenisData = "angkatan";getData(key, jenisData);toggleButton($(this).attr('id'))});
+    $('#btn2018').on('click', function(){var key = "2018"; var jenisData = "angkatan";getData(key, jenisData);toggleButton($(this).attr('id'))});
+    $('#btnBE').on('click', function(){var key = "be"; var jenisData = "anggota";getData(key, jenisData);toggleButton($(this).attr('id'))});
+    $('#btnDPA').on('click', function(){var key = "dpa"; var jenisData = "anggota";getData(key, jenisData);toggleButton($(this).attr('id'))});
+    $('#btnMubes').on('click', function(){var key = "mubes"; var jenisData = "anggota";getData(key, jenisData);toggleButton($(this).attr('id'))});
+
+    function toggleButton(id)
     {
+        console.log(id);
         clearActiveBtn();
         
         let a = document.getElementById(id);
@@ -45,7 +48,7 @@ $(document).ready(function () {
 '                                    <img class="activator" src="' + value.url_foto + '">'+
 '                                </div>'+
 '                                <div class="card-content">'+
-'                                    <span class="card-title activator grey-text text-darken-4">' + value.nama + '<i class="material-icons right">more_vert</i></span>'+
+'                                    <span class="card-title activator grey-text text-darken-4">' + value.nama + '</span>'+
 '                                    <p><a><p>' + value.npm + '</p>'+
 '                                    <p>'+ value.jabatan +'</p>'+
 '                                    <p>'+ value.posisi +'</a></p>'+

@@ -1,30 +1,37 @@
 <ul id="slide-out" class="sidenav sidenav-fixed">
-    <li><a id="tentang" href="{{ url('hda') }}" class="waves-effect">Tentang</a></li>
+    <li class="logo">
+        <a id="logo-container" href="{{ url('admin') }}" class="brand-logo">
+            <img src="{{ asset('img/himatif-logo-256x256.png') }}" alt="" style="vertical-align:middle">
+            <span>Himatif Admin</span>
+        </a>
+    </li>
     <li class="no-padding">
         <ul class="collapsible collapsible-accordion">
             <li class="active">
-                <a class="collapsible-header">Angkatan</a>
+                <a class="collapsible-header">Database</a>
                 <div class="collapsible-body">
                     <ul>
-                        <li><a id="btn2012" class="waves-effect">Circle 2012</a></li>
-                        <li><a id="btn2013" class="waves-effect">Pascal 2013</a></li>
-                        <li><a id="btn2014" class="waves-effect">Assembly 2014</a></li>
-                        <li><a id="btn2015" class="waves-effect">Binary 2015</a></li>
-                        <li><a id="btn2016" class="waves-effect">Cyber 2016</a></li>
-                        <li><a id="btn2017" class="waves-effect">Delphi 2017</a></li>
-                        <li><a id="btn2018" class="waves-effect">Eclipse 2018</a></li>
+                        <li><a class="waves-effect">User</a></li>
+                        <li><a class="waves-effect">Status Update</a></li>
+                </div>
+            </li> 
+        </ul>
+        <ul class="collapsible collapsible-accordion">
+            <li class="active">
+                <a class="collapsible-header">Pathways</a>
+                <div class="collapsible-body">
+                    <ul>
+                        <li><a class="waves-effect">Content</a></li>
                     </ul>
                 </div>
             </li> 
         </ul>
         <ul class="collapsible collapsible-accordion">
             <li class="active">
-                <a class="collapsible-header">Badan Kelengkapan</a>
+                <a class="collapsible-header">Djournal</a>
                 <div class="collapsible-body">
                     <ul>
-                        <li><a id="btnBE" class="waves-effect">Badan Eksekutif</a></li>
-                        <li><a id="btnDPA" class="waves-effect">Dewan Perwakilan Anggota</a></li>
-                        <li><a id="btnMubes" class="waves-effect">Presidium</a></li>
+                        <li><a class="waves-effect">Content</a></li>
                     </ul>
                 </div>
             </li> 
@@ -43,4 +50,4 @@ $(document).ready(function(){
     $('.sidenav').sidenav();
 });
 </script>
-<script src="{{asset('js/hda.js')}}"></script>
+<script src="{{asset('js/admin-user.js')}}"></script>

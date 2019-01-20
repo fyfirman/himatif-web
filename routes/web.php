@@ -23,6 +23,6 @@ Route::post('login', 'loginController@login');
 Route::get('logout', 'loginController@logout');
 Route::get('updateProfile', 'hdaController@viewEdit')->name('viewEdit');
 Route::post('updateProfile', 'hdaController@edit')->name('update');
-Route::get('admin', function(){
-    return view('admin.app');
+Route::get('admin/user', function(){
+    return view('admin.userContent');
 });

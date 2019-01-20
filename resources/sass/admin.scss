@@ -1,3 +1,22 @@
-.sidenav{
-    color: red;
+// Variables
+@import 'variables';
+
+// Materialize
+@import 'materialize/materialize';
+
+// Navbar HDA (Search Bar)
+@import 'components/nav-hda';
+
+// Content
+@import 'components/content';
+
+// Content
+@import 'components/cards';
+
+// Detail Profile
+@import 'components/detail-profile';
+
+.section{
+    margin-left: 300px;
+    margin-top: 64px;
 }

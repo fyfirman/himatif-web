@@ -42,7 +42,7 @@ $(document).ready(function () {
                     if(typeof value.jabatan == 'undefined'){value.jabatan = '';value.posisi = '';}
                     else if(typeof value.posisi == 'undefined'){value.posisi = '';}
                     $('#contentHda').append(
-                        '<div class="col m3 s6 custom-col">'+
+                        '<div class="col m3 s6 l2">'+
 '                            <div class="card">'+
 '                                <div class="card-image waves-effect waves-block waves-light">'+
 '                                    <img class="activator" src="' + value.url_foto + '">'+

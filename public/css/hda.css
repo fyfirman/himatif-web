@@ -10277,7 +10277,7 @@ input[type=range]::-ms-thumb {
 }
 
 nav {
-  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2) !important;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2);
 }
 
 @media only screen and (min-width: 992px) {
@@ -10307,7 +10307,7 @@ nav {
 }
 
 .apps-menu-btn:hover {
-  background-color: white;
+  background-color: transparent;
 }
 
 .apps-wrapper {
@@ -10558,6 +10558,15 @@ nav {
 @media only screen and (min-width: 992px) {
   .custom-col {
     width: 20% !important;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .custom-col-7 {
+    width: 14.28% !important;
     margin-left: auto;
     left: auto;
     right: auto;

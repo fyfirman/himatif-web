@@ -6,3 +6,12 @@
         right: auto;
     }
 }
+
+.custom-col-7{
+    @media only screen and (min-width: 992px){
+        width: 14.28% !important;
+        margin-left: auto;
+        left: auto;
+        right: auto;
+    }
+}

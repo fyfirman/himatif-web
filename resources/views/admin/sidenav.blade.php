@@ -11,7 +11,7 @@
                 <a class="collapsible-header">Database</a>
                 <div class="collapsible-body">
                     <ul>
-                        <li><a class="waves-effect"><i class="material-icons">people</i>User</a></li>
+                        <li class="active"><a class="waves-effect"><i class="material-icons">people</i>User</a></li>
                         <li><a class="waves-effect"><i class="material-icons">update</i>Status Update</a></li>
                 </div>
             </li> 

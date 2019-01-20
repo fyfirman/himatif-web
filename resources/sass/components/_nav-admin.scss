@@ -1,0 +1,27 @@
+@import 'nav-hda';
+
+nav{
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0) !important;
+    background: rgb(255,193,7);
+    background: linear-gradient(0deg, rgba(255,193,7,1) 0%, rgba(255,202,40,1) 100%);
+    @media screen and (min-width: 993px){
+        padding-left: 260px;
+    }
+    .search-wrapper{
+        margin-left: 0px;
+    }
+    
+    .user-thumb{
+        border: 0px solid;
+    }
+
+    .apps-menu-btn{
+        color: rgba(255, 255, 255, 0.7);
+        
+        :hover{
+            color: rgba(255, 255, 255, 1);
+            background-color: transparent;
+        }
+    }
+    
+}

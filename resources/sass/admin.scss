@@ -5,7 +5,10 @@
 @import 'materialize/materialize';
 
 // Navbar HDA (Search Bar)
-@import 'components/nav-hda';
+@import 'components/nav-admin';
+
+// Sidenav
+@import 'components/sidenav-admin';
 
 // Content
 @import 'components/content';
@@ -16,7 +19,14 @@
 // Detail Profile
 @import 'components/detail-profile';
 
-.section{
-    margin-left: 300px;
-    margin-top: 64px;
+body{
+    background-color: #f5f7f9;
 }
+
+.section{
+    @media screen and (min-width: 993px){
+        margin-left: 260px;
+        margin-top: 115px;
+    }
+}
+

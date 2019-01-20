@@ -46,6 +46,7 @@
             
         </ul>
     </div>
+    @yield('admin-tab')
 </nav>
 
 {{-- Apps Menu Content --}}

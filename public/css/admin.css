@@ -101,7 +101,8 @@
   color: #a21318 !important;
 }
 
-.materialize-red.darken-4 {
+.materialize-red.darken-4,
+.sidenav .collapsible .collapsible-body li.active > a.materialize-red {
   background-color: #8b1014 !important;
 }
 
@@ -223,7 +224,9 @@
 }
 
 .red.darken-4,
-.darken-4.logout-btn {
+.sidenav .collapsible .collapsible-body li.active > a.red,
+.darken-4.logout-btn,
+.sidenav .collapsible .collapsible-body li.active > a.logout-btn {
   background-color: #B71C1C !important;
 }
 
@@ -368,7 +371,8 @@
   color: #ad1457 !important;
 }
 
-.pink.darken-4 {
+.pink.darken-4,
+.sidenav .collapsible .collapsible-body li.active > a.pink {
   background-color: #880e4f !important;
 }
 
@@ -509,7 +513,8 @@
   color: #6a1b9a !important;
 }
 
-.purple.darken-4 {
+.purple.darken-4,
+.sidenav .collapsible .collapsible-body li.active > a.purple {
   background-color: #4a148c !important;
 }
 
@@ -650,7 +655,8 @@
   color: #4527a0 !important;
 }
 
-.deep-purple.darken-4 {
+.deep-purple.darken-4,
+.sidenav .collapsible .collapsible-body li.active > a.deep-purple {
   background-color: #311b92 !important;
 }
 
@@ -791,7 +797,8 @@
   color: #283593 !important;
 }
 
-.indigo.darken-4 {
+.indigo.darken-4,
+.sidenav .collapsible .collapsible-body li.active > a.indigo {
   background-color: #1a237e !important;
 }
 
@@ -932,7 +939,8 @@
   color: #1565C0 !important;
 }
 
-.blue.darken-4 {
+.blue.darken-4,
+.sidenav .collapsible .collapsible-body li.active > a.blue {
   background-color: #0D47A1 !important;
 }
 
@@ -1073,7 +1081,8 @@
   color: #0277bd !important;
 }
 
-.light-blue.darken-4 {
+.light-blue.darken-4,
+.sidenav .collapsible .collapsible-body li.active > a.light-blue {
   background-color: #01579b !important;
 }
 
@@ -1214,7 +1223,8 @@
   color: #00838f !important;
 }
 
-.cyan.darken-4 {
+.cyan.darken-4,
+.sidenav .collapsible .collapsible-body li.active > a.cyan {
   background-color: #006064 !important;
 }
 
@@ -1383,7 +1393,11 @@
 
 .teal.darken-4,
 .darken-4#header-detail,
-.card .card-reveal .darken-4.reveal-header {
+.card .card-reveal .darken-4.reveal-header,
+.sidenav .collapsible .collapsible-body li.active > a.teal,
+.sidenav .collapsible .collapsible-body li.active > a#header-detail,
+.sidenav .collapsible .collapsible-body .card .card-reveal li.active > a.reveal-header,
+.card .card-reveal .sidenav .collapsible .collapsible-body li.active > a.reveal-header {
   background-color: #004d40 !important;
 }
 
@@ -1532,7 +1546,8 @@
   color: #2E7D32 !important;
 }
 
-.green.darken-4 {
+.green.darken-4,
+.sidenav .collapsible .collapsible-body li.active > a.green {
   background-color: #1B5E20 !important;
 }
 
@@ -1673,7 +1688,8 @@
   color: #558b2f !important;
 }
 
-.light-green.darken-4 {
+.light-green.darken-4,
+.sidenav .collapsible .collapsible-body li.active > a.light-green {
   background-color: #33691e !important;
 }
 
@@ -1814,7 +1830,8 @@
   color: #9e9d24 !important;
 }
 
-.lime.darken-4 {
+.lime.darken-4,
+.sidenav .collapsible .collapsible-body li.active > a.lime {
   background-color: #827717 !important;
 }
 
@@ -1967,7 +1984,9 @@
 }
 
 .yellow.darken-4,
-.darken-4.login-btn {
+.sidenav .collapsible .collapsible-body li.active > a.yellow,
+.darken-4.login-btn,
+.sidenav .collapsible .collapsible-body li.active > a.login-btn {
   background-color: #f57f17 !important;
 }
 
@@ -2112,7 +2131,8 @@
   color: #ff8f00 !important;
 }
 
-.amber.darken-4 {
+.amber.darken-4,
+.sidenav .collapsible .collapsible-body li.active > a.amber {
   background-color: #ff6f00 !important;
 }
 
@@ -2253,7 +2273,8 @@
   color: #ef6c00 !important;
 }
 
-.orange.darken-4 {
+.orange.darken-4,
+.sidenav .collapsible .collapsible-body li.active > a.orange {
   background-color: #e65100 !important;
 }
 
@@ -2394,7 +2415,8 @@
   color: #d84315 !important;
 }
 
-.deep-orange.darken-4 {
+.deep-orange.darken-4,
+.sidenav .collapsible .collapsible-body li.active > a.deep-orange {
   background-color: #bf360c !important;
 }
 
@@ -2535,7 +2557,8 @@
   color: #4e342e !important;
 }
 
-.brown.darken-4 {
+.brown.darken-4,
+.sidenav .collapsible .collapsible-body li.active > a.brown {
   background-color: #3e2723 !important;
 }
 
@@ -2543,7 +2566,8 @@
   color: #3e2723 !important;
 }
 
-.blue-grey {
+.blue-grey,
+.sidenav .collapsible .collapsible-body li.active > a {
   background-color: #607d8b !important;
 }
 
@@ -2552,7 +2576,9 @@
 }
 
 .blue-grey.lighten-5,
-.blue-grey#body-detail {
+.blue-grey#body-detail,
+.sidenav .collapsible .collapsible-body li.active > a.lighten-5,
+.sidenav .collapsible .collapsible-body li.active > a#body-detail {
   background-color: #eceff1 !important;
 }
 
@@ -2561,7 +2587,10 @@
 }
 
 .blue-grey.lighten-4,
-.search-wrapper .blue-grey.input-field {
+.sidenav .collapsible .collapsible-body li.active > a.lighten-4,
+.search-wrapper .blue-grey.input-field,
+.search-wrapper .sidenav .collapsible .collapsible-body li.active > a.input-field,
+.sidenav .collapsible .collapsible-body .search-wrapper li.active > a.input-field {
   background-color: #cfd8dc !important;
 }
 
@@ -2569,7 +2598,8 @@
   color: #cfd8dc !important;
 }
 
-.blue-grey.lighten-3 {
+.blue-grey.lighten-3,
+.sidenav .collapsible .collapsible-body li.active > a.lighten-3 {
   background-color: #b0bec5 !important;
 }
 
@@ -2577,7 +2607,8 @@
   color: #b0bec5 !important;
 }
 
-.blue-grey.lighten-2 {
+.blue-grey.lighten-2,
+.sidenav .collapsible .collapsible-body li.active > a.lighten-2 {
   background-color: #90a4ae !important;
 }
 
@@ -2585,7 +2616,8 @@
   color: #90a4ae !important;
 }
 
-.blue-grey.lighten-1 {
+.blue-grey.lighten-1,
+.sidenav .collapsible .collapsible-body li.active > a.lighten-1 {
   background-color: #78909c !important;
 }
 
@@ -2595,7 +2627,9 @@
 }
 
 .blue-grey.darken-1,
-.blue-grey.logout-btn:active {
+.sidenav .collapsible .collapsible-body li.active > a.darken-1,
+.blue-grey.logout-btn:active,
+.sidenav .collapsible .collapsible-body li.active > a.logout-btn:active {
   background-color: #546e7a !important;
 }
 
@@ -2628,7 +2662,9 @@
 }
 
 .blue-grey.darken-2,
-.blue-grey.login-btn {
+.sidenav .collapsible .collapsible-body li.active > a.darken-2,
+.blue-grey.login-btn,
+.sidenav .collapsible .collapsible-body li.active > a.login-btn {
   background-color: #455a64 !important;
 }
 
@@ -2636,7 +2672,8 @@
   color: #455a64 !important;
 }
 
-.blue-grey.darken-3 {
+.blue-grey.darken-3,
+.sidenav .collapsible .collapsible-body li.active > a.darken-3 {
   background-color: #37474f !important;
 }
 
@@ -2644,7 +2681,8 @@
   color: #37474f !important;
 }
 
-.blue-grey.darken-4 {
+.blue-grey.darken-4,
+.sidenav .collapsible .collapsible-body li.active > a {
   background-color: #263238 !important;
 }
 
@@ -2970,7 +3008,11 @@
 
 .grey.darken-4,
 .darken-4#body-detail,
-.search-wrapper .darken-4.input-field {
+.sidenav .collapsible .collapsible-body li.active > a.grey,
+.sidenav .collapsible .collapsible-body li.active > a#body-detail,
+.search-wrapper .darken-4.input-field,
+.search-wrapper .sidenav .collapsible .collapsible-body li.active > a.input-field,
+.sidenav .collapsible .collapsible-body .search-wrapper li.active > a.input-field {
   background-color: #212121 !important;
 }
 
@@ -10190,7 +10232,7 @@ input[type=range]::-ms-thumb {
 }
 
 nav {
-  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2) !important;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2);
 }
 
 @media only screen and (min-width: 992px) {
@@ -10220,7 +10262,7 @@ nav {
 }
 
 .apps-menu-btn:hover {
-  background-color: white;
+  background-color: transparent;
 }
 
 .apps-wrapper {
@@ -10418,9 +10460,105 @@ nav {
   border: 2px solid #4db6ac;
 }
 
+nav {
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0) !important;
+  background: #ffc107;
+  background: linear-gradient(0deg, #ffc107 0%, #ffca28 100%);
+}
+
+@media screen and (min-width: 993px) {
+  nav {
+    padding-left: 260px;
+  }
+}
+
+nav .search-wrapper {
+  margin-left: 0px;
+}
+
+nav .user-thumb {
+  border: 0px solid;
+}
+
+nav .apps-menu-btn {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+nav .apps-menu-btn :hover {
+  color: white;
+  background-color: transparent;
+}
+
+.logo-container {
+  text-align: center;
+}
+
+.logo-container img {
+  height: 48px;
+}
+
+.sidenav {
+  width: 260px;
+  background: #37474f;
+  background: linear-gradient(0deg, #37474f 0%, #455a64 64%);
+}
+
+.sidenav .collapsible {
+  margin-top: 32px;
+}
+
+.sidenav .collapsible .collapsible-header {
+  padding-left: 48px;
+}
+
+.sidenav .collapsible .collapsible-body {
+  background: transparent;
+}
+
+.sidenav .collapsible .collapsible-body li > a {
+  margin-left: 40px;
+  padding-left: 8px;
+  font-weight: 300;
+  border-radius: 99px 0 0 99px;
+  line-height: 20px;
+  height: 36px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.sidenav .collapsible .collapsible-body li.active {
+  background-color: transparent !important;
+}
+
+.sidenav li > a {
+  color: white !important;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.sidenav li > a i.material-icons {
+  color: white !important;
+  margin-right: 4px;
+  font-size: 1.2em;
+  line-height: 20px;
+}
+
+.sidenav li.active {
+  background: transparent;
+}
+
 @media only screen and (min-width: 992px) {
   .custom-col {
     width: 20% !important;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .custom-col-7 {
+    width: 14.28% !important;
     margin-left: auto;
     left: auto;
     right: auto;
@@ -10585,8 +10723,14 @@ nav {
   margin: 0;
 }
 
-.section {
-  margin-left: 300px;
-  margin-top: 64px;
+body {
+  background-color: #f5f7f9;
+}
+
+@media screen and (min-width: 993px) {
+  .section {
+    margin-left: 260px;
+    margin-top: 115px;
+  }
 }
 

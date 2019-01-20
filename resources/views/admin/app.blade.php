@@ -20,20 +20,12 @@
     @include('admin.sidenav')
 
     {{-- Top Navigation --}}
-    @include('partials.nav-hda')
+    @include('partials.nav-admin')
 
 
     <main class="section">
         
-        <ul class="tabs">
-            <li class="tab col s3"><a id="btn2012" href="#">2012</a></li>
-            <li class="tab col s3"><a id="btn2013" href="#">2013</a></li>
-            <li class="tab col s3"><a id="btn2014" href="#">2014</a></li>
-            <li class="tab col s3"><a id="btn2015" href="#">2015</a></li>
-            <li class="tab col s3"><a id="btn2016" href="#">2016</a></li>
-            <li class="tab col s3"><a id="btn2017" href="#">2017</a></li>
-            <li class="tab col s3"><a id="btn2018" class="active" href="#">2018</a></li>
-        </ul>
+        
         <script>
             // Installation tab
             $(document).ready(function(){

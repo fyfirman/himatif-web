@@ -16,7 +16,7 @@
             </div>
             <div id="header-data" class="hide">
                 <span class="row"><i class="material-icons right white-text">close</i></span>
-                <img id="user-photos" class="user-thumb" src="" alt="">
+                <a id="photo-link" href="#" target="_blank"><img id="user-photos" class="user-thumb" src="" alt=""></a>
                 <h5 id="nama"></h5>
                 <p id="npm"></p>
                 <p id="bidang_minat"></p>

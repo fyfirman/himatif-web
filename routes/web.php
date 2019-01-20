@@ -20,7 +20,7 @@ Route::get('hda/anggota/{bk}', 'hdaController@bk');
 Route::get('data/anggota/{npm}', 'hdaController@getDataAnggota');
 Route::get('data/search/{key}', 'hdaController@search');
 Route::post('login', 'loginController@login');
-Route::get('logout', 'loginController@logout');
+Route::get('logout', 'loginController@logout')->name('logout');
 Route::get('updateProfile', 'hdaController@viewEdit')->name('viewEdit');
 Route::post('updateProfile', 'hdaController@edit')->name('update');
 Route::get('admin/user', function(){

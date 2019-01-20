@@ -45,31 +45,13 @@ $(document).ready(function () {
                         '<div class="col m3 s6 l2">'+
 '                            <div class="card">'+
 '                                <div class="card-image waves-effect waves-block waves-light">'+
-'                                    <img class="activator" src="' + value.url_foto + '">'+
+'                                    <img onclick="showInfo(' + value.npm + ')" class="" src="' + value.url_foto + '">'+
 '                                </div>'+
 '                                <div class="card-content">'+
-'                                    <span class="card-title activator grey-text text-darken-4">' + value.nama + '</span>'+
+'                                    <span onclick="showInfo(' + value.npm + ')" class="card-title grey-text text-darken-4">' + value.nama + '</span>'+
 '                                    <p><a><p>' + value.npm + '</p>'+
 '                                    <p>'+ value.jabatan +'</p>'+
 '                                    <p>'+ value.posisi +'</a></p>'+
-'                                </div>'+
-'                                <div class="card-reveal">'+
-'                                    <div class="reveal-header">'+
-'                                        <span id="reveal-thumb" class="card-title grey-text text-darken-4"><i class="material-icons right white-text">close</i></span>'+
-'                                        <br>'+
-'                                        <p><img class="user-thumb" src="' + value.url_foto + '"/></p>'+
-'                                        <p id="name">' + value.nama + '</p>'+
-'                                        <p>' + value.npm + '</p>'+
-'                                        <p>' + value.bidang_minat + '</p>'+
-'                                    </div>'+
-'                                    <div class="reveal-info">'+
-'                                        <p id="first-child"><i class="material-icons">cake</i> '+ value.tanggal_lahir +'</p>'+
-'                                        <p><i class="material-icons">call</i> '+ value.no_hp +'</p>'+
-'                                        <p><i class="fab fa-line"></i> '+ value.line +'</p>'+
-'                                    </div>'+
-'                                    <div class="reveal-action">'+
-'                                        <a onclick="showInfo(' + value.npm + ')">More Info</a>'+
-'                                    </div>'+
 '                                </div>'+
 '                            </div>'+
 '                        </div>'

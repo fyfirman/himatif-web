@@ -11,8 +11,8 @@
                 <a class="collapsible-header">Database</a>
                 <div class="collapsible-body">
                     <ul>
-                        <li><a class="waves-effect">User</a></li>
-                        <li><a class="waves-effect">Status Update</a></li>
+                        <li><a class="waves-effect"><i class="material-icons">people</i>User</a></li>
+                        <li><a class="waves-effect"><i class="material-icons">update</i>Status Update</a></li>
                 </div>
             </li> 
         </ul>
@@ -21,7 +21,7 @@
                 <a class="collapsible-header">Pathways</a>
                 <div class="collapsible-body">
                     <ul>
-                        <li><a class="waves-effect">Content</a></li>
+                        <li><a class="waves-effect"><i class="material-icons">create</i>Content</a></li>
                     </ul>
                 </div>
             </li> 
@@ -31,7 +31,7 @@
                 <a class="collapsible-header">Djournal</a>
                 <div class="collapsible-body">
                     <ul>
-                        <li><a class="waves-effect">Content</a></li>
+                        <li><a class="waves-effect"><i class="material-icons">library_books</i>Content</a></li>
                     </ul>
                 </div>
             </li> 

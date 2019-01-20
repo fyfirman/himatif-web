@@ -1,6 +1,6 @@
 <ul id="slide-out" class="sidenav sidenav-fixed">
     <li class="logo">
-        <a id="logo-container" href="{{ url('admin') }}" class="brand-logo">
+        <a id="logo-container" href="{{ url('') }}" class="brand-logo">
             <img src="{{ asset('img/himatif-logo-256x256.png') }}" alt="" style="vertical-align:middle">
             <span>Himatif Admin</span>
         </a>

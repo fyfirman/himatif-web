@@ -25,3 +25,21 @@ nav{
     }
     
 }
+
+.tabs{
+    @extend .white;
+    
+    & > .tab{
+        a{
+            @extend .white, .black-text;
+        }
+
+        a.active{
+            color: rgba(255, 214, 30, 0.7) !important;
+        }
+    }
+}
+
+.indicator{
+    height: 3px !important;
+}

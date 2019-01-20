@@ -1,12 +1,11 @@
 <ul id="slide-out" class="sidenav sidenav-fixed">
-    <li><a id="tentang" href="{{ url('hda') }}" class="waves-effect">Tentang</a></li>
     <li class="no-padding">
         <ul class="collapsible collapsible-accordion">
             <li class="active">
                 <a class="collapsible-header">Angkatan</a>
                 <div class="collapsible-body">
                     <ul>
-                        <li><a id="btn2012" class="waves-effect">Circle 2012</a></li>
+                        <li class="active"><a id="btn2012" class="waves-effect">Circle 2012</a></li>
                         <li><a id="btn2013" class="waves-effect">Pascal 2013</a></li>
                         <li><a id="btn2014" class="waves-effect">Assembly 2014</a></li>
                         <li><a id="btn2015" class="waves-effect">Binary 2015</a></li>

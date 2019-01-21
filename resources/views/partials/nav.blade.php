@@ -25,6 +25,12 @@
                     <span class="orange-text">Update Data Succes.</span>
                 @elseif(session('update') == 'failed')
                     <span class="red-text">Update Data Failed!</span>
+                @elseif(session('reset') == 'failed')
+                    <span class="red-text">NPM/Email for Reset Password is Invalid/Not Registered yet!</span>
+                @elseif(session('updatePW') == 'success')
+                    <span class="orange-text">Update Password Succesfully!</span>
+                @elseif(session('updatePW') == 'failed')
+                    <span class="red-text">Update Password Failed. Please re-check your old/newpassword!</span>
                 @endif
             </li>
             <li><a onclick="toogleAppsMenu({{Session::get('logged_in')}})" class="apps-menu-btn"><i class="material-icons">apps</i></a></li>
@@ -88,7 +94,7 @@
                 </button>
             </div>
             <div class="col m6">
-                <a href="">Forgot Password</a>
+                <a style="cursor:pointer" onclick="showReset()">Forgot Password</a>
             </div>
         </div>
     </form>
@@ -119,5 +125,34 @@
         <a href="{{ route('logout') }}" class="btn-small deep-btn logout-btn">Logout</a>
         <a href="{{ route('viewEdit') }}" class="btn-small deep-btn edit-btn">Edit Profile</a>
     </div>
+</div>
+@endif
+
+{{-- ResetPassword Content --}}
+@if(!session('logged_in'))
+<div id="reset-form" class="login-form hide-on-med-and-down" style="display:none">
+    <form action="{{ route('reset') }}" autocomplete="off" method="POST">
+        @csrf
+        <div class="row">
+            <div class="input-field col m12 inline" >
+                <input name="username" id="npm" type="text" class="validate" required>
+                <label for="npm">Nomor Pokok Mahasiswa</label>
+            </div>
+            <div class="input-field col m12 inline">
+                <input type="email" name="email" id="email" class="validate" required>
+                <label for="email">Email</label>
+            </div>
+        </div>
+        <div class="row valign-wrapper">
+            <div class="col m6">
+                <button class="btn-small login-btn deep-btn" type="submit">
+                    Reset
+                </button>
+            </div>
+            <div class="col m6">
+                <a style="cursor:pointer" onclick="showReset()">Back to Login</a>
+            </div>
+        </div>
+    </form>
 </div>
 @endif

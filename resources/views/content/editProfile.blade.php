@@ -129,28 +129,35 @@
                 </div>
             </div>
         </div>
-        {{-- SOON UPDATE PASSWORD --}}
-        {{-- <div id="account-info">
-            <h5>3. Update Password</h5>
+        <div class="row center">
+            <button class="btn deep-btn" type="submit">Update Data Profile</button>
+        </div>
+    </form>
+    <form action="{{ route('updatePwd') }}" method="POST">
+        @csrf
+        {{-- UPDATE PASSWORD --}}
+        <div id="account-info">
+            <h5>4. Update Password</h5>
             <div class="row">
                 <div class="input-field m12 inline">
-                    <input type="password" name="old_pwd" id="old_pwd" required>
-                    <label for="old_pwd">Old Password</label>
+                    <input type="hidden" name="username" value="{{ $data->npm }}">
+                    <input type="password" name="oldpw" id="oldpw" required>
+                    <label for="oldpw">Old Password</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field m12 inline">
-                    <input type="password" name="new_pwd" id="new_pwd" required>
-                    <label for="new_pwd">New Password</label>
+                    <input type="password" name="newpw" id="newpw" required>
+                    <label for="newpw">New Password</label>
                 </div>
                 <div class="input-field m12 inline">
                     <input type="password" name="confirm_newPwd" id="confirm_newPwd" required>
                     <label for="Confirm_newPwd">Confirm New Password</label>
                 </div>
             </div>
-        </div> --}}
+        </div>
         <div class="row center">
-            <button class="btn deep-btn" type="submit">Update</button>
+            <button class="btn deep-btn">Update Password</button>
         </div>
         @endforeach
     </form>

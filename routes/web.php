@@ -26,3 +26,5 @@ Route::post('updateProfile', 'hdaController@edit')->name('update');
 Route::get('admin/user', function(){
     return view('admin.userContent');
 });
+Route::post('reset', 'resetPwdController@reset')->name('reset');
+Route::post('update/password', 'resetPwdController@update')->name('updatePwd');

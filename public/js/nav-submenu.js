@@ -12,6 +12,7 @@ function toogleElement(id){
     } else {
         element.style.display = "none";
     }
+    document.getElementById('reset-form').style.display = 'none';
 }
 
 function toogleAppsMenu(status_login) {
@@ -38,4 +39,16 @@ function toogleAuth(status_login) {
     else
         id = 'login-form';
     toogleElement(id);
+}
+
+function showReset(){
+    let loginForm = document.getElementById('login-form');
+    let resetForm = document.getElementById('reset-form');
+    if(loginForm.style.display != 'none'){
+        loginForm.style.display = 'none';
+        resetForm.style.display = 'block';
+    }else{
+        loginForm.style.display = 'block';
+        resetForm.style.display = 'none';
+    }
 }

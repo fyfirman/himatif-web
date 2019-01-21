@@ -1,4 +1,8 @@
 $(document).ready(function () {
+    window.onload = function () {
+        getData('2012','angkatan');
+    };
+
     $('#btn2012').on('click', function(){var key = "2012"; var jenisData = "angkatan";getData(key, jenisData);toogleSideBtn($(this).attr('id'))});
     $('#btn2013').on('click', function(){var key = "2013"; var jenisData = "angkatan";getData(key, jenisData);toogleSideBtn($(this).attr('id'))});
     $('#btn2014').on('click', function(){var key = "2014"; var jenisData = "angkatan";getData(key, jenisData);toogleSideBtn($(this).attr('id'))});
@@ -54,7 +58,7 @@ $(document).ready(function () {
 '                                    <div class="reveal-header">'+
 '                                        <span id="reveal-thumb" class="card-title grey-text text-darken-4"><i class="material-icons right white-text">close</i></span>'+
 '                                        <br>'+
-'                                        <p><img class="user-thumb" src="' + value.url_foto + '"/></p>'+
+'                                        <p><a href="' + value.url_foto + '" target="_blank"><img class="user-thumb" src="' + value.url_foto + '"/></a></p>'+
 '                                        <p id="name">' + value.nama + '</p>'+
 '                                        <p>' + value.npm + '</p>'+
 '                                        <p>' + value.bidang_minat + '</p>'+

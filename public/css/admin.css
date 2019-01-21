@@ -3048,13 +3048,16 @@
   background-color: #000000 !important;
 }
 
-.black-text {
+.black-text,
+.tabs > .tab a {
   color: #000000 !important;
 }
 
 .white,
 #body-detail #biodata,
 #detail-container,
+.tabs > .tab a,
+.tabs,
 .login-form,
 .logout-form,
 .apps-wrapper,
@@ -10489,6 +10492,14 @@ nav .apps-menu-btn :hover {
   background-color: transparent;
 }
 
+.tabs > .tab a.active {
+  color: rgba(255, 214, 30, 0.7) !important;
+}
+
+.indicator {
+  height: 3px !important;
+}
+
 .logo-container {
   text-align: center;
 }
@@ -10725,6 +10736,7 @@ nav .apps-menu-btn :hover {
 
 body {
   background-color: #f5f7f9;
+  overflow-y: scroll;
 }
 
 @media screen and (min-width: 993px) {

@@ -10746,3 +10746,7 @@ body {
   }
 }
 
+.sidenav-trigger {
+  color: white !important;
+}
+

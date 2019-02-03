@@ -16,8 +16,8 @@
         {{-- Search bar buat di HDA --}}
         @yield('search-bar')
 
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li>@if (session('login') == 'invalid')
+        <ul id="nav-mobile" class="right">
+            <li class="hide-on-small-only">@if (session('login') == 'invalid')
                     <span class="red-text">NPM/Password is Invalid.</span>
                 @elseif(session('login') == 'first')
                     <span class="orange-text">Please Login First!</span>
@@ -33,7 +33,7 @@
                     <span class="red-text">Update Password Failed. Please re-check your old/newpassword!</span>
                 @endif
             </li>
-            <li><a onclick="toogleAppsMenu({{Session::get('logged_in')}})" class="apps-menu-btn"><i class="material-icons">apps</i></a></li>
+            <li class="hide-on-small-only"><a onclick="toogleAppsMenu({{Session::get('logged_in')}})" class="apps-menu-btn"><i class="material-icons">apps</i></a></li>
             <li>
                 {{-- Kondisi ketika sudah masuk --}}
                 @if(session('logged_in'))
@@ -56,7 +56,7 @@
 </nav>
 
 {{-- Apps Menu Content --}}
-<div id="apps-wrapper" class="apps-wrapper hide-on-med-and-down">
+<div id="apps-wrapper" class="apps-wrapper">
     <div class="row">
         <a href="{{ url('/hda') }}" class="col m4 apps-btn">
             <img src="https://dummyimage.com/100x100/000000/ffffff&text=HDA" alt=""><br>
@@ -87,7 +87,7 @@
 
 {{-- Login Content --}}
 @if(!session('logged_in'))
-<div id="login-form" class="login-form hide-on-med-and-down">
+<div id="login-form" class="login-form">
     <form action="login" autocomplete="off" method="POST">
         @csrf
         <div class="row">
@@ -116,7 +116,7 @@
 
 {{-- Logout Content --}}
 @if(session('logged_in'))
-<div id="logout-form" class="logout-form hide-on-med-and-down">
+<div id="logout-form" class="logout-form">
     @foreach ($anggota as $data)
         <div class="row">
             <div class="col m5 text-center">
@@ -143,7 +143,7 @@
 
 {{-- ResetPassword Content --}}
 @if(!session('logged_in'))
-<div id="reset-form" class="login-form hide-on-med-and-down" style="display:none">
+<div id="reset-form" class="login-form" style="display:none">
     <form action="{{ route('reset') }}" autocomplete="off" method="POST">
         @csrf
         <div class="row">

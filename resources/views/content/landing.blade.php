@@ -8,7 +8,7 @@
 <div class="landing-container">
 	<div class="row">
 		{{-- HDA Card --}}
-		<div class="col m4">
+		<div class="col m6">
 			<div id="hda" class="card">
 				<div class="card-image">
 					<img src="{{asset('img/hda-card.jpg')}}">
@@ -16,33 +16,20 @@
 				</div>
 				<div class="card-content">
 					<span class="card-title">Himatif Database</span>
-					<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+					<p>Mencari informasi seseorang? Himatif Database akan membantu kamu!</p>
 				</div>
 			</div>
 		</div>
-		{{-- Pathways Card --}}
-		<div class="col m4">
-			<div id="pathways" class="card">
+		{{-- Keilmuan Card --}}
+		<div class="col m6">
+			<div id="keilmuan" class="card">
 				<div class="card-image">
-					<img src="{{asset('img/hda-card.jpg')}}">
+					<img src="{{asset('img/journal-card.jpg')}}">
 					<a href="{{ url('/hda') }}" class="btn-floating btn-large halfway-fab waves-effect waves-light red"><i class="material-icons">send</i></a>
 				</div>
 				<div class="card-content">
-					<span class="card-title">Pathways</span>
-					<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-				</div>
-			</div>
-		</div>
-		{{-- Read D'Journal Card --}}
-		<div class="col m4">
-			<div id="journal" class="card">
-				<div class="card-image">
-					<img src="{{asset('img/hda-card.jpg')}}">
-					<a href="{{ url('/hda') }}" class="btn-floating btn-large halfway-fab waves-effect waves-light red"><i class="material-icons">send</i></a>
-				</div>
-				<div class="card-content">
-					<span class="card-title">Read D'Journal</span>
-					<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+					<span class="card-title">Keilmuan</span>
+					<p>Tuntutlah ilmu sampai ke Negeri Cina! Tapi ngapain kalo disini ada?</p>
 				</div>
 			</div>
 		</div>

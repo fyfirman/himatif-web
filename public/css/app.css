@@ -9430,6 +9430,12 @@ nav {
   font-size: 1.3rem !important;
 }
 
+@media only screen and (max-width: 992px) {
+  .brand-logo {
+    margin-left: 0px;
+  }
+}
+
 .brand-logo img {
   height: 36px;
   width: 36px;

@@ -10,14 +10,16 @@
 
 @media screen and (min-width: 769px) {
     .landing-container{
-        width: 80%;
+        width: 60%;
     }
+}
+
+.card-image{
+    box-shadow: 0px .1px 0px .2px rgba(255,255,255,1);
 }
 
 .card-content{
     @extend .white-text;
-
-
 }
 
 #hda{
@@ -25,13 +27,13 @@
         background-color: #008e9c;
     }
 }
-#pathways{
+#keilmuan{
     .card-content{
-        @extend .blue ,.darken-2;
+        background-color: #195AD2;
     }
 }
-#journal{
-    .card-content{
-        @extend  .amber ,.darken-3;
-    }
+
+body{
+    background: url(../img/bg.svg) no-repeat center center fixed;
+    background-size: cover;
 }

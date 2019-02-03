@@ -16,7 +16,7 @@
                 </div>
             </li> 
         </ul>
-        <ul class="collapsible collapsible-accordion">
+        <ul class="collapsible collapsible-accordion ">
             <li class="active">
                 <a class="collapsible-header">Badan Kelengkapan</a>
                 <div class="collapsible-body">
@@ -29,7 +29,7 @@
             </li> 
         </ul>
     </li>
-    </ul>
+    <li class="hide-on-med-and-up"><a href="{{ route('logout') }}">Logout</a></li>
 </ul>
 
 <script>

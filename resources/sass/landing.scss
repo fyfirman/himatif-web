@@ -1,0 +1,37 @@
+// Variables
+@charset "UTF-8";
+// Materialize
+@import "materialize/materialize";
+
+.landing-container{
+    @extend .container;
+    padding-top: 80px;
+}
+
+@media screen and (min-width: 769px) {
+    .landing-container{
+        width: 80%;
+    }
+}
+
+.card-content{
+    @extend .white-text;
+
+
+}
+
+#hda{
+    .card-content{
+        background-color: #008e9c;
+    }
+}
+#pathways{
+    .card-content{
+        @extend .blue ,.darken-2;
+    }
+}
+#journal{
+    .card-content{
+        @extend  .amber ,.darken-3;
+    }
+}

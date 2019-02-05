@@ -2,17 +2,19 @@ $(document).ready(function () {
     window.onload = function () {
         getData('2012','angkatan');
     };
+    
+    var requesting = false;
 
-    $('#btn2012').on('click', function(){var key = "2012"; var jenisData = "angkatan";getData(key, jenisData);toogleSideBtn($(this).attr('id'))});
-    $('#btn2013').on('click', function(){var key = "2013"; var jenisData = "angkatan";getData(key, jenisData);toogleSideBtn($(this).attr('id'))});
-    $('#btn2014').on('click', function(){var key = "2014"; var jenisData = "angkatan";getData(key, jenisData);toogleSideBtn($(this).attr('id'))});
-    $('#btn2015').on('click', function(){var key = "2015"; var jenisData = "angkatan";getData(key, jenisData);toogleSideBtn($(this).attr('id'))});
-    $('#btn2016').on('click', function(){var key = "2016"; var jenisData = "angkatan";getData(key, jenisData);toogleSideBtn($(this).attr('id'))});
-    $('#btn2017').on('click', function(){var key = "2017"; var jenisData = "angkatan";getData(key, jenisData);toogleSideBtn($(this).attr('id'))});
-    $('#btn2018').on('click', function(){var key = "2018"; var jenisData = "angkatan";getData(key, jenisData);toogleSideBtn($(this).attr('id'))});
-    $('#btnBE').on('click', function(){var key = "be"; var jenisData = "anggota";getData(key, jenisData);toogleSideBtn($(this).attr('id'))});
-    $('#btnDPA').on('click', function(){var key = "dpa"; var jenisData = "anggota";getData(key, jenisData);toogleSideBtn($(this).attr('id'))});
-    $('#btnMubes').on('click', function(){var key = "mubes"; var jenisData = "anggota";getData(key, jenisData);toogleSideBtn($(this).attr('id'))});
+    $('#btn2012').on('click', function(){if(requesting){return;}var key = "2012"; var jenisData = "angkatan";getData(key, jenisData);toogleSideBtn($(this).attr('id'));});
+    $('#btn2013').on('click', function(){if(requesting){return;}var key = "2013"; var jenisData = "angkatan";getData(key, jenisData);toogleSideBtn($(this).attr('id'));});
+    $('#btn2014').on('click', function(){if(requesting){return;}var key = "2014"; var jenisData = "angkatan";getData(key, jenisData);toogleSideBtn($(this).attr('id'))});
+    $('#btn2015').on('click', function(){if(requesting){return;}var key = "2015"; var jenisData = "angkatan";getData(key, jenisData);toogleSideBtn($(this).attr('id'))});
+    $('#btn2016').on('click', function(){if(requesting){return;}var key = "2016"; var jenisData = "angkatan";getData(key, jenisData);toogleSideBtn($(this).attr('id'))});
+    $('#btn2017').on('click', function(){if(requesting){return;}var key = "2017"; var jenisData = "angkatan";getData(key, jenisData);toogleSideBtn($(this).attr('id'))});
+    $('#btn2018').on('click', function(){if(requesting){return;}var key = "2018"; var jenisData = "angkatan";getData(key, jenisData);toogleSideBtn($(this).attr('id'))});
+    $('#btnBE').on('click', function(){if(requesting){return;}var key = "be"; var jenisData = "anggota";getData(key, jenisData);toogleSideBtn($(this).attr('id'))});
+    $('#btnDPA').on('click', function(){if(requesting){return;}var key = "dpa"; var jenisData = "anggota";getData(key, jenisData);toogleSideBtn($(this).attr('id'))});
+    $('#btnMubes').on('click', function(){if(requesting){return;}var key = "mubes"; var jenisData = "anggota";getData(key, jenisData);toogleSideBtn($(this).attr('id'))});
 
     function toogleSideBtn(id)
     {
@@ -33,11 +35,14 @@ $(document).ready(function () {
             $(this).removeClass("active");
         })
     }
+
     function getData(key, jenisData){
         $('#contentHda').empty();
+        requesting = true;
         $.ajax({
             type: "GET",
             url: "/hda/" + jenisData + "/" + key,
+            beforeSend: function(){requesting=true},
             success: function (response) {
                 $.each(response, function(index, value){
                     if(typeof value.jabatan == 'undefined'){value.jabatan = '';value.posisi = '';}
@@ -76,6 +81,9 @@ $(document).ready(function () {
 '                        </div>'
                     );
                 });
+            },
+            complete: function(){
+                requesting = false;
             }
         });
     }
@@ -84,9 +92,13 @@ $(document).ready(function () {
         if(e.which == 13){
             let key = $(this).val();
             $('#contentHda').empty();
+            if(requesting){
+                return;
+            }
             $.ajax({
                 type: "GET",
                 url: "/data/search/" + key,
+                beforeSend: function(){requesting = true},
                 success: function (response) {
                     if(response == ''){
                         $('#contentHda').html('<span id="center-align">Tidak ada data yang cocok</span>');
@@ -129,11 +141,18 @@ $(document).ready(function () {
                             );
                         });
                     }
+                },
+                complete: function(){
+                    requesting = false;
                 }
             });
             return false;
         }
     });
 });
-$(document).ajaxStart(function(){$('#loading').removeClass('hide');});
-$(document).ajaxComplete(function(){$('#loading').addClass('hide');});
+$(document).ajaxStart(function(){
+    $('#loading').removeClass('hide');
+});
+$(document).ajaxComplete(function(){
+    $('#loading').addClass('hide');
+});

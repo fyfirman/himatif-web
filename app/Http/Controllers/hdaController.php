@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Input;
 
 class hdaController extends Controller
 {
-    private $baseUrl = 'http://localhost:8000/api/v1/';
+    private $baseUrl = 'http://api.himatif.org/data/v1/';
     /**
      * Display a listing of the resource.
      *

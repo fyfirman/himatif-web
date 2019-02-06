@@ -1,7 +1,5 @@
 $(document).ready(function () {
-    window.onload = function () {
-        getData('2012','angkatan');
-    };
+    getData('2012','angkatan');
     
     var requesting = false;
 

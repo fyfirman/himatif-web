@@ -29,7 +29,6 @@
             </li> 
         </ul>
     </li>
-    <li class="hide-on-med-and-up"><a href="{{ route('logout') }}">Logout</a></li>
 </ul>
 
 <script>

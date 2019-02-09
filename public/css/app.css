@@ -9414,7 +9414,7 @@ input[type=range]::-ms-thumb {
 }
 
 nav {
-  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2) !important;
 }
 
 @media only screen and (min-width: 992px) {
@@ -9475,21 +9475,20 @@ nav {
 
 .user-thumb {
   border-radius: 10000000px;
-  border: 2px solid #ffd61e;
   height: 40px;
   width: 40px;
 }
 
 .deep-btn {
-  box-shadow: inset rgba(0, 0, 0, 0.15) 0px 0.5px 2px 0px;
+  box-shadow: inset rgba(0, 0, 0, 0.15) 0px 0.5px 2px 0px !important;
 }
 
 .deep-btn:hover {
-  box-shadow: inset rgba(0, 0, 0, 0.15) 0px 1px 3px 0px;
+  box-shadow: inset rgba(0, 0, 0, 0.15) 0px 1px 3px 0px !important;
 }
 
 .deep-btn:active {
-  box-shadow: inset rgba(0, 0, 0, 0.15) 0px 4px 3px 0px;
+  box-shadow: inset rgba(0, 0, 0, 0.15) 0px 4px 3px 0px !important;
 }
 
 .login-btn:active {

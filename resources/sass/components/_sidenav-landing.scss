@@ -1,0 +1,17 @@
+nav{
+    z-index: 999 !important;
+}
+
+.sidenav{
+    margin-top:56px;
+    z-index: 998;
+
+    .collapsible-header{
+        padding-left: 32px;
+    }
+    .collapsible-body{
+        a{
+            padding-left: 48px !important;
+        }
+    }
+}

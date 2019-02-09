@@ -1,0 +1,12 @@
+@import "components/nav";
+
+$yellow-accent: #ffd61e;
+
+// Nav mobile button color
+#nav-mobile-btn{
+    color: $yellow-accent !important;
+}
+
+.user-thumb{
+	border: 2px solid $yellow-accent;
+}

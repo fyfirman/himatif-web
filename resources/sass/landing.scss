@@ -1,7 +1,12 @@
 // Variables
 @charset "UTF-8";
+
 // Materialize
 @import "materialize/materialize";
+
+@import "components/sidenav-landing";
+
+@import "components/nav-landing";
 
 .landing-container{
     @extend .container;
@@ -38,7 +43,3 @@ body{
     background-size: cover;
 }
 
-// Nav mobile button color
-#nav-mobile-btn{
-    color: #ffd61e !important;
-} 

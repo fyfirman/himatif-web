@@ -44,19 +44,23 @@
   background-color: #ea454b !important;
 }
 
-.materialize-red-text.text-lighten-1 {
+.materialize-red-text.text-lighten-1,
+.materialize-red-text.apps-menu-btn {
   color: #ea454b !important;
 }
 
-.materialize-red.darken-1 {
+.materialize-red.darken-1,
+.materialize-red.logout-btn:active {
   background-color: #d0181e !important;
 }
 
-.materialize-red-text.text-darken-1 {
+.materialize-red-text.text-darken-1,
+.materialize-red-text.apps-menu-btn:hover {
   color: #d0181e !important;
 }
 
-.materialize-red.darken-2 {
+.materialize-red.darken-2,
+.materialize-red.login-btn {
   background-color: #b9151b !important;
 }
 
@@ -80,7 +84,8 @@
   color: #8b1014 !important;
 }
 
-.red {
+.red,
+.logout-btn {
   background-color: #F44336 !important;
 }
 
@@ -88,7 +93,8 @@
   color: #F44336 !important;
 }
 
-.red.lighten-5 {
+.red.lighten-5,
+.lighten-5.logout-btn {
   background-color: #FFEBEE !important;
 }
 
@@ -96,7 +102,8 @@
   color: #FFEBEE !important;
 }
 
-.red.lighten-4 {
+.red.lighten-4,
+.lighten-4.logout-btn {
   background-color: #FFCDD2 !important;
 }
 
@@ -104,7 +111,8 @@
   color: #FFCDD2 !important;
 }
 
-.red.lighten-3 {
+.red.lighten-3,
+.lighten-3.logout-btn {
   background-color: #EF9A9A !important;
 }
 
@@ -112,7 +120,8 @@
   color: #EF9A9A !important;
 }
 
-.red.lighten-2 {
+.red.lighten-2,
+.lighten-2.logout-btn {
   background-color: #E57373 !important;
 }
 
@@ -120,23 +129,31 @@
   color: #E57373 !important;
 }
 
-.red.lighten-1 {
+.red.lighten-1,
+.lighten-1.logout-btn {
   background-color: #EF5350 !important;
 }
 
-.red-text.text-lighten-1 {
+.red-text.text-lighten-1,
+.red-text.apps-menu-btn {
   color: #EF5350 !important;
 }
 
-.red.darken-1 {
+.red.darken-1,
+.darken-1.logout-btn,
+.logout-btn:active {
   background-color: #E53935 !important;
 }
 
-.red-text.text-darken-1 {
+.red-text.text-darken-1,
+.red-text.apps-menu-btn:hover {
   color: #E53935 !important;
 }
 
-.red.darken-2 {
+.red.darken-2,
+.darken-2.logout-btn,
+.red.login-btn,
+.login-btn.logout-btn {
   background-color: #D32F2F !important;
 }
 
@@ -144,7 +161,8 @@
   color: #D32F2F !important;
 }
 
-.red.darken-3 {
+.red.darken-3,
+.darken-3.logout-btn {
   background-color: #C62828 !important;
 }
 
@@ -152,7 +170,8 @@
   color: #C62828 !important;
 }
 
-.red.darken-4 {
+.red.darken-4,
+.darken-4.logout-btn {
   background-color: #B71C1C !important;
 }
 
@@ -160,7 +179,8 @@
   color: #B71C1C !important;
 }
 
-.red.accent-1 {
+.red.accent-1,
+.accent-1.logout-btn {
   background-color: #FF8A80 !important;
 }
 
@@ -168,7 +188,8 @@
   color: #FF8A80 !important;
 }
 
-.red.accent-2 {
+.red.accent-2,
+.accent-2.logout-btn {
   background-color: #FF5252 !important;
 }
 
@@ -176,7 +197,8 @@
   color: #FF5252 !important;
 }
 
-.red.accent-3 {
+.red.accent-3,
+.accent-3.logout-btn {
   background-color: #FF1744 !important;
 }
 
@@ -184,7 +206,8 @@
   color: #FF1744 !important;
 }
 
-.red.accent-4 {
+.red.accent-4,
+.accent-4.logout-btn {
   background-color: #D50000 !important;
 }
 
@@ -236,19 +259,23 @@
   background-color: #ec407a !important;
 }
 
-.pink-text.text-lighten-1 {
+.pink-text.text-lighten-1,
+.pink-text.apps-menu-btn {
   color: #ec407a !important;
 }
 
-.pink.darken-1 {
+.pink.darken-1,
+.pink.logout-btn:active {
   background-color: #d81b60 !important;
 }
 
-.pink-text.text-darken-1 {
+.pink-text.text-darken-1,
+.pink-text.apps-menu-btn:hover {
   color: #d81b60 !important;
 }
 
-.pink.darken-2 {
+.pink.darken-2,
+.pink.login-btn {
   background-color: #c2185b !important;
 }
 
@@ -348,19 +375,23 @@
   background-color: #ab47bc !important;
 }
 
-.purple-text.text-lighten-1 {
+.purple-text.text-lighten-1,
+.purple-text.apps-menu-btn {
   color: #ab47bc !important;
 }
 
-.purple.darken-1 {
+.purple.darken-1,
+.purple.logout-btn:active {
   background-color: #8e24aa !important;
 }
 
-.purple-text.text-darken-1 {
+.purple-text.text-darken-1,
+.purple-text.apps-menu-btn:hover {
   color: #8e24aa !important;
 }
 
-.purple.darken-2 {
+.purple.darken-2,
+.purple.login-btn {
   background-color: #7b1fa2 !important;
 }
 
@@ -460,19 +491,23 @@
   background-color: #7e57c2 !important;
 }
 
-.deep-purple-text.text-lighten-1 {
+.deep-purple-text.text-lighten-1,
+.deep-purple-text.apps-menu-btn {
   color: #7e57c2 !important;
 }
 
-.deep-purple.darken-1 {
+.deep-purple.darken-1,
+.deep-purple.logout-btn:active {
   background-color: #5e35b1 !important;
 }
 
-.deep-purple-text.text-darken-1 {
+.deep-purple-text.text-darken-1,
+.deep-purple-text.apps-menu-btn:hover {
   color: #5e35b1 !important;
 }
 
-.deep-purple.darken-2 {
+.deep-purple.darken-2,
+.deep-purple.login-btn {
   background-color: #512da8 !important;
 }
 
@@ -572,19 +607,23 @@
   background-color: #5c6bc0 !important;
 }
 
-.indigo-text.text-lighten-1 {
+.indigo-text.text-lighten-1,
+.indigo-text.apps-menu-btn {
   color: #5c6bc0 !important;
 }
 
-.indigo.darken-1 {
+.indigo.darken-1,
+.indigo.logout-btn:active {
   background-color: #3949ab !important;
 }
 
-.indigo-text.text-darken-1 {
+.indigo-text.text-darken-1,
+.indigo-text.apps-menu-btn:hover {
   color: #3949ab !important;
 }
 
-.indigo.darken-2 {
+.indigo.darken-2,
+.indigo.login-btn {
   background-color: #303f9f !important;
 }
 
@@ -684,19 +723,23 @@
   background-color: #42A5F5 !important;
 }
 
-.blue-text.text-lighten-1 {
+.blue-text.text-lighten-1,
+.blue-text.apps-menu-btn {
   color: #42A5F5 !important;
 }
 
-.blue.darken-1 {
+.blue.darken-1,
+.blue.logout-btn:active {
   background-color: #1E88E5 !important;
 }
 
-.blue-text.text-darken-1 {
+.blue-text.text-darken-1,
+.blue-text.apps-menu-btn:hover {
   color: #1E88E5 !important;
 }
 
-.blue.darken-2 {
+.blue.darken-2,
+.blue.login-btn {
   background-color: #1976D2 !important;
 }
 
@@ -796,19 +839,23 @@
   background-color: #29b6f6 !important;
 }
 
-.light-blue-text.text-lighten-1 {
+.light-blue-text.text-lighten-1,
+.light-blue-text.apps-menu-btn {
   color: #29b6f6 !important;
 }
 
-.light-blue.darken-1 {
+.light-blue.darken-1,
+.light-blue.logout-btn:active {
   background-color: #039be5 !important;
 }
 
-.light-blue-text.text-darken-1 {
+.light-blue-text.text-darken-1,
+.light-blue-text.apps-menu-btn:hover {
   color: #039be5 !important;
 }
 
-.light-blue.darken-2 {
+.light-blue.darken-2,
+.light-blue.login-btn {
   background-color: #0288d1 !important;
 }
 
@@ -908,19 +955,23 @@
   background-color: #26c6da !important;
 }
 
-.cyan-text.text-lighten-1 {
+.cyan-text.text-lighten-1,
+.cyan-text.apps-menu-btn {
   color: #26c6da !important;
 }
 
-.cyan.darken-1 {
+.cyan.darken-1,
+.cyan.logout-btn:active {
   background-color: #00acc1 !important;
 }
 
-.cyan-text.text-darken-1 {
+.cyan-text.text-darken-1,
+.cyan-text.apps-menu-btn:hover {
   color: #00acc1 !important;
 }
 
-.cyan.darken-2 {
+.cyan.darken-2,
+.cyan.login-btn {
   background-color: #0097a7 !important;
 }
 
@@ -1020,19 +1071,23 @@
   background-color: #26a69a !important;
 }
 
-.teal-text.text-lighten-1 {
+.teal-text.text-lighten-1,
+.teal-text.apps-menu-btn {
   color: #26a69a !important;
 }
 
-.teal.darken-1 {
+.teal.darken-1,
+.teal.logout-btn:active {
   background-color: #00897b !important;
 }
 
-.teal-text.text-darken-1 {
+.teal-text.text-darken-1,
+.teal-text.apps-menu-btn:hover {
   color: #00897b !important;
 }
 
-.teal.darken-2 {
+.teal.darken-2,
+.teal.login-btn {
   background-color: #00796b !important;
 }
 
@@ -1132,19 +1187,23 @@
   background-color: #66BB6A !important;
 }
 
-.green-text.text-lighten-1 {
+.green-text.text-lighten-1,
+.green-text.apps-menu-btn {
   color: #66BB6A !important;
 }
 
-.green.darken-1 {
+.green.darken-1,
+.green.logout-btn:active {
   background-color: #43A047 !important;
 }
 
-.green-text.text-darken-1 {
+.green-text.text-darken-1,
+.green-text.apps-menu-btn:hover {
   color: #43A047 !important;
 }
 
-.green.darken-2 {
+.green.darken-2,
+.green.login-btn {
   background-color: #388E3C !important;
 }
 
@@ -1244,19 +1303,23 @@
   background-color: #9ccc65 !important;
 }
 
-.light-green-text.text-lighten-1 {
+.light-green-text.text-lighten-1,
+.light-green-text.apps-menu-btn {
   color: #9ccc65 !important;
 }
 
-.light-green.darken-1 {
+.light-green.darken-1,
+.light-green.logout-btn:active {
   background-color: #7cb342 !important;
 }
 
-.light-green-text.text-darken-1 {
+.light-green-text.text-darken-1,
+.light-green-text.apps-menu-btn:hover {
   color: #7cb342 !important;
 }
 
-.light-green.darken-2 {
+.light-green.darken-2,
+.light-green.login-btn {
   background-color: #689f38 !important;
 }
 
@@ -1356,19 +1419,23 @@
   background-color: #d4e157 !important;
 }
 
-.lime-text.text-lighten-1 {
+.lime-text.text-lighten-1,
+.lime-text.apps-menu-btn {
   color: #d4e157 !important;
 }
 
-.lime.darken-1 {
+.lime.darken-1,
+.lime.logout-btn:active {
   background-color: #c0ca33 !important;
 }
 
-.lime-text.text-darken-1 {
+.lime-text.text-darken-1,
+.lime-text.apps-menu-btn:hover {
   color: #c0ca33 !important;
 }
 
-.lime.darken-2 {
+.lime.darken-2,
+.lime.login-btn {
   background-color: #afb42b !important;
 }
 
@@ -1424,7 +1491,8 @@
   color: #aeea00 !important;
 }
 
-.yellow {
+.yellow,
+.login-btn {
   background-color: #ffeb3b !important;
 }
 
@@ -1432,7 +1500,8 @@
   color: #ffeb3b !important;
 }
 
-.yellow.lighten-5 {
+.yellow.lighten-5,
+.lighten-5.login-btn {
   background-color: #fffde7 !important;
 }
 
@@ -1440,7 +1509,8 @@
   color: #fffde7 !important;
 }
 
-.yellow.lighten-4 {
+.yellow.lighten-4,
+.lighten-4.login-btn {
   background-color: #fff9c4 !important;
 }
 
@@ -1448,7 +1518,8 @@
   color: #fff9c4 !important;
 }
 
-.yellow.lighten-3 {
+.yellow.lighten-3,
+.lighten-3.login-btn {
   background-color: #fff59d !important;
 }
 
@@ -1456,7 +1527,8 @@
   color: #fff59d !important;
 }
 
-.yellow.lighten-2 {
+.yellow.lighten-2,
+.lighten-2.login-btn {
   background-color: #fff176 !important;
 }
 
@@ -1464,23 +1536,30 @@
   color: #fff176 !important;
 }
 
-.yellow.lighten-1 {
+.yellow.lighten-1,
+.lighten-1.login-btn {
   background-color: #ffee58 !important;
 }
 
-.yellow-text.text-lighten-1 {
+.yellow-text.text-lighten-1,
+.yellow-text.apps-menu-btn {
   color: #ffee58 !important;
 }
 
-.yellow.darken-1 {
+.yellow.darken-1,
+.yellow.logout-btn:active,
+.darken-1.login-btn,
+.login-btn.logout-btn:active {
   background-color: #fdd835 !important;
 }
 
-.yellow-text.text-darken-1 {
+.yellow-text.text-darken-1,
+.yellow-text.apps-menu-btn:hover {
   color: #fdd835 !important;
 }
 
-.yellow.darken-2 {
+.yellow.darken-2,
+.login-btn {
   background-color: #fbc02d !important;
 }
 
@@ -1488,7 +1567,8 @@
   color: #fbc02d !important;
 }
 
-.yellow.darken-3 {
+.yellow.darken-3,
+.darken-3.login-btn {
   background-color: #f9a825 !important;
 }
 
@@ -1496,7 +1576,8 @@
   color: #f9a825 !important;
 }
 
-.yellow.darken-4 {
+.yellow.darken-4,
+.darken-4.login-btn {
   background-color: #f57f17 !important;
 }
 
@@ -1504,7 +1585,8 @@
   color: #f57f17 !important;
 }
 
-.yellow.accent-1 {
+.yellow.accent-1,
+.accent-1.login-btn {
   background-color: #ffff8d !important;
 }
 
@@ -1512,7 +1594,8 @@
   color: #ffff8d !important;
 }
 
-.yellow.accent-2 {
+.yellow.accent-2,
+.accent-2.login-btn {
   background-color: #ffff00 !important;
 }
 
@@ -1520,7 +1603,8 @@
   color: #ffff00 !important;
 }
 
-.yellow.accent-3 {
+.yellow.accent-3,
+.accent-3.login-btn {
   background-color: #ffea00 !important;
 }
 
@@ -1528,7 +1612,8 @@
   color: #ffea00 !important;
 }
 
-.yellow.accent-4 {
+.yellow.accent-4,
+.accent-4.login-btn {
   background-color: #ffd600 !important;
 }
 
@@ -1580,19 +1665,23 @@
   background-color: #ffca28 !important;
 }
 
-.amber-text.text-lighten-1 {
+.amber-text.text-lighten-1,
+.amber-text.apps-menu-btn {
   color: #ffca28 !important;
 }
 
-.amber.darken-1 {
+.amber.darken-1,
+.amber.logout-btn:active {
   background-color: #ffb300 !important;
 }
 
-.amber-text.text-darken-1 {
+.amber-text.text-darken-1,
+.amber-text.apps-menu-btn:hover {
   color: #ffb300 !important;
 }
 
-.amber.darken-2 {
+.amber.darken-2,
+.amber.login-btn {
   background-color: #ffa000 !important;
 }
 
@@ -1692,19 +1781,23 @@
   background-color: #ffa726 !important;
 }
 
-.orange-text.text-lighten-1 {
+.orange-text.text-lighten-1,
+.orange-text.apps-menu-btn {
   color: #ffa726 !important;
 }
 
-.orange.darken-1 {
+.orange.darken-1,
+.orange.logout-btn:active {
   background-color: #fb8c00 !important;
 }
 
-.orange-text.text-darken-1 {
+.orange-text.text-darken-1,
+.orange-text.apps-menu-btn:hover {
   color: #fb8c00 !important;
 }
 
-.orange.darken-2 {
+.orange.darken-2,
+.orange.login-btn {
   background-color: #f57c00 !important;
 }
 
@@ -1804,19 +1897,23 @@
   background-color: #ff7043 !important;
 }
 
-.deep-orange-text.text-lighten-1 {
+.deep-orange-text.text-lighten-1,
+.deep-orange-text.apps-menu-btn {
   color: #ff7043 !important;
 }
 
-.deep-orange.darken-1 {
+.deep-orange.darken-1,
+.deep-orange.logout-btn:active {
   background-color: #f4511e !important;
 }
 
-.deep-orange-text.text-darken-1 {
+.deep-orange-text.text-darken-1,
+.deep-orange-text.apps-menu-btn:hover {
   color: #f4511e !important;
 }
 
-.deep-orange.darken-2 {
+.deep-orange.darken-2,
+.deep-orange.login-btn {
   background-color: #e64a19 !important;
 }
 
@@ -1916,19 +2013,23 @@
   background-color: #8d6e63 !important;
 }
 
-.brown-text.text-lighten-1 {
+.brown-text.text-lighten-1,
+.brown-text.apps-menu-btn {
   color: #8d6e63 !important;
 }
 
-.brown.darken-1 {
+.brown.darken-1,
+.brown.logout-btn:active {
   background-color: #6d4c41 !important;
 }
 
-.brown-text.text-darken-1 {
+.brown-text.text-darken-1,
+.brown-text.apps-menu-btn:hover {
   color: #6d4c41 !important;
 }
 
-.brown.darken-2 {
+.brown.darken-2,
+.brown.login-btn {
   background-color: #5d4037 !important;
 }
 
@@ -1996,19 +2097,23 @@
   background-color: #78909c !important;
 }
 
-.blue-grey-text.text-lighten-1 {
+.blue-grey-text.text-lighten-1,
+.blue-grey-text.apps-menu-btn {
   color: #78909c !important;
 }
 
-.blue-grey.darken-1 {
+.blue-grey.darken-1,
+.blue-grey.logout-btn:active {
   background-color: #546e7a !important;
 }
 
-.blue-grey-text.text-darken-1 {
+.blue-grey-text.text-darken-1,
+.blue-grey-text.apps-menu-btn:hover {
   color: #546e7a !important;
 }
 
-.blue-grey.darken-2 {
+.blue-grey.darken-2,
+.blue-grey.login-btn {
   background-color: #455a64 !important;
 }
 
@@ -2036,7 +2141,8 @@
   background-color: #9e9e9e !important;
 }
 
-.grey-text {
+.grey-text,
+.apps-menu-btn {
   color: #9e9e9e !important;
 }
 
@@ -2044,7 +2150,8 @@
   background-color: #fafafa !important;
 }
 
-.grey-text.text-lighten-5 {
+.grey-text.text-lighten-5,
+.text-lighten-5.apps-menu-btn {
   color: #fafafa !important;
 }
 
@@ -2052,7 +2159,8 @@
   background-color: #f5f5f5 !important;
 }
 
-.grey-text.text-lighten-4 {
+.grey-text.text-lighten-4,
+.text-lighten-4.apps-menu-btn {
   color: #f5f5f5 !important;
 }
 
@@ -2060,7 +2168,8 @@
   background-color: #eeeeee !important;
 }
 
-.grey-text.text-lighten-3 {
+.grey-text.text-lighten-3,
+.text-lighten-3.apps-menu-btn {
   color: #eeeeee !important;
 }
 
@@ -2068,7 +2177,8 @@
   background-color: #e0e0e0 !important;
 }
 
-.grey-text.text-lighten-2 {
+.grey-text.text-lighten-2,
+.text-lighten-2.apps-menu-btn {
   color: #e0e0e0 !important;
 }
 
@@ -2076,23 +2186,29 @@
   background-color: #bdbdbd !important;
 }
 
-.grey-text.text-lighten-1 {
+.grey-text.text-lighten-1,
+.apps-menu-btn {
   color: #bdbdbd !important;
 }
 
-.grey.darken-1 {
+.grey.darken-1,
+.grey.logout-btn:active {
   background-color: #757575 !important;
 }
 
-.grey-text.text-darken-1 {
+.grey-text.text-darken-1,
+.text-darken-1.apps-menu-btn,
+.apps-menu-btn:hover {
   color: #757575 !important;
 }
 
-.grey.darken-2 {
+.grey.darken-2,
+.grey.login-btn {
   background-color: #616161 !important;
 }
 
-.grey-text.text-darken-2 {
+.grey-text.text-darken-2,
+.text-darken-2.apps-menu-btn {
   color: #616161 !important;
 }
 
@@ -2100,7 +2216,8 @@
   background-color: #424242 !important;
 }
 
-.grey-text.text-darken-3 {
+.grey-text.text-darken-3,
+.text-darken-3.apps-menu-btn {
   color: #424242 !important;
 }
 
@@ -2108,7 +2225,8 @@
   background-color: #212121 !important;
 }
 
-.grey-text.text-darken-4 {
+.grey-text.text-darken-4,
+.text-darken-4.apps-menu-btn {
   color: #212121 !important;
 }
 
@@ -2120,7 +2238,11 @@
   color: #000000 !important;
 }
 
-.white {
+.white,
+.login-form,
+.logout-form,
+.apps-wrapper,
+.edit-btn {
   background-color: #FFFFFF !important;
 }
 
@@ -2748,7 +2870,9 @@ i.left {
   margin-right: 15px;
 }
 
-i.right {
+i.right,
+i.logout-btn,
+i.edit-btn {
   float: right;
   margin-left: 15px;
 }
@@ -3402,7 +3526,9 @@ th {
   float: left !important;
 }
 
-.right {
+.right,
+.logout-btn,
+.edit-btn {
   float: right !important;
 }
 
@@ -4567,7 +4693,9 @@ nav .brand-logo.center {
   }
 
   nav .brand-logo.left,
-  nav .brand-logo.right {
+  nav .brand-logo.right,
+  nav .brand-logo.logout-btn,
+  nav .brand-logo.edit-btn {
     padding: 0;
     -webkit-transform: none;
             transform: none;
@@ -4577,13 +4705,17 @@ nav .brand-logo.center {
     left: 0.5rem;
   }
 
-  nav .brand-logo.right {
+  nav .brand-logo.right,
+  nav .brand-logo.logout-btn,
+  nav .brand-logo.edit-btn {
     right: 0.5rem;
     left: auto;
   }
 }
 
-nav .brand-logo.right {
+nav .brand-logo.right,
+nav .brand-logo.logout-btn,
+nav .brand-logo.edit-btn {
   right: 0.5rem;
   padding: 0;
 }
@@ -8411,7 +8543,9 @@ input[type=range]::-ms-thumb {
   transform: rotate(129deg);
 }
 
-.circle-clipper.right .circle {
+.circle-clipper.right .circle,
+.circle-clipper.logout-btn .circle,
+.circle-clipper.edit-btn .circle {
   left: -100%;
   border-left-color: transparent !important;
   -webkit-transform: rotate(-129deg);
@@ -8424,7 +8558,9 @@ input[type=range]::-ms-thumb {
   animation: left-spin 1333ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
 }
 
-.active .circle-clipper.right .circle {
+.active .circle-clipper.right .circle,
+.active .circle-clipper.logout-btn .circle,
+.active .circle-clipper.edit-btn .circle {
   /* duration: ARCTIME */
   -webkit-animation: right-spin 1333ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
   animation: right-spin 1333ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
@@ -9273,6 +9409,238 @@ input[type=range]::-ms-thumb {
   }
 }
 
+nav {
+  z-index: 999 !important;
+}
+
+.sidenav {
+  margin-top: 56px;
+  z-index: 998;
+}
+
+.sidenav .collapsible-header {
+  padding-left: 32px;
+}
+
+.sidenav .collapsible-body a {
+  padding-left: 48px !important;
+}
+
+.user-thumb {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+nav {
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2) !important;
+}
+
+@media only screen and (min-width: 992px) {
+  nav {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+.brand-logo {
+  margin-left: 15px;
+  margin-right: 15px;
+  font-size: 1.3rem !important;
+}
+
+@media only screen and (max-width: 992px) {
+  .brand-logo {
+    margin-left: 0px;
+  }
+}
+
+.brand-logo img {
+  height: 36px;
+  width: 36px;
+}
+
+.brand-logo:hover {
+  text-decoration: none;
+}
+
+.nav-button {
+  height: 64px !important;
+}
+
+.apps-menu-btn:hover {
+  background-color: transparent;
+}
+
+.apps-wrapper {
+  width: 352px !important;
+  padding: 25px !important;
+}
+
+.apps-wrapper .apps-btn {
+  padding: 10px 4px;
+  text-align: center;
+  border-radius: 3px;
+  border: 1px solid #fff;
+}
+
+.apps-wrapper .apps-btn img {
+  width: 64px;
+}
+
+.apps-wrapper .apps-btn:hover {
+  border: 1px solid #e5e5e5;
+}
+
+.user-thumb {
+  border-radius: 10000000px;
+  height: 40px;
+  width: 40px;
+}
+
+.deep-btn {
+  box-shadow: inset rgba(0, 0, 0, 0.15) 0px 0.5px 2px 0px !important;
+}
+
+.deep-btn:hover {
+  box-shadow: inset rgba(0, 0, 0, 0.15) 0px 1px 3px 0px !important;
+}
+
+.deep-btn:active {
+  box-shadow: inset rgba(0, 0, 0, 0.15) 0px 4px 3px 0px !important;
+}
+
+.login-btn:active {
+  background-color: #e9b228 !important;
+}
+
+.edit-btn {
+  border: solid 1px #ccc;
+  box-shadow: none;
+  color: #4b4b4b;
+}
+
+.edit-btn:active {
+  background-color: #f0f0f0 !important;
+  box-shadow: inset rgba(0, 0, 0, 0.15) 0px 1px 3px 0px;
+}
+
+.logout-btn {
+  margin-left: 3%;
+  box-shadow: inset rgba(0, 0, 0, 0.15) 0px 1px 2px 0px;
+}
+
+.login-form,
+.logout-form,
+.apps-wrapper {
+  position: fixed;
+  top: 80px;
+  right: 5px;
+  z-index: 999;
+  width: 250px;
+  display: none;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-color: rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transition-duration: 0.4s;
+  /* label color */
+}
+
+.login-form .row,
+.logout-form .row,
+.apps-wrapper .row {
+  margin-bottom: 0px;
+}
+
+.login-form .input-field,
+.logout-form .input-field,
+.apps-wrapper .input-field {
+  margin-bottom: 0px;
+  /* label focus color */
+  /* label underline focus color */
+  /* valid color */
+}
+
+.login-form .input-field input[type=text]:focus + label,
+.logout-form .input-field input[type=text]:focus + label,
+.apps-wrapper .input-field input[type=text]:focus + label,
+.login-form .input-field input[type=password]:focus + label,
+.logout-form .input-field input[type=password]:focus + label,
+.apps-wrapper .input-field input[type=password]:focus + label {
+  color: #fda40c;
+}
+
+.login-form .input-field input[type=text]:focus,
+.logout-form .input-field input[type=text]:focus,
+.apps-wrapper .input-field input[type=text]:focus,
+.login-form .input-field input[type=password]:focus,
+.logout-form .input-field input[type=password]:focus,
+.apps-wrapper .input-field input[type=password]:focus {
+  border-bottom: 1px solid #fda40c;
+  box-shadow: 0 1px 0 0 #fda40c;
+}
+
+.login-form .input-field input[type=text].valid,
+.logout-form .input-field input[type=text].valid,
+.apps-wrapper .input-field input[type=text].valid,
+.login-form .input-field input[type=password].valid,
+.logout-form .input-field input[type=password].valid,
+.apps-wrapper .input-field input[type=password].valid {
+  border-bottom: 1px solid #fda40c;
+  box-shadow: 0 1px 0 0 #fda40c;
+}
+
+.login-form .input-field:focus label,
+.logout-form .input-field:focus label,
+.apps-wrapper .input-field:focus label {
+  color: #fda40c;
+}
+
+.login-form input:-webkit-autofill,
+.logout-form input:-webkit-autofill,
+.apps-wrapper input:-webkit-autofill {
+  -webkit-box-shadow: inset 0 0 0px 9999px white !important;
+}
+
+.login-form a,
+.logout-form a,
+.apps-wrapper a {
+  font-size: 9pt;
+}
+
+.logout-form {
+  width: 300px;
+}
+
+.logout-form .user-thumb {
+  text-align: center;
+  height: 100px;
+  width: 100px;
+  margin-bottom: 10px;
+  border: none;
+}
+
+.logout-form .info-wrapper {
+  padding-top: 15%;
+  padding-bottom: 15%;
+}
+
+.logout-form .user-name {
+  font-weight: 600;
+  font-size: 12pt;
+}
+
+#nav-mobile-btn {
+  color: #ffd61e !important;
+}
+
+.user-thumb {
+  border: 2px solid #ffd61e;
+}
+
 .landing-container {
   padding-top: 80px;
 }
@@ -9298,9 +9666,5 @@ input[type=range]::-ms-thumb {
 body {
   background: url(/images/bg.svg?c0dcfcce149085c4798273f9f8dbb982) no-repeat center center fixed;
   background-size: cover;
-}
-
-#nav-mobile-btn {
-  color: #ffd61e !important;
 }
 

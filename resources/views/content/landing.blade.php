@@ -25,7 +25,7 @@
 			<div id="keilmuan" class="card">
 				<div class="card-image">
 					<img src="{{asset('img/journal-card.jpg')}}">
-					<a href="{{ url('/hda') }}" class="btn-floating btn-large halfway-fab waves-effect waves-light red"><i class="material-icons">send</i></a>
+					<a href="{{ url('/keilmuan') }}" class="btn-floating btn-large halfway-fab waves-effect waves-light red"><i class="material-icons">send</i></a>
 				</div>
 				<div class="card-content">
 					<span class="card-title">Keilmuan</span>
@@ -35,4 +35,6 @@
 		</div>
 	</div>
 </div>
+
+
 @endsection

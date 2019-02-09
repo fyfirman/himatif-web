@@ -16,6 +16,7 @@
 
 <body>
     @include('partials.nav')
+    @include('landing.sidenav')
     <main class="section">
         @yield('content')
     </main>

@@ -59,7 +59,7 @@
 <div id="apps-wrapper" class="apps-wrapper">
     <div class="row">
         <a href="{{ url('/hda') }}" class="col m4 apps-btn">
-            <img src="https://dummyimage.com/100x100/000000/ffffff&text=HDA" alt=""><br>
+            <img src="{{ asset('svg/logo-hda.svg') }}" alt=""><br>
             <label>Himatif Database</label>
         </a>
         <a href="{{ url('/keilmuan') }}" class="col m4 apps-btn">

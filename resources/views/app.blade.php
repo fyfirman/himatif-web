@@ -7,6 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     {!! MaterializeCSS::include_full() !!}
     
+    {{-- Sweet Alert --}}
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser -->
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+
     <link rel="stylesheet" type="text/css" href="{{ mix('/css/app.css') }}">
     @yield('css')
     
@@ -27,3 +32,13 @@
 </body>
 
 </html>
+
+<script>
+    window.onload = function alert(params) {
+        Swal.fire({
+            title: 'Please login to continue',
+            type: 'error',
+            confirmButtonText: 'Login'
+        })
+    }
+</script>

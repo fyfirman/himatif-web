@@ -63,7 +63,7 @@
             <label>Himatif Database</label>
         </a>
         <a href="{{ url('/keilmuan') }}" class="col m4 apps-btn">
-            <img src="https://dummyimage.com/100x100/000000/ffffff&text=keilmuan" alt=""><br>
+            <img src="{{ asset('svg/logo-keilmuan.svg') }}" alt=""><br>
             <label>Keilmuan</label>
         </a>
         @php

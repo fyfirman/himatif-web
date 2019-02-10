@@ -10251,6 +10251,26 @@ nav {
   }
 }
 
+nav #user-btn:hover {
+  background-color: transparent !important;
+}
+
+nav .user-thumb:hover {
+  border: 5px solid rgba(0, 0, 0, 0.1);
+  transition: 0.2s;
+}
+
+nav #user-btn > .active {
+  border: 5px solid rgba(0, 0, 0, 0.15);
+}
+
+.user-thumb {
+  border-radius: 10000000px;
+  height: 40px;
+  width: 40px;
+  transition: 0.2s;
+}
+
 .brand-logo {
   margin-left: 15px;
   margin-right: 15px;
@@ -10298,12 +10318,6 @@ nav {
 
 .apps-wrapper .apps-btn:hover {
   border: 1px solid #e5e5e5;
-}
-
-.user-thumb {
-  border-radius: 10000000px;
-  height: 40px;
-  width: 40px;
 }
 
 .deep-btn {

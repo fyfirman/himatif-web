@@ -12,8 +12,33 @@ nav{
 	@media only screen and (max-width : 360px){
 		width: 100.5%;
 	}
+
+	
+	#user-btn:hover{
+		background-color: transparent !important;
+	}
+
+	// Login Logout Button
+	
+	.user-thumb:hover{
+		border: 5px solid rgba(0,0,0,0.1);
+		transition: .2s;
+	}
+	
+	#user-btn > .active{
+		border: 5px solid rgba(0,0,0,0.15);
+	}
 }
 
+.user-thumb{
+	@extend %center-cropped;
+
+	border-radius: 10000000px;
+	height: 40px;
+	width: 40px;
+	transition: .2s;
+
+}
 .brand-logo{
 	margin-left: 15px;
 	margin-right: 15px;
@@ -67,15 +92,7 @@ nav{
 	}
 }
 
-// Login Logout Button
-.user-thumb{
-	@extend %center-cropped;
 
-	border-radius: 10000000px;
-	height: 40px;
-	width: 40px;
-	
-}
 
 .deep-btn{
 	box-shadow: inset rgba(0, 0, 0, 0.15) 0px 0.5px 2px 0px !important;

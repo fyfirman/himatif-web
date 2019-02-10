@@ -12,7 +12,7 @@ function toogleElement(id){
     } else {
         element.style.display = "none";
     }
-    document.getElementById('reset-form').style.display = 'none';
+    // document.getElementById('reset-form').style.display = 'none';
 }
 
 function toogleAppsMenu(status_login) {
@@ -38,7 +38,17 @@ function toogleAuth(status_login) {
         id = 'logout-form';
     else
         id = 'login-form';
+
     toogleElement(id);
+    toggleUserButtonStyle();
+}
+
+function toggleUserButtonStyle(){
+    let userButton = document.querySelector("#user-btn > .user-thumb");
+
+    userButton.classList.toggle("active");
+
+    console.log(userButton);
 }
 
 function showReset(){

@@ -39,7 +39,7 @@
                 @if(session('logged_in'))
                     @php $anggota = Cookie::get('anggota'); $anggota=json_decode($anggota); @endphp
                     @foreach ($anggota as $data)
-                        <a class="nav-button" onclick="toogleAuth(1)">
+                        <a id="user-btn" class="nav-button" onclick="toogleAuth(1)">
                             <img class="user-thumb" src="{{ $data->url_foto }}" style="vertical-align:middle"/>
                         </a>
                     @endforeach

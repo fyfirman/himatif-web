@@ -62,26 +62,21 @@
             <img src="https://dummyimage.com/100x100/000000/ffffff&text=HDA" alt=""><br>
             <label>Himatif Database</label>
         </a>
-        <a href="{{ url('/pathways') }}" class="col m4 apps-btn">
-            <img src="https://dummyimage.com/100x100/000000/ffffff&text=Pathways" alt=""><br>
-            <label>Pathways</label>
+        <a href="{{ url('/keilmuan') }}" class="col m4 apps-btn">
+            <img src="https://dummyimage.com/100x100/000000/ffffff&text=keilmuan" alt=""><br>
+            <label>Keilmuan</label>
         </a>
-        <a href="{{ url('/jurnal') }}" class="col m4 apps-btn">
-            <img src="https://dummyimage.com/100x100/000000/ffffff&text=Read Djournal" alt=""><br>
-            <label>Read Djournal</label>
-        </a>
-    </div>
-    @php
+        @php
         $superuser = true;
-    @endphp
-    @if ($superuser)
-    <div class="row">
-        <a href="{{ url('/admin/user') }}" class="col m4 apps-btn">
-            <img src="https://via.placeholder.com/100/FF0000/ffffff?text=Admin" alt=""><br>
-            <label>Admin</label>
-        </a>
+        @endphp
+        @if ($superuser)
+            <a href="{{ url('/admin/user') }}" class="col m4 apps-btn">
+                <img src="https://via.placeholder.com/100/FF0000/ffffff?text=Admin" alt=""><br>
+                <label>Admin</label>
+            </a>
+        @endif
     </div>
-    @endif
+    
 </div>
 
 

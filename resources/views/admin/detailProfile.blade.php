@@ -24,13 +24,13 @@
                 <p id="npm"></p>
                 <p id="bidang_minat"></p>
                 <div class="contact row">
-                    <div class="col m4">
+                    <div class="col m4 s12">
                         <i class="material-icons">call</i> <span id="nohp"></span>
                     </div>
-                    <div class="col m4">
+                    <div class="col m4 s12">
                         <i class="fab fa-line"></i> <span id="line"></span>
                     </div>
-                    <div class="col m4">
+                    <div class="col m4 s12">
                         <i class="material-icons">email</i> <span id="email"></span>
                     </div>
                 </div>
@@ -38,11 +38,15 @@
         </div>
         <div id="body-detail" class="hide">
             <h4>Biodata</h4>
-            <div id="biodata">
+            <div id="biodata" class="data">
                 <div class="row">
-                    <div class="col m12">
+                    <div class="col m6">
                         <label for="jk">Jenis Kelamin</label>
                         <p id="jk"></p>
+                    </div>
+                    <div class="col m6">
+                        <label for="hobi">Hobi</label>
+                        <p id="hobi"></p>
                     </div>
                 </div>
                 <div class="row">
@@ -71,6 +75,61 @@
                     <div class="col m12">
                         <label for="alamat_kos">Alamat Kos</label>
                         <p id="alamat_kos"></p>
+                    </div>
+                </div>
+            </div>
+            <h4>Informasi Keluarga</h4>
+            <div id="keluarga" class="data">
+                <div class="row">
+                    <div class="col m6 s12">
+                        <label for="nama_ayah">Nama Ayah</label>
+                        <p id="nama_ayah">Dummy text</p>
+                    </div>
+                    <div class="col m6 s12">
+                        <label for="nama_ibu">Nama Ibu</label>
+                        <p id="nama_ibu">Dummy text</p>
+                    </div>
+                    <div class="col m12">
+                        <label for="no_telp_ortu">Nomor Telepon Orang Tua</label>
+                        <p id="no_telp_ortu">Dummy text</p>
+                    </div>
+                </div>
+            </div>
+            <h4>Media Sosial</h4>
+            <div id="media_sosial" class="data">
+                <div class="row">
+                    <div class="col m4 s12">
+                        <label for="facebook">Facebook</label>
+                        <p id="facebook">Dummy text</p>
+                    </div>
+                    <div class="col m4 s12">
+                        <label for="twitter">Twitter</label>
+                        <p id="twitter">Dummy text</p>
+                    </div>
+                    <div class="col m4 s12">
+                        <label for="instagram">Instagram</label>
+                        <p id="instagram">Dummy text</p>
+                    </div>
+                </div>
+            </div>
+            <h4>Keorganisasian</h4>
+            <div id="keorganisasian" class="data">
+                <div class="row">
+                    <div class="col m12">
+                        <label for="riwayat_organisasi">Riwayat Organisasi</label>
+                        <ul>
+                            <li>Dummy text 1</li>
+                            <li>Dummy text 2</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col m12">
+                        <label for="riwayat_kepanitiaan">Riwayat Kepanitiaan</label>
+                        <ul>
+                            <li>Dummy text 1</li>
+                            <li>Dummy text 2</li>
+                        </ul>
                     </div>
                 </div>
             </div>

@@ -3054,7 +3054,7 @@
 }
 
 .white,
-#body-detail #biodata,
+#body-detail .data,
 #detail-container,
 .tabs > .tab a,
 .tabs,
@@ -10746,16 +10746,20 @@ nav .apps-menu-btn :hover {
 
 #body-detail h4 {
   padding-left: 20px;
-  margin-top: 0;
+  margin-top: 12px;
   font-size: 1.3rem;
 }
 
-#body-detail #biodata {
+#body-detail .data {
   padding: 16px;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
 }
 
-#body-detail #biodata p {
+#body-detail .data p {
+  margin: 0;
+}
+
+#body-detail .data ul {
   margin: 0;
 }
 

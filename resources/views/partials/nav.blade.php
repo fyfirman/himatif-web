@@ -71,7 +71,7 @@
         @endphp
         @if ($superuser)
             <a href="{{ url('/admin/user') }}" class="col m4 apps-btn">
-                <img src="https://via.placeholder.com/100/FF0000/ffffff?text=Admin" alt=""><br>
+                <img src="{{ asset('svg/logo-admin.svg') }}" alt=""><br>
                 <label>Admin</label>
             </a>
         @endif

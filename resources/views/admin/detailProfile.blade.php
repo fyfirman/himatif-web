@@ -15,7 +15,10 @@
                 </div>
             </div>
             <div id="header-data" class="hide">
-                <span class="row"><i class="material-icons right white-text">close</i></span>
+                <span class="row">
+                    <i class="material-icons right white-text">close</i>
+                    <a href="#edit"><i class="material-icons right white-text">settings</i></a>
+                </span>
                 <a id="photo-link" href="#" target="_blank"><img id="user-photos" class="user-thumb" src="" alt=""></a>
                 <h5 id="nama"></h5>
                 <p id="npm"></p>

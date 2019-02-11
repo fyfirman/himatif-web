@@ -14,7 +14,7 @@
 
 <body>
     {{-- Modals Detail Profile --}}
-    @include('hda.detailProfile')
+    @include('admin.detailProfile')
     
     {{-- Side Navigation --}}
     @include('admin.sidenav')

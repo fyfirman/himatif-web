@@ -43,6 +43,14 @@ class hdaController extends Controller
         }
     }
 
+    public function admin(Request $request){
+        if($this->cekSession($request)){
+            return view('admin.userContent');
+        }else{
+            return redirect('/')->with('message', 'login_first');
+        }
+    }
+
     public function angkatan($tahun, Request $request){
         $endpoint = 'anggota/search?type=angkatan&q='.$tahun;
         $data = $this->getDataAPI($endpoint);
@@ -66,27 +74,6 @@ class hdaController extends Controller
     public function getDataAnggota($npm){
         $endpoint = 'anggota/search?type=npm&q='.$npm;
         return $this->getDataAPI($endpoint);
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
     }
 
     /**

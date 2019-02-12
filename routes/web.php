@@ -23,11 +23,6 @@ Route::post('login', 'loginController@login');
 Route::get('logout', 'loginController@logout')->name('logout');
 Route::get('updateProfile', 'hdaController@viewEdit')->name('viewEdit');
 Route::post('updateProfile', 'hdaController@edit')->name('update');
-Route::get('admin', function(){
-    return redirect('admin/user');
-});
-Route::get('admin/user', function(){
-    return view('admin.userContent');
-});
+Route::get('admin', 'hdaController@admin')->name('admin');
 Route::post('reset', 'resetPwdController@reset')->name('reset');
 Route::post('update/password', 'resetPwdController@update')->name('updatePwd');

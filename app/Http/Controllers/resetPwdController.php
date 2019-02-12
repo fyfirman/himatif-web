@@ -8,7 +8,7 @@ use GuzzleHttp\Exception\RequestException;
 
 class resetPwdController extends Controller
 {
-    private $baseUrl = 'http://localhost:8000/api/v1/';
+    private $baseUrl = 'http://api.himatif.org/data/v1/';
 
     public function reset(Request $request){
         $uname = $request->input('username');
@@ -21,7 +21,7 @@ class resetPwdController extends Controller
                 return view('content.newPWD', ['pwd' => $result->data]);
             }
         }catch (RequestException $req) {
-            return redirect('/')->with('reset', 'failed');
+            return redirect('/')->with('message', 'resetpw_failed');
         }
     }
 
@@ -29,14 +29,14 @@ class resetPwdController extends Controller
         $endpoint = 'update/anggota/password';
         $client = new Client(['base_uri' => $this->baseUrl]);
         $token = $request->session()->get('remember_token');
-        $oldpw = $request->input('oldpw');
         $newpw = $request->input('newpw');
-        if($oldpw == $newpw){
+        $confirm_pw = $request->input('confirm_newPwd');
+        if($newpw == $confirm_pw){
             try{
                 $data = array(
                     'username' => $request->input('username'),
                     'oldpw' => $request->input('oldpw'),
-                    'newpw' => $request->input('newpw'),
+                    'newpw' => $newpw,
                 );
                 $response = $client->request('PUT', $endpoint, ['form_params' => $data, 'headers' => ['remember_token' => $token]]);
                 $result = json_decode($response->getBody()->getContents());
@@ -45,12 +45,12 @@ class resetPwdController extends Controller
             }
     
             if($result != NULL && $result->status == 'Password berhasil diganti'){
-                return redirect()->route('viewEdit')->with('updatePW', 'success');
+                return redirect()->route('viewEdit')->with('message', 'updatepw_success');
             }else{
-                return redirect()->route('viewEdit')->with('updatePW', 'failed');
+                return redirect()->route('viewEdit')->with('message', 'updatepw_failed');
             }
         }else{
-            return redirect()->route('viewEdit')->with('updatePW', 'failed');
+            return redirect()->route('viewEdit')->with('message', 'updatepw_failed');
         }
     }
 }

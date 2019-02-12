@@ -2,9 +2,41 @@
 <script src="{{asset('js/nav-submenu.js')}}"></script>
 <nav class="navbar-fixed white pushpin">
     <script>
-    $(document).ready(function(){
-        $('.pushpin').pushpin();
-    });
+        $(document).ready(function(){
+            $('.pushpin').pushpin();
+            // jJqNA3Gm
+            var message = "{{ Session::get('message') }}";
+            switch(message){
+                case "login_invalid":
+                    alert('NPM/Password is Invalid', 'error');
+                    break;
+                case "login_first":
+                    alert('Please Login First', 'warning');
+                    break;
+                case "updatedata_success":
+                    alert('Update Data Success', 'success');
+                    break;
+                case "updatedata_failed":
+                    alert('Update Data Failed', 'error');
+                    break;
+                case "updatepw_success":
+                    alert('Update Password Succesfully!', 'success');
+                    break;
+                case "updatepw_failed":
+                    alert('Update Password Failed. Please re-check your old/newpassword!', 'error');
+                    break;
+                case "resetpw_failed":
+                    alert('NPM/Email for Reset Password is Invalid/Not Registered yet!', 'error');
+                    break;
+            }
+        });
+
+        function alert(title, type){
+            Swal.fire({
+                title: title,
+                type: type
+            })
+        }
     </script>
     <div class="nav-wrapper">
         <a id="nav-mobile-btn" href="#" data-target="slide-out" class="sidenav-trigger teal-text"><i class="material-icons">menu</i></a>
@@ -17,22 +49,6 @@
         @yield('search-bar')
 
         <ul id="nav-mobile" class="right">
-            <li class="hide-on-small-only">@if (session('login') == 'invalid')
-                    <span class="red-text">NPM/Password is Invalid.</span>
-                @elseif(session('login') == 'first')
-                    <span class="orange-text">Please Login First!</span>
-                @elseif(session('update') == 'success')
-                    <span class="orange-text">Update Data Succes.</span>
-                @elseif(session('update') == 'failed')
-                    <span class="red-text">Update Data Failed!</span>
-                @elseif(session('reset') == 'failed')
-                    <span class="red-text">NPM/Email for Reset Password is Invalid/Not Registered yet!</span>
-                @elseif(session('updatePW') == 'success')
-                    <span class="orange-text">Update Password Succesfully!</span>
-                @elseif(session('updatePW') == 'failed')
-                    <span class="red-text">Update Password Failed. Please re-check your old/newpassword!</span>
-                @endif
-            </li>
             <li class="hide-on-small-only"><a onclick="toogleAppsMenu({{Session::get('logged_in')}})" class="apps-menu-btn"><i class="material-icons">apps</i></a></li>
             <li>
                 {{-- Kondisi ketika sudah masuk --}}

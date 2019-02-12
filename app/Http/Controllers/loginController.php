@@ -29,7 +29,7 @@ class loginController extends Controller{
                 return redirect('/')->withCookie(cookie('anggota', $data_json, 1440));
             }
         } catch (RequestException $req) {
-            return redirect('/')->with('login', 'invalid');
+            return redirect('/')->with('message', 'login_invalid');
         }
     }
 

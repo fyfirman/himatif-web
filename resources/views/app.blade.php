@@ -32,13 +32,3 @@
 </body>
 
 </html>
-
-<script>
-    window.onload = function alert(params) {
-        Swal.fire({
-            title: 'Please login to continue',
-            type: 'error',
-            confirmButtonText: 'Login'
-        })
-    }
-</script>

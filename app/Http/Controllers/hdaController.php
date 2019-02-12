@@ -39,7 +39,7 @@ class hdaController extends Controller
         if($this->cekSession($request)){
             return view('hda.app');
         }else{
-            return redirect('/')->with('login', 'first');
+            return redirect('/')->with('message', 'login_first');
         }
     }
 
@@ -49,7 +49,7 @@ class hdaController extends Controller
         if($this->cekSession($request) && $data != NULL){
             return $data;
         }else{
-            return redirect('/')->with('login', 'first');
+            return redirect('/')->with('message', 'login_first');
         }
     }
 
@@ -59,7 +59,7 @@ class hdaController extends Controller
         if($this->cekSession($request) && $data != NULL){
             return $data;
         }else{
-            return redirect('/')->with('login', 'first');
+            return redirect('/')->with('message', 'login_first');
         }
     }
 
@@ -105,7 +105,7 @@ class hdaController extends Controller
         if($this->cekSession($request)){
             return view('content.editProfile');
         }else{
-            return redirect('/')->with('login', 'first');
+            return redirect('/')->with('message', 'login_first');
         }
     }
 
@@ -155,9 +155,9 @@ class hdaController extends Controller
             $npm = $request->session()->get('username');
             $data = $this->getDataAnggota($npm);
             $data_json = json_encode($data);
-            return redirect()->route('viewEdit')->with('update', 'success')->withCookie(cookie('anggota', $data_json, 120));
+            return redirect()->route('viewEdit')->with('message', 'updatedata_success')->withCookie(cookie('anggota', $data_json, 120));
         }else{
-            return redirect()->route('viewEdit')->with('update', 'failed');
+            return redirect()->route('viewEdit')->with('message', 'updatedata_failed');
         }
     }
 

@@ -10517,6 +10517,12 @@ nav .apps-menu-btn :hover {
   background-color: transparent;
 }
 
+@media screen and (max-width: 600px) {
+  nav .tabs {
+    top: -9px;
+  }
+}
+
 .tabs > .tab a.active {
   color: rgba(255, 214, 30, 0.7) !important;
 }

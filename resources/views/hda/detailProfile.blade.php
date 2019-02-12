@@ -35,7 +35,7 @@
         </div>
         <div id="body-detail" class="hide">
             <h4>Biodata</h4>
-            <div id="biodata">
+            <div id="biodata" class="data">
                 <div class="row">
                     <div class="col m12">
                         <label for="jk">Jenis Kelamin</label>

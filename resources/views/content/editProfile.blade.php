@@ -17,20 +17,38 @@
                 </div>
             </div>
             <div class="row">
-                <div class="input-field col m12 inline">
-                    <input type="text" name="jk" id="jk" value="{{ $data->jk }}" required>
+                <div class="input-field col m6 inline">
+                    <select name="jk" id="jk" required>
+                        <option value="Laki - laki" @if ($data->jk == 'Laki - laki') selected="selected" @endif >Laki - laki</option>
+                        <option value="Perempuan" @if ($data->jk == 'Perempuan') selected="selected" @endif>Perempuan</option>
+                    </select>
                     <label for="jk">Jenis Kelamin</label>
                 </div>
-            </div>
-            <div class="row">
-                <div class="input-field col m12 inline">
-                    <input type="text" name="agama" id="agama" value="{{ $data->agama }}" required>
+                <div class="input-field col m6 inline">
+                    <select name="agama" id="agama" required>
+                        <option value="Islam" @if ($data->agama == 'Islam' || $data->agama == 'islam') selected="selected" @endif>Islam</option>
+                        <option value="Kristen" @if ($data->agama == 'Kristen') selected="selected" @endif >Kristen</option>
+                        <option value="Protestan" @if ($data->agama == 'Protestan') selected="selected" @endif >Protestan</option>
+                        <option value="Katolik" @if ($data->agama == 'Katolik') selected="selected" @endif >Katholik</option>
+                        <option value="Buddha" @if ($data->agama == 'Buddha') selected="selected" @endif >Buddha</option>
+                        <option value="Hindu" @if ($data->agama == 'Hindu') selected="selected" @endif >Hindu</option>
+                    </select>
                     <label for="agama">Agama</label>
                 </div>
             </div>
             <div class="row">
-                <div class="input-field col m12 inline">
-                    <input type="text" name="goldar" id="goldar" value="{{ $data->goldar }}" required>
+                <div class="input-field col m6 inline">
+                    <input type="text" name="hobi" id="hobi" value="{{ $data->hobi }}" required>
+                    <label for="hobi">Hobi</label>
+                </div>
+                <div class="input-field col m6 inline">
+                    <select name="goldar" id="goldar" required>
+                        <option value="A" @if ($data->goldar == 'A') selected="selected" @endif>A</option>
+                        <option value="B" @if ($data->goldar == 'B') selected="selected" @endif >B</option>
+                        <option value="AB" @if ($data->goldar == 'AB') selected="selected" @endif >AB</option>
+                        <option value="O" @if ($data->goldar == 'O') selected="selected" @endif >O</option>
+                        <option value="-" @if ($data->goldar == '-') selected="selected" @endif >-</option>
+                    </select>
                     <label for="goldar">Golongan Darah</label>
                 </div>
             </div>
@@ -56,55 +74,51 @@
                         <label for="alamat_kos">Alamat Kos</label>
                     </div>
             </div>
-            <div class="row">
-                <div class="input-field m12 inline">
-                    <input type="text" name="angkatan" id="angkatan" value="{{ $data->angkatan }}" required>
-                    <label for="angkatan">Angkatan</label>
-                </div>
-                <div class="input-field m12 inline">
-                    <input type="text" name="hobi" id="hobi" value="{{ $data->hobi }}" required>
-                    <label for="hobi">Hobi</label>
-                </div>
-            </div>
             <div id="organisasi" class="row">
-                <div class="input-field m12 inline">
+                <div class="input-field col m6 inline">
                     <input type="text" name="status" id="status" value="{{ $data->status }}" required>
                     <label for="status">Status Anggota</label>
                 </div>
-                <div class="input-field m12 inline">
+                <div class="input-field col m6 inline">
                     <input type="text" name="bidang_minat" id="bidang_minat" value="{{ $data->bidang_minat }}" required>
                     <label for="bidang_minat">Bidang Minat</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col m6 inline">
+                    <input type="text" name="angkatan" id="angkatan" value="{{ $data->angkatan }}" required>
+                    <label for="angkatan">Angkatan</label>
                 </div>
             </div>
         </div>
         <div id="contact-info">
             <h5>2. Informasi Kontak</h5>
             <div class="row">
-                <div class="input-field m12 inline">
+                <div class="input-field col m6 inline">
                     <input type="email" name="email" id="email" value="{{ $data->email }}" required>
                     <label for="email">Email</label>
                 </div>
-                <div class="input-field m12 inline">
+                <div class="input-field col m6 inline">
                     <input type="number" name="no_hp" id="no_hp" value="{{ $data->no_hp }}" required>
                     <label for="no_hp">Nomor Handphone</label>
                 </div>
             </div>
             <div class="row">
-                <div class="input-field m12 inline">
+                <div class="input-field col m6 inline">
                     <input type="text" name="line" id="line" value="{{ $data->line }}" required>
                     <label for="line">ID Line</label>
                 </div>
-                <div class="input-field m12 inline">
+                <div class="input-field col m6 inline">
                     <input type="text" name="fb" id="fb" value="{{ $data->fb }}" required>
                     <label for="fb">Facebook</label>
                 </div>
             </div>
             <div class="row">
-                <div class="input-field m12 inline">
+                <div class="input-field col m6 inline">
                     <input type="text" name="instagram" id="instagram" value="{{ $data->instagram }}" required>
                     <label for="instagram">Instagram</label>
                 </div>
-                <div class="input-field m12 inline">
+                <div class="input-field col m6 inline">
                     <input type="text" name="twitter" id="twitter" value="{{ $data->twitter }}" required>
                     <label for="twitter">Twitter</label>
                 </div>
@@ -113,17 +127,17 @@
         <div>
             <h5>3. Data Orang Tua</h5>
             <div class="row">
-                <div class="input-field m12 inline">
+                <div class="input-field col m6 inline">
                     <input type="text" name="nama_ayah" id="nama_ayah" value="{{ $data->nama_ayah }}" required>
                     <label for="nama_ayah">Nama Ayah</label>
                 </div>
-                <div class="input-field m12 inline">
+                <div class="input-field col m6 inline">
                     <input type="text" name="nama_ibu" id="nama_ibu" value="{{ $data->nama_ibu }}" required>
                     <label for="nama_ibu">Nama Ibu</label>
                 </div>
             </div>
             <div class="row">
-                <div class="input-field m12 inline">
+                <div class="input-field col m6 inline">
                     <input type="number" name="no_tlp_ortu" id="no_tlp_ortu" value="{{ $data->no_tlp_ortu }}" required>
                     <label for="no_tlp_ortu">Nomor Telepon Orang Tua</label>
                 </div>
@@ -139,18 +153,18 @@
         <div id="account-info">
             <h5>4. Update Password</h5>
             <div class="row">
-                <div class="input-field m12 inline">
+                <div class="input-field col m6 inline">
                     <input type="hidden" name="username" value="{{ $data->npm }}">
                     <input type="password" name="oldpw" id="oldpw" required>
                     <label for="oldpw">Old Password</label>
                 </div>
             </div>
             <div class="row">
-                <div class="input-field m12 inline">
+                <div class="input-field col m6 inline">
                     <input type="password" name="newpw" id="newpw" required>
                     <label for="newpw">New Password</label>
                 </div>
-                <div class="input-field m12 inline">
+                <div class="input-field col m6 inline">
                     <input type="password" name="confirm_newPwd" id="confirm_newPwd" required>
                     <label for="Confirm_newPwd">Confirm New Password</label>
                 </div>
@@ -165,6 +179,7 @@
 <script>
 $(document).ready(function(){
     $('.datepicker').datepicker();
+    $('select').formSelect();
 });
 </script>
 @endsection

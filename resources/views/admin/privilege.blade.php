@@ -11,6 +11,7 @@
             <tr>
                 <th>NPM</th>
                 <th>Nama</th>
+                <th>Last Updated</th>
                 <th>Update Status</th>
                 <th>User Level</th>
             </tr>
@@ -20,6 +21,7 @@
             <tr>
                 <td>140810170051</td>
                 <td>Firmansyah Yanuar</td>
+                <td>17-Feb-19</td>
                 <td class="input-field">
                     <select>
                         <option value="updated" selected>Updated</option>
@@ -38,6 +40,7 @@
             <tr>
                 <td>140810170026</td>
                 <td>Aci hitam</td>
+                <td>17-Feb-19</td>
                 <td class="input-field">
                     <select>
                         <option value="updated" selected>Updated</option>
@@ -55,6 +58,7 @@
             <tr>
                 <td>140810170061</td>
                 <td>Dani coge</td>
+                <td>17-Feb-19</td>
                 <td class="input-field">
                     <select>
                         <option value="updated">Updated</option>

@@ -147,11 +147,39 @@
             <button class="btn deep-btn" type="submit">Update Data Profile</button>
         </div>
     </form>
+    
+    <form action="#" method="POST">
+        @csrf
+        <div class="row center" id="list_orgpnt">
+            <h5 class="left-align">4. Data Organisasi dan Kepanitiaan</h5>
+            <div class="col m6">
+                <ul class="collection with-header">
+                    <li class="collection-header"><h5>Kepanitiaan</h5></li>
+                    <li class="collection-item"><div>IFest<a href="#!" class="secondary-content"><i class="material-icons red-text">delete</i></a></div></li>
+                    <li class="collection-item"><div>CBS<a href="#!" class="secondary-content"><i class="material-icons red-text">delete</i></a></div></li>
+                </ul>
+                <div id="field_inputkepanitiaan"></div>
+                <a onclick="addInput('kepanitiaan')" class="btn">Add New</a>
+            </div>
+            <div class="col m6">
+                <ul class="collection with-header">
+                    <li class="collection-header"><h5>Organisasi</h5></li>
+                    <li class="collection-item"><div>BE Himatif FMIPA UNPAD<a href="#!" class="secondary-content"><i class="material-icons red-text">delete</i></a></div></li>
+                    <li class="collection-item"><div>DPA Himatif FMIPA UNPAD<a href="#!" class="secondary-content"><i class="material-icons red-text">delete</i></a></div></li>
+                </ul>
+                <div id="field_inputorganisasi"></div>
+                <a onclick="addInput('organisasi')" class="btn">Add New</a>
+            </div>
+        </div>
+        <div class="row center">
+            <button class="btn deep-btn">Save DATA ORGANISASI</button>
+        </div>
+    </form>
     <form action="{{ route('updatePwd') }}" method="POST">
         @csrf
         {{-- UPDATE PASSWORD --}}
         <div id="account-info">
-            <h5>4. Update Password</h5>
+            <h5>5. Update Password</h5>
             <div class="row">
                 <div class="input-field col m6 inline">
                     <input type="hidden" name="username" value="{{ $data->npm }}">
@@ -176,6 +204,7 @@
         @endforeach
     </form>
 </div>
+<script src="{{asset('js/editProfile.js')}}"></script>
 <script>
 $(document).ready(function(){
     $('.datepicker').datepicker();

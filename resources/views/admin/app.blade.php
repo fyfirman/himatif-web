@@ -32,7 +32,7 @@
                 $('.tabs').tabs();
             });
         </script>
-        <div id="contentHda" class="row">
+        <div  class="row">
             @yield('content')
             {{-- Ajax Request --}}
         </div>

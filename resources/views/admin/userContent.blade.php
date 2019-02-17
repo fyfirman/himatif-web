@@ -1,6 +1,6 @@
 @extends('admin.app')
 
 @section('content')
-    Test
-    
+    <div id="contentHda">
+    </div>
 @endsection

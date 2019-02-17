@@ -4,39 +4,31 @@
     <script>
         $(document).ready(function(){
             $('.pushpin').pushpin();
-            // jJqNA3Gm
             var message = "{{ Session::get('message') }}";
             switch(message){
                 case "login_invalid":
-                    alert('NPM/Password is Invalid', 'error');
+                    swal('NPM/Password is Invalid', 'error');
                     break;
                 case "login_first":
-                    alert('Please Login First', 'warning');
+                    swal('Please Login First', 'warning');
                     break;
                 case "updatedata_success":
-                    alert('Update Data Success', 'success');
+                    swal('Update Data Success', 'success');
                     break;
                 case "updatedata_failed":
-                    alert('Update Data Failed', 'error');
+                    swal('Update Data Failed', 'error');
                     break;
                 case "updatepw_success":
-                    alert('Update Password Succesfully!', 'success');
+                    swal('Update Password Succesfully!', 'success');
                     break;
                 case "updatepw_failed":
-                    alert('Update Password Failed. Please re-check your old/newpassword!', 'error');
+                    swal('Update Password Failed. Please re-check your old/newpassword!', 'error');
                     break;
                 case "resetpw_failed":
-                    alert('NPM/Email for Reset Password is Invalid/Not Registered yet!', 'error');
+                    swal('NPM/Email for Reset Password is Invalid/Not Registered yet!', 'error');
                     break;
             }
         });
-
-        function alert(title, type){
-            Swal.fire({
-                title: title,
-                type: type
-            })
-        }
     </script>
     <div class="nav-wrapper">
         <a id="nav-mobile-btn" href="#" data-target="slide-out" class="sidenav-trigger teal-text"><i class="material-icons">menu</i></a>

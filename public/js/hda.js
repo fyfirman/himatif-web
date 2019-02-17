@@ -148,9 +148,5 @@ $(document).ready(function () {
         }
     });
 });
-$(document).ajaxStart(function(){
-    $('#loading').removeClass('hide');
-});
-$(document).ajaxComplete(function(){
-    $('#loading').addClass('hide');
-});
+$(document).ajaxStart(function(){$('#loading').removeClass('hide');});
+$(document).ajaxComplete(function(){$('#loading').addClass('hide');});

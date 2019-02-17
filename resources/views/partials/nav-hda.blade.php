@@ -1,5 +1,10 @@
 @extends('partials.nav')
 
+@section('brand-logo')
+    <img src="{{ asset('img/himatif-logo-256x256.png') }}" alt="" style="vertical-align:middle">
+    <span>Himatif Apps</span>   
+@endsection
+
 @section('search-bar')
     <div class="search-wrapper left hide-on-med-and-down">
         <form class="hide-on-med-and-down" id="search-form" autocomplete="off">

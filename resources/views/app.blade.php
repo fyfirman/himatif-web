@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    @include('partials.nav')
+    @include('partials.nav-standard')
     @include('landing.sidenav')
     <main class="section">
         @yield('content')

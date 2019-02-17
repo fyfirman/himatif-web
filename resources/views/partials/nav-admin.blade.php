@@ -1,5 +1,6 @@
 @extends('partials.nav')
 
+
 @section('search-bar')
     <div class="search-wrapper left hide-on-med-and-down">
         <form class="hide-on-med-and-down" id="search-form" autocomplete="off">

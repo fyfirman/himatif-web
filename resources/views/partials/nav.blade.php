@@ -41,8 +41,12 @@
     <div class="nav-wrapper">
         <a id="nav-mobile-btn" href="#" data-target="slide-out" class="sidenav-trigger teal-text"><i class="material-icons">menu</i></a>
         <a href="/" class="brand-logo grey-text text-darken-1">
-            <img src="{{ asset('img/himatif-logo-256x256.png') }}" alt="" style="vertical-align:middle">
-            <span>Himatif Apps</span>
+            {{-- @hasSection('brand-logo') --}}
+                @yield('brand-logo')
+            {{-- @else
+                <img src="{{ asset('img/himatif-logo-256x256.png') }}" alt="" style="vertical-align:middle">
+                <span>Himatif Apps</span>   
+            @endif --}}
         </a>
 
         {{-- Search bar buat di HDA --}}

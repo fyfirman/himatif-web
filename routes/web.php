@@ -27,6 +27,9 @@ Route::get('admin', 'hdaController@admin')->name('admin');
 Route::get('admin/config', function(){
     return view('admin.config');
 });
+Route::get('keilmuan', function(){
+    return view('keilmuan.app');
+});
 
 Route::post('reset', 'resetPwdController@reset')->name('reset');
 Route::post('update/password', 'resetPwdController@update')->name('updatePwd');

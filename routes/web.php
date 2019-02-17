@@ -29,5 +29,8 @@ Route::get('admin', function(){
 Route::get('admin/user', function(){
     return view('admin.userContent');
 });
+Route::get('admin/privilege', function(){
+    return view('admin.privilege');
+});
 Route::post('reset', 'resetPwdController@reset')->name('reset');
 Route::post('update/password', 'resetPwdController@update')->name('updatePwd');

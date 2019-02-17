@@ -24,8 +24,8 @@ Route::get('logout', 'loginController@logout')->name('logout');
 Route::get('updateProfile', 'hdaController@viewEdit')->name('viewEdit');
 Route::post('updateProfile', 'hdaController@edit')->name('update');
 Route::get('admin', 'hdaController@admin')->name('admin');
-Route::get('admin/privilege', function(){
-    return view('admin.privilege');
+Route::get('admin/config', function(){
+    return view('admin.config');
 });
 
 Route::post('reset', 'resetPwdController@reset')->name('reset');

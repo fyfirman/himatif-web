@@ -12,8 +12,7 @@
                 <div class="collapsible-body">
                     <ul>
                         <li class="active"><a href="{{ url('admin/user') }}" class="waves-effect"><i class="material-icons">people</i>User</a></li>
-                        <li><a href="{{ url('admin/updateStatus') }}"class="waves-effect"><i class="material-icons">update</i>Status Update</a></li>
-                        <li><a href="{{ url('admin/privilege') }}"class="waves-effect"><i class="material-icons">settings</i>Privilege</a></li>
+                        <li><a href="{{ url('admin/config') }}"class="waves-effect"><i class="material-icons">settings</i>Configuration</a></li>
                 </div>
             </li> 
         </ul>

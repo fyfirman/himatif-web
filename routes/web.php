@@ -24,8 +24,11 @@ Route::get('logout', 'loginController@logout')->name('logout');
 Route::get('updateProfile', 'hdaController@viewEdit')->name('viewEdit');
 Route::post('updateProfile', 'hdaController@edit')->name('update');
 Route::get('admin', 'hdaController@admin')->name('admin');
+<<<<<<< HEAD
 Route::get('admin/privilege', function(){
     return view('admin.privilege');
 });
+=======
+>>>>>>> master
 Route::post('reset', 'resetPwdController@reset')->name('reset');
 Route::post('update/password', 'resetPwdController@update')->name('updatePwd');

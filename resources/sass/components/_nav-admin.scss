@@ -23,6 +23,12 @@ nav{
             background-color: transparent;
         }
     }
+
+    .tabs{
+        @media screen and (max-width: 600px){
+            top: -9px;
+        }
+    }
     
 }
 

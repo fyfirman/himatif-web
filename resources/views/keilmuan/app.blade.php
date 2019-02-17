@@ -6,22 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     {!! MaterializeCSS::include_full() !!}
-    
-    {{-- Sweet Alert --}}
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
-    <!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser -->
-    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
-
     <link rel="stylesheet" type="text/css" href="{{ mix('/css/app.css') }}">
-    @yield('css')
-    
+    <link rel="stylesheet" type="text/css" href="{{ mix('/css/hda.css') }}">
     
     <title>{{ config('app.name') }}</title>
 </head>
 
 <body>
-    @include('partials.nav-standard')
-    @include('landing.sidenav')
+    @include('partials.nav-keilmuan')
+    @include('keilmuan.sidenav')
+    
     <main class="section">
         @yield('content')
     </main>

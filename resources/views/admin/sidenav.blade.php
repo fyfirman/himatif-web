@@ -1,8 +1,8 @@
 <ul id="slide-out" class="sidenav sidenav-fixed">
     <li class="logo">
         <a id="logo-container" href="{{ url('') }}" class="brand-logo">
-            <img src="{{ asset('img/himatif-logo-256x256.png') }}" alt="" style="vertical-align:middle">
-            <span>Himatif Admin</span>
+            <img src="{{ asset('svg/logo-admin.svg') }}" alt="" style="vertical-align:middle">
+            <span>Admin</span>
         </a>
     </li>
     <li class="no-padding">
@@ -11,8 +11,9 @@
                 <a class="collapsible-header">Database</a>
                 <div class="collapsible-body">
                     <ul>
-                        <li class="active"><a class="waves-effect"><i class="material-icons">people</i>User</a></li>
-                        <li><a class="waves-effect"><i class="material-icons">update</i>Status Update</a></li>
+                        <li class="active"><a href="{{ url('admin/user') }}" class="waves-effect"><i class="material-icons">people</i>User</a></li>
+                        <li><a href="{{ url('admin/updateStatus') }}"class="waves-effect"><i class="material-icons">update</i>Status Update</a></li>
+                        <li><a href="{{ url('admin/privilege') }}"class="waves-effect"><i class="material-icons">settings</i>Privilege</a></li>
                 </div>
             </li> 
         </ul>

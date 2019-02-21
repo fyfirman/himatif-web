@@ -36,5 +36,15 @@
 	</div>
 </div>
 
+<div class="fixed-action-btn">
+	<a href="#" class="btn-floating btn-large red">
+		<i class="large material-icons">info</i>
+	</a>
+</div>
 
+<script>
+	$(document).ready(function(){
+		$('.fixed-action-btn').floatingActionButton();
+	});
+</script>
 @endsection

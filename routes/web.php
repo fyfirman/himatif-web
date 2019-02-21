@@ -28,7 +28,7 @@ Route::get('admin/config', function(){
     return view('admin.config');
 });
 Route::get('keilmuan', function(){
-    return view('keilmuan.app');
+    return view('keilmuan.pathways');
 });
 
 Route::post('reset', 'resetPwdController@reset')->name('reset');

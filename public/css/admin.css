@@ -1266,7 +1266,7 @@
 
 .teal,
 #header-detail,
-.card .card-reveal .reveal-header {
+#contentHda .card .card-reveal .reveal-header {
   background-color: #009688 !important;
 }
 
@@ -1277,8 +1277,8 @@
 .teal.lighten-5,
 .teal#body-detail,
 .lighten-5#header-detail,
-.card .card-reveal .lighten-5.reveal-header,
-.card .card-reveal .reveal-header#body-detail {
+#contentHda .card .card-reveal .lighten-5.reveal-header,
+#contentHda .card .card-reveal .reveal-header#body-detail {
   background-color: #e0f2f1 !important;
 }
 
@@ -1288,11 +1288,11 @@
 
 .teal.lighten-4,
 .lighten-4#header-detail,
-.card .card-reveal .lighten-4.reveal-header,
+#contentHda .card .card-reveal .lighten-4.reveal-header,
 .search-wrapper .teal.input-field,
 .search-wrapper .input-field#header-detail,
-.search-wrapper .card .card-reveal .input-field.reveal-header,
-.card .card-reveal .search-wrapper .input-field.reveal-header {
+.search-wrapper #contentHda .card .card-reveal .input-field.reveal-header,
+#contentHda .card .card-reveal .search-wrapper .input-field.reveal-header {
   background-color: #b2dfdb !important;
 }
 
@@ -1302,7 +1302,7 @@
 
 .teal.lighten-3,
 .lighten-3#header-detail,
-.card .card-reveal .lighten-3.reveal-header {
+#contentHda .card .card-reveal .lighten-3.reveal-header {
   background-color: #80cbc4 !important;
 }
 
@@ -1312,7 +1312,7 @@
 
 .teal.lighten-2,
 .lighten-2#header-detail,
-.card .card-reveal .lighten-2.reveal-header {
+#contentHda .card .card-reveal .lighten-2.reveal-header {
   background-color: #4db6ac !important;
 }
 
@@ -1322,7 +1322,7 @@
 
 .teal.lighten-1,
 .lighten-1#header-detail,
-.card .card-reveal .lighten-1.reveal-header {
+#contentHda .card .card-reveal .lighten-1.reveal-header {
   background-color: #26a69a !important;
 }
 
@@ -1333,10 +1333,10 @@
 
 .teal.darken-1,
 .darken-1#header-detail,
-.card .card-reveal .darken-1.reveal-header,
+#contentHda .card .card-reveal .darken-1.reveal-header,
 .teal.logout-btn:active,
 .logout-btn#header-detail:active,
-.card .card-reveal .logout-btn.reveal-header:active {
+#contentHda .card .card-reveal .logout-btn.reveal-header:active {
   background-color: #00897b !important;
 }
 
@@ -1370,10 +1370,10 @@
 
 .teal.darken-2,
 .darken-2#header-detail,
-.card .card-reveal .darken-2.reveal-header,
+#contentHda .card .card-reveal .darken-2.reveal-header,
 .teal.login-btn,
 .login-btn#header-detail,
-.card .card-reveal .login-btn.reveal-header {
+#contentHda .card .card-reveal .login-btn.reveal-header {
   background-color: #00796b !important;
 }
 
@@ -1383,7 +1383,7 @@
 
 .teal.darken-3,
 .darken-3#header-detail,
-.card .card-reveal .darken-3.reveal-header {
+#contentHda .card .card-reveal .darken-3.reveal-header {
   background-color: #00695c !important;
 }
 
@@ -1393,11 +1393,11 @@
 
 .teal.darken-4,
 .darken-4#header-detail,
-.card .card-reveal .darken-4.reveal-header,
+#contentHda .card .card-reveal .darken-4.reveal-header,
 .sidenav .collapsible .collapsible-body li.active > a.teal,
 .sidenav .collapsible .collapsible-body li.active > a#header-detail,
-.sidenav .collapsible .collapsible-body .card .card-reveal li.active > a.reveal-header,
-.card .card-reveal .sidenav .collapsible .collapsible-body li.active > a.reveal-header {
+.sidenav .collapsible .collapsible-body #contentHda .card .card-reveal li.active > a.reveal-header,
+#contentHda .card .card-reveal .sidenav .collapsible .collapsible-body li.active > a.reveal-header {
   background-color: #004d40 !important;
 }
 
@@ -1407,7 +1407,7 @@
 
 .teal.accent-1,
 .accent-1#header-detail,
-.card .card-reveal .accent-1.reveal-header {
+#contentHda .card .card-reveal .accent-1.reveal-header {
   background-color: #a7ffeb !important;
 }
 
@@ -1417,7 +1417,7 @@
 
 .teal.accent-2,
 .accent-2#header-detail,
-.card .card-reveal .accent-2.reveal-header {
+#contentHda .card .card-reveal .accent-2.reveal-header {
   background-color: #64ffda !important;
 }
 
@@ -1427,7 +1427,7 @@
 
 .teal.accent-3,
 .accent-3#header-detail,
-.card .card-reveal .accent-3.reveal-header {
+#contentHda .card .card-reveal .accent-3.reveal-header {
   background-color: #1de9b6 !important;
 }
 
@@ -1437,7 +1437,7 @@
 
 .teal.accent-4,
 .accent-4#header-detail,
-.card .card-reveal .accent-4.reveal-header {
+#contentHda .card .card-reveal .accent-4.reveal-header {
   background-color: #00bfa5 !important;
 }
 
@@ -3067,7 +3067,7 @@
 
 .white-text,
 #header-detail,
-.card .card-reveal .reveal-header {
+#contentHda .card .card-reveal .reveal-header {
   color: #FFFFFF !important;
 }
 
@@ -10226,7 +10226,7 @@ input[type=range]::-ms-thumb {
   }
 }
 
-.card .card-image img,
+#contentHda .card .card-image img,
 .user-thumb {
   -o-object-fit: cover;
      object-fit: cover;
@@ -10607,22 +10607,22 @@ nav .apps-menu-btn :hover {
   }
 }
 
-.card .card-image {
+#contentHda .card .card-image {
   position: relative !important;
   width: 100%;
   padding-top: 150%;
 }
 
-.card .card-image img {
+#contentHda .card .card-image img {
   position: absolute;
   height: 100%;
 }
 
-.card .card-content {
+#contentHda .card .card-content {
   padding: 8px 12px;
 }
 
-.card .card-content .card-title {
+#contentHda .card .card-content .card-title {
   width: 100%;
   height: 32px !important;
   font-size: 18px;
@@ -10631,51 +10631,51 @@ nav .apps-menu-btn :hover {
   text-overflow: ellipsis !important;
 }
 
-.card .card-reveal {
+#contentHda .card .card-reveal {
   padding: 0;
 }
 
-.card .card-reveal i {
+#contentHda .card .card-reveal i {
   font-size: 1rem;
 }
 
-.card .card-reveal .reveal-header {
+#contentHda .card .card-reveal .reveal-header {
   text-align: center;
   padding: 8px;
   height: 55%;
 }
 
-.card .card-reveal .reveal-header .user-thumb {
+#contentHda .card .card-reveal .reveal-header .user-thumb {
   width: 100px;
   height: 100px;
 }
 
-.card .card-reveal .reveal-header #name {
+#contentHda .card .card-reveal .reveal-header #name {
   font-size: 15px !important;
 }
 
-.card .card-reveal .reveal-header p {
+#contentHda .card .card-reveal .reveal-header p {
   font-size: 12px;
   margin: 0;
 }
 
-.card .card-reveal .reveal-info {
+#contentHda .card .card-reveal .reveal-info {
   padding: 16px;
   height: 35%;
 }
 
-.card .card-reveal .reveal-info #first-child {
+#contentHda .card .card-reveal .reveal-info #first-child {
   margin-top: 0;
 }
 
-.card .card-reveal .reveal-action {
+#contentHda .card .card-reveal .reveal-action {
   height: 10%;
   border-top: 1px solid rgba(160, 160, 160, 0.2);
   text-align: center;
   padding: 6px 0;
 }
 
-.card .card-reveal .reveal-action a {
+#contentHda .card .card-reveal .reveal-action a {
   cursor: pointer;
 }
 

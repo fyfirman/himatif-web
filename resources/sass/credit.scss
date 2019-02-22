@@ -1,0 +1,18 @@
+// Variables
+@charset "UTF-8";
+
+// Materialize
+@import "materialize/materialize";
+
+@import "components/star";
+
+html{
+    height: 100%;
+    overflow: hidden;
+    background: radial-gradient(ellipse at bottom, #292D35 0%,#292D35 100%);
+}
+.credit-container{
+    @extend .container;
+    padding-top: 80px;
+}
+

@@ -30,6 +30,9 @@ Route::get('admin/config', function(){
 Route::get('keilmuan', function(){
     return view('keilmuan.pathways');
 });
+Route::get('credit', function(){
+    return view('content.credit ');
+});
 
 Route::post('reset', 'resetPwdController@reset')->name('reset');
 Route::post('update/password', 'resetPwdController@update')->name('updatePwd');

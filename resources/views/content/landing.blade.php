@@ -37,7 +37,7 @@
 </div>
 
 <div class="fixed-action-btn">
-	<a href="#" class="btn-floating btn-large red">
+	<a href="{{ url('credit')}}" class="btn-floating btn-large red">
 		<i class="large material-icons">info</i>
 	</a>
 </div>

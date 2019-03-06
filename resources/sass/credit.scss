@@ -9,19 +9,25 @@
 @import "components/custom-background";
 
 html{
-    height: 100%;
-    overflow: hidden;
+    min-height: 100%;
+    // overflow: hidden;
     background: radial-gradient(ellipse at bottom, #292D35 0%,#292D35 100%);
 }
 
 .credit-container{
     @extend .container;
     margin-top: 80px;
+    color: white;
+    
+    h1{
+        text-align: center;
+        
+    }
 
     .members{
-        color: white;
         padding: 20px;
         text-align: center;
+
         .post-image{
             width: 80%;
             margin-bottom: 20px; 
@@ -32,6 +38,14 @@ html{
             border-radius: 3px;
         }
         
+        span{
+            display: block;
+        }
+
+        span:nth-child(1){
+            font-weight: 600;
+            font-size: 20px !important;
+        }
     }
 }
 

@@ -9362,17 +9362,20 @@ input[type=range]::-ms-thumb {
 }
 
 html {
-  height: 100%;
-  overflow: hidden;
+  min-height: 100%;
   background: radial-gradient(ellipse at bottom, #292D35 0%, #292D35 100%);
 }
 
 .credit-container {
   margin-top: 80px;
+  color: white;
+}
+
+.credit-container h1 {
+  text-align: center;
 }
 
 .credit-container .members {
-  color: white;
   padding: 20px;
   text-align: center;
 }
@@ -9384,5 +9387,14 @@ html {
   box-shadow: 15px 15px 0 0 rgba(189, 194, 194, 0.3);
   border: 1px solid #8EBBF6;
   border-radius: 3px;
+}
+
+.credit-container .members span {
+  display: block;
+}
+
+.credit-container .members span:nth-child(1) {
+  font-weight: 600;
+  font-size: 20px !important;
 }
 

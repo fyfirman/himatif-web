@@ -17,19 +17,23 @@
     </nav>
     <main class="section">
         <div class="credit-container">
-            <h4>2019 - Delphi Team</h4>
+            <h1>decoder team;</h1>
+            <p>Tim berasal dari angkatan Delphi ini membawa konsep aplikasi HDA berkembang lebih luas. </p>
             <div class="row">
                 <div class="members col s12 m4 bg-dk">
                     <img class="post-image" src="{{ asset('img/mansyah.jpg') }}" alt="">
                     <span>Firmansyah Yanuar</span>
+                    <span>Front-End Developer, UI/UX Designer</span>
                 </div>
                 <div class="members col s12 m4 bg-dk-sm">
                     <img class="post-image" src="http://api.himatif.org/data/assets/foto/2017/20.jpg" alt="">
                     <span>Mohamad Achun Armando</span>
+                    <span>Front-End Developer, Back-End Developer</span>
                 </div>
                 <div class="members col s12 m4 bg-dk">
                     <img class="post-image" src="http://api.himatif.org/data/assets/foto/2017/30.jpg" alt=""><br>
                     <span>Arif Rhizky Gilang Purnama</span>
+                    <span>Back-End Developer</span>
                 </div>
             </div>
         </div>

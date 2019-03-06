@@ -6,13 +6,33 @@
 
 @import "components/star";
 
+@import "components/custom-background";
+
 html{
     height: 100%;
     overflow: hidden;
     background: radial-gradient(ellipse at bottom, #292D35 0%,#292D35 100%);
 }
+
 .credit-container{
     @extend .container;
-    padding-top: 80px;
+    margin-top: 80px;
+
+    .members{
+        color: white;
+        padding: 20px;
+        text-align: center;
+        .post-image{
+            width: 80%;
+            margin-bottom: 20px; 
+            background: #efe1da;
+            -webkit-box-shadow: 15px 15px 0 0 hsla(180,4%,75%,.3);
+            box-shadow: 15px 15px 0 0 hsla(180,4%,75%,.3);
+            border: 1px solid $colorTwo;
+            border-radius: 3px;
+        }
+        
+    }
 }
+
 

@@ -11,9 +11,10 @@
         <thead>
             <tr>`
                 <th>Date Uploaded</th>
-                <th>Nama</th>
+                <th>Mata Kuliah</th>
                 <th>Thumbnail Link</th>
                 <th>Download Link</th>
+                <th>Jumlah Download</th>
                 <th></th>
             </tr>
         </thead>
@@ -24,6 +25,7 @@
                 <td>Firmansyah Yanuar</td>
                 <td>drive.google.com/dsasadsadsadsa</td>
                 <td>drive.google.com/dsasadsadsadsa</td>
+                <td>100</td>
                 <td class="input-field">
                     <a href="#">Edit</a> | <a href="#">Delete</a>
                 </td>

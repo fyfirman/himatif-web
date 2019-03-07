@@ -11,7 +11,7 @@
             <div class="input-field col m12 inline">
                 <input type="hidden" name="npm" value="">
                 <input type="text" name="nama" id="nama" value="" required>
-                <label for="nama">Nama File</label>
+                <label for="nama">Mata Kuliah</label>
             </div>
         </div>
         

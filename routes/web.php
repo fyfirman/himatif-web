@@ -24,6 +24,7 @@ Route::get('logout', 'loginController@logout')->name('logout');
 Route::get('updateProfile', 'hdaController@viewEdit')->name('viewEdit');
 Route::post('updateProfile', 'hdaController@edit')->name('update');
 Route::get('admin', 'hdaController@admin')->name('admin');
+Route::get('admin/user', 'hdaController@admin')->name('admin');
 Route::get('admin/config', function(){
     return view('admin.config');
 });
@@ -34,7 +35,7 @@ Route::get('admin/pathways/new', function(){
     return view('admin.newContent');
 });
 Route::get('admin/djournal', function(){
-    return view('admin.newContent');
+    return view('admin.djournalContent');
 });
 Route::get('keilmuan', function(){
     return view('keilmuan.pathways');

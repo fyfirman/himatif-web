@@ -21,7 +21,7 @@
                 <a class="collapsible-header">Pathways</a>
                 <div class="collapsible-body">
                     <ul>
-                        <li><a class="waves-effect"><i class="material-icons">create</i>Content</a></li>
+                        <li><a href="{{ url('admin/pathways') }}" class="waves-effect"><i class="material-icons">create</i>Content</a></li>
                     </ul>
                 </div>
             </li> 
@@ -31,7 +31,7 @@
                 <a class="collapsible-header">Djournal</a>
                 <div class="collapsible-body">
                     <ul>
-                        <li><a class="waves-effect"><i class="material-icons">library_books</i>Content</a></li>
+                        <li><a href="{{ url('admin/djournal') }}" class="waves-effect"><i class="material-icons">library_books</i>Content</a></li>
                     </ul>
                 </div>
             </li> 

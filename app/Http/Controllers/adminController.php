@@ -13,6 +13,8 @@ class adminController extends hdaController
 
     public function index(Request $request){
         if($this->cekSession($request)){
+            if($request->session()->get('privilege') == 2)
+                return redirect('/admin/pathways');
             return redirect('/admin/user');
         }else{
             return redirect('/')->with('message', 'login_first');

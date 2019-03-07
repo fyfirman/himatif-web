@@ -6,6 +6,10 @@
         </a>
     </li>
     <li class="no-padding">
+        @php
+            $privilege = Session::get('privilege');
+        @endphp
+        @if ($privilege == 3 )
         <ul class="collapsible collapsible-accordion">
             <li class="active">
                 <a class="collapsible-header">Database</a>
@@ -16,26 +20,29 @@
                 </div>
             </li> 
         </ul>
-        <ul class="collapsible collapsible-accordion">
-            <li class="active">
-                <a class="collapsible-header">Pathways</a>
-                <div class="collapsible-body">
-                    <ul>
-                        <li><a href="{{ url('admin/pathways') }}" class="waves-effect"><i class="material-icons">create</i>Content</a></li>
-                    </ul>
-                </div>
-            </li> 
-        </ul>
-        <ul class="collapsible collapsible-accordion">
-            <li class="active">
-                <a class="collapsible-header">Djournal</a>
-                <div class="collapsible-body">
-                    <ul>
-                        <li><a href="{{ url('admin/djournal') }}" class="waves-effect"><i class="material-icons">library_books</i>Content</a></li>
-                    </ul>
-                </div>
-            </li> 
-        </ul>
+        @endif
+        @if ($privilege == 2 || $privilege == 3 )
+            <ul class="collapsible collapsible-accordion">
+                <li class="active">
+                    <a class="collapsible-header">Pathways</a>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li><a href="{{ url('admin/pathways') }}" class="waves-effect"><i class="material-icons">create</i>Content</a></li>
+                        </ul>
+                    </div>
+                </li> 
+            </ul>
+            <ul class="collapsible collapsible-accordion">
+                <li class="active">
+                    <a class="collapsible-header">Djournal</a>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li><a href="{{ url('admin/djournal') }}" class="waves-effect"><i class="material-icons">library_books</i>Content</a></li>
+                        </ul>
+                    </div>
+                </li> 
+            </ul>
+        @endif
     </li>
     </ul>
 </ul>

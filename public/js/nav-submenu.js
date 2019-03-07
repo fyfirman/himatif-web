@@ -62,10 +62,3 @@ function showReset(){
         resetForm.style.display = 'none';
     }
 }
-
-function swal(title, type){
-    Swal.fire({
-        title: title,
-        type: type
-    })
-}

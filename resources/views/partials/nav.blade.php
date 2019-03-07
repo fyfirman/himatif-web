@@ -7,25 +7,25 @@
             var message = "{{ Session::get('message') }}";
             switch(message){
                 case "login_invalid":
-                    swal('NPM/Password is Invalid', 'error');
+                    swal.fire('NPM/Password is Invalid', '', 'error');
                     break;
                 case "login_first":
-                    swal('Please Login First', 'warning');
+                    swal.fire('Please Login First', '', 'warning');
                     break;
                 case "updatedata_success":
-                    swal('Update Data Success', 'success');
+                    swal.fire('Update Data Success', '', 'success');
                     break;
                 case "updatedata_failed":
-                    swal('Update Data Failed', 'error');
+                    swal.fire('Update Data Failed', '', 'error');
                     break;
                 case "updatepw_success":
-                    swal('Update Password Succesfully!', 'success');
+                    swal.fire('Update Password Succesfully!', '', 'success');
                     break;
                 case "updatepw_failed":
-                    swal('Update Password Failed. Please re-check your old/newpassword!', 'error');
+                    swal.fire('Update Password Failed. Please re-check your old/newpassword!', '', 'error');
                     break;
                 case "resetpw_failed":
-                    swal('NPM/Email for Reset Password is Invalid/Not Registered yet!', 'error');
+                    swal.fire('NPM/Email for Reset Password is Invalid/Not Registered yet!', '','error');
                     break;
             }
         });

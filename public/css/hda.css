@@ -10496,6 +10496,10 @@ nav #user-btn > .active {
   font-size: 12pt;
 }
 
+.swal2-content .select-wrapper {
+  display: none;
+}
+
 .search-wrapper {
   height: 100%;
   width: 50%;

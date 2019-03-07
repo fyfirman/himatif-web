@@ -30,8 +30,11 @@ Route::get('admin/config', function(){
 Route::get('admin/pathways', function(){
     return view('admin.pathwaysContent');
 });
+Route::get('admin/pathways/new', function(){
+    return view('admin.newContent');
+});
 Route::get('admin/djournal', function(){
-    return view('admin.djournalContent');
+    return view('admin.newContent');
 });
 Route::get('keilmuan', function(){
     return view('keilmuan.pathways');

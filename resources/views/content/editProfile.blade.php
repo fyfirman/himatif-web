@@ -17,14 +17,14 @@
                 </div>
             </div>
             <div class="row">
-                <div class="input-field col m6 s12 inline">
+                <div class="input-field col m4 s12 inline">
                     <select name="jk" id="jk" required>
                         <option value="Laki - laki" @if ($data->jk == 'Laki - laki') selected="selected" @endif >Laki - laki</option>
                         <option value="Perempuan" @if ($data->jk == 'Perempuan') selected="selected" @endif>Perempuan</option>
                     </select>
                     <label for="jk">Jenis Kelamin</label>
                 </div>
-                <div class="input-field col m6 s12 inline">
+                <div class="input-field col m4 s12 inline">
                     <select name="agama" id="agama" required>
                         <option value="Islam" @if ($data->agama == 'Islam' || $data->agama == 'islam') selected="selected" @endif>Islam</option>
                         <option value="Kristen" @if ($data->agama == 'Kristen') selected="selected" @endif >Kristen</option>
@@ -35,13 +35,7 @@
                     </select>
                     <label for="agama">Agama</label>
                 </div>
-            </div>
-            <div class="row">
-                <div class="input-field col m6 s12 inline">
-                    <input type="text" name="hobi" id="hobi" value="{{ $data->hobi }}" required>
-                    <label for="hobi">Hobi</label>
-                </div>
-                <div class="input-field col m6 s12 inline">
+                <div class="input-field col m4 s12 inline">
                     <select name="goldar" id="goldar" required>
                         <option value="A" @if ($data->goldar == 'A') selected="selected" @endif>A</option>
                         <option value="B" @if ($data->goldar == 'B') selected="selected" @endif >B</option>
@@ -53,9 +47,15 @@
                 </div>
             </div>
             <div class="row">
+                <div class="input-field col m12 s12 inline">
+                    <input type="text" name="hobi" id="hobi" value="{{ $data->hobi }}" required>
+                    <label for="hobi">Hobi</label>
+                </div>
+            </div>
+            <div class="row">
                 <div class="input-field col m6 s6 inline">
                     <input type="text" name="tempat_lahir" id="tempat_lahir" value="{{ $data->tempat_lahir }}" required>
-                    <label for="tempat_lahir">Tempat Lahir</label>
+                    <label for="tempat_lahir">Tempat Lahir (YYYY-MM-DD)</label>
                 </div>
                 <div class="input-field col m6 s6 inline">
                     <input type="text" class="datepicker" name="tanggal_lahir" id="tanggal_lahir" value="{{ $data->tanggal_lahir }}" required>
@@ -75,18 +75,34 @@
                     </div>
             </div>
             <div id="organisasi" class="row">
-                <div class="input-field col m6 s12 inline">
-                    <input type="text" name="status" id="status" value="{{ $data->status }}" required>
+                <div class="input-field col m4 s12 inline">
+                    <select name="status" id="status" required>
+                        <option value="Anggota Muda" @if ($data->status == 'Anggota Muda') selected @endif>Anggota Muda</option>
+                        <option value="Anggota Penuh" @if ($data->status == 'Anggota Penuh') selected @endif>Anggota Penuh</option>
+                        <option value="Anggota Kehormatan" @if ($data->status == 'Anggota Kehormatan') selected @endif>Anggota Kehormatan</option>
+                    </select>
                     <label for="status">Status Anggota</label>
                 </div>
-                <div class="input-field col m6 s12 inline">
-                    <input type="text" name="bidang_minat" id="bidang_minat" value="{{ $data->bidang_minat }}" required>
+                <div class="input-field col m4 s12 inline">
+                    <select name="bidang_minat" id="bidang_minat" required>
+                        <option value="-" @if ($data->bidang_minat == '-') selected @endif>-</option>
+                        <option value="Sistem Informasi" @if ($data->bidang_minat == 'Sistem Informasi') selected @endif>Sistem Informasi</option>
+                        <option value="Jaringan Komunikasi" @if ($data->bidang_minat == 'Jaringan Komunikasi') selected @endif>Jaringan Komunikasi</option>
+                        <option value="Artificial Intelligence" @if ($data->bidang_minat == 'Artificial Intelligence') selected @endif>Artificial Intelligence</option>
+                    </select>
                     <label for="bidang_minat">Bidang Minat</label>
                 </div>
-            </div>
-            <div class="row">
-                <div class="input-field col m6 s12 inline">
-                    <input type="text" name="angkatan" id="angkatan" value="{{ $data->angkatan }}" required>
+                <div class="input-field col m4 s12 inline">
+                    <select name="angkatan" id="angkatan" required>
+                        <option value="-" @if ($data->angkatan == '-') selected @endif>-</option>
+                        <option value="2018" @if ($data->angkatan == '2018') selected @endif>2018</option>
+                        <option value="2017" @if ($data->angkatan == '2017') selected @endif>2017</option>
+                        <option value="2016" @if ($data->angkatan == '2016') selected @endif>2016</option>
+                        <option value="2015" @if ($data->angkatan == '2015') selected @endif>2015</option>
+                        <option value="2014" @if ($data->angkatan == '2014') selected @endif>2014</option>
+                        <option value="2013" @if ($data->angkatan == '2013') selected @endif>2013</option>
+                        <option value="2012" @if ($data->angkatan == '2012') selected @endif>2012</option>
+                    </select>
                     <label for="angkatan">Angkatan</label>
                 </div>
             </div>

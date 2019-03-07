@@ -6,36 +6,37 @@
 
 @section('content')
 <div class="container">
-    <a class="waves-effect waves-light btn-large red">New</a>
-    <table>
-        <thead>
-            <tr>`
-                <th>Date Uploaded</th>
-                <th>Nama</th>
-                <th>Thumbnail Link</th>
-                <th>Download Link</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            @for ($i = 0; $i < 5; $i++)
-            <tr>
-                <td>17-Feb-19</td>
-                <td>Firmansyah Yanuar</td>
-                <td>drive.google.com/dsasadsadsadsa</td>
-                <td>drive.google.com/dsasadsadsadsa</td>
-                <td class="input-field">
-                    <a href="#">Edit</a> | <a href="#">Delete</a>
-                </td>
-            </tr>
-            @endfor
-        </tbody>
-    </table>
-</div>
+    <form action="" method="post">
+        <div class="row">
+            <div class="input-field col m12 inline">
+                <input type="hidden" name="npm" value="">
+                <input type="text" name="nama" id="nama" value="" required>
+                <label for="nama">Nama File</label>
+            </div>
+        </div>
+        
+        <div class="file-field input-field row">
+            <div class="btn deep-btn">
+                <span>Browse</span>
+                <input type="file">
+            </div>
+            <div class="file-path-wrapper">
+                <input class="file-path validate" type="text" placeholder="Image Thumbnails">
+            </div>
+        </div>
 
-<script>
-$(document).ready(function(){
-    $('select').formSelect();
-});
-</script>
+        <div class="file-field input-field row">
+            <div class="btn deep-btn">
+                <span>Browse</span>
+                <input type="file">
+            </div>
+            <div class="file-path-wrapper">
+                <input class="file-path validate" type="text" placeholder="Browse File">
+            </div>
+        </div>
+        <div class="row center">
+            <button class="btn deep-btn" type="submit">Update Data Profile</button>
+        </div>
+    </form>
+</div>
 @endsection

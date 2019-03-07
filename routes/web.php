@@ -24,10 +24,8 @@ Route::get('logout', 'loginController@logout')->name('logout');
 Route::get('updateProfile', 'hdaController@viewEdit')->name('viewEdit');
 Route::post('updateProfile', 'hdaController@edit')->name('update');
 Route::get('admin', 'adminController@index');
-Route::get('admin/user', 'adminController@user')->name('user');
-Route::get('admin/config', function(){
-    return view('admin.config');
-});
+Route::get('admin/user', 'adminController@user');
+Route::get('admin/config', 'adminController@config');
 Route::get('admin/pathways', function(){
     return view('admin.pathwaysContent');
 });

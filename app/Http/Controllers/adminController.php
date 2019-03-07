@@ -26,4 +26,12 @@ class adminController extends hdaController
             return redirect('/')->with('message', 'login_first');
         }
     }
+
+    public function config(Request $request){
+        if($this->cekSession($request)){
+            return view('admin.config');
+        }else{
+            return redirect('/')->with('message', 'login_first');
+        }
+    }
 }

@@ -79,9 +79,9 @@
             <label>Keilmuan</label>
         </a>
         @php
-        $superuser = true;
+            $privilege = Session::get('privilege');
         @endphp
-        @if ($superuser)
+        @if ($privilege == 2 || $privilege == 3 )
             <a href="{{ url('admin') }}" class="col m4 apps-btn">
                 <img src="{{ asset('svg/logo-admin.svg') }}" alt=""><br>
                 <label>Admin</label>

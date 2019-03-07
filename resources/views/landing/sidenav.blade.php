@@ -5,13 +5,18 @@
             <a class="collapsible-header">Keilmuan</a>
             <div class="collapsible-body">
                 <ul>
-                    <li><a class="waves-effect">Read Djournal</a></li>
-                    <li><a class="waves-effect">Pathways</a></li>
+                    <li><a href="{{ url('/keilmuan') }}" class="waves-effect">Read Djournal</a></li>
+                    <li><a href="{{ url('/keilmuan') }}" class="waves-effect">Pathways</a></li>
                 </ul>
             </div>
         </li> 
     </ul>
-    <li><a href="{{ url('/admin') }}">Admin</a></li>
+    @php
+        $privilege = Session::get('privilege');
+    @endphp
+    @if ($privilege == 2 || $privilege == 3 )
+        <li><a href="{{ url('/admin') }}">Admin</a></li>
+    @endif
 </ul>
 <script>
     $(document).ready(function(){

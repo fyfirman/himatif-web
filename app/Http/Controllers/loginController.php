@@ -19,6 +19,7 @@ class loginController extends Controller{
             if($result->status == 'Login Berhasil'){
                 $data = array(
                     'username' => $result->user->username,
+                    'privilege' => $result->user->privilege, 
                     'remember_token' => $result->user->remember_token, 
                     'logged_in' => 1
                 );

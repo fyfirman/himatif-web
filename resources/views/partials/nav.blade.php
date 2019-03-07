@@ -82,7 +82,7 @@
         $superuser = true;
         @endphp
         @if ($superuser)
-            <a href="{{ route('admin') }}" class="col m4 apps-btn">
+            <a href="{{ url('admin') }}" class="col m4 apps-btn">
                 <img src="{{ asset('svg/logo-admin.svg') }}" alt=""><br>
                 <label>Admin</label>
             </a>

@@ -223,7 +223,9 @@
 <script src="{{asset('js/editProfile.js')}}"></script>
 <script>
 $(document).ready(function(){
-    $('.datepicker').datepicker();
+    $('.datepicker').datepicker({
+        format: 'yyyy-mm-dd'
+    });
     $('select').formSelect();
 });
 </script>

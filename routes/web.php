@@ -27,6 +27,12 @@ Route::get('admin', 'hdaController@admin')->name('admin');
 Route::get('admin/config', function(){
     return view('admin.config');
 });
+Route::get('admin/pathways', function(){
+    return view('admin.pathwaysContent');
+});
+Route::get('admin/djournal', function(){
+    return view('admin.djournalContent');
+});
 Route::get('keilmuan', function(){
     return view('keilmuan.pathways');
 });

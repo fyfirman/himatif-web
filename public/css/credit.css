@@ -9366,9 +9366,16 @@ html {
   background: radial-gradient(ellipse at bottom, #292D35 0%, #292D35 100%);
 }
 
+nav {
+  padding: 0 25px;
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: none;
+}
+
 .credit-container {
-  margin-top: 80px;
+  margin-top: 50px;
   color: white;
+  z-index: 10;
 }
 
 .credit-container h1 {
@@ -9393,8 +9400,7 @@ html {
   display: block;
 }
 
-.credit-container .members span:nth-child(1) {
-  font-weight: 600;
-  font-size: 20px !important;
+.credit-container .members .name {
+  font-size: 24px;
 }
 

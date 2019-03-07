@@ -10,15 +10,21 @@
 
 html{
     min-height: 100%;
-    // overflow: hidden;
     background: radial-gradient(ellipse at bottom, #292D35 0%,#292D35 100%);
+}
+
+nav{
+    padding: 0 25px;
+    background: rgba(0, 0, 0, 0.1);
+    box-shadow: none;
 }
 
 .credit-container{
     @extend .container;
-    margin-top: 80px;
-    color: white;
-    
+    margin-top: 50px;
+    color: white; 
+    z-index: 10;
+
     h1{
         text-align: center;
         
@@ -42,11 +48,8 @@ html{
             display: block;
         }
 
-        span:nth-child(1){
-            font-weight: 600;
-            font-size: 20px !important;
+        .name{
+            font-size: 24px;
         }
     }
 }
-
-

@@ -55,11 +55,11 @@
             <div class="row">
                 <div class="input-field col m6 s6 inline">
                     <input type="text" name="tempat_lahir" id="tempat_lahir" value="{{ $data->tempat_lahir }}" required>
-                    <label for="tempat_lahir">Tempat Lahir (YYYY-MM-DD)</label>
+                    <label for="tempat_lahir">Tempat Lahir</label>
                 </div>
                 <div class="input-field col m6 s6 inline">
                     <input type="text" class="datepicker" name="tanggal_lahir" id="tanggal_lahir" value="{{ $data->tanggal_lahir }}" required>
-                    <label for="tanggal_lahir">Tanggal Lahir</label>
+                    <label for="tanggal_lahir">Tanggal Lahir (YYYY-MM-DD)</label>
                 </div>
             </div>
             <div class="row">

@@ -14,7 +14,7 @@
     @php
         $privilege = Session::get('privilege');
     @endphp
-    @if ($privilege == 2 || $privilege == 3 )
+    @if ($privilege == 2 || $privilege == 3 || $privilege == 4 )
         <li><a href="{{ url('/admin') }}">Admin</a></li>
     @endif
 </ul>

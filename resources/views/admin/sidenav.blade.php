@@ -9,19 +9,21 @@
         @php
             $privilege = Session::get('privilege');
         @endphp
-        @if ($privilege == 3 )
+        @if ( $privilege == 3 || $privilege == 4 )
         <ul class="collapsible collapsible-accordion">
             <li class="active">
                 <a class="collapsible-header">Database</a>
                 <div class="collapsible-body">
                     <ul>
                         <li class="active"><a href="{{ url('admin/user') }}" class="waves-effect"><i class="material-icons">people</i>User</a></li>
-                        <li><a href="{{ url('admin/config') }}"class="waves-effect"><i class="material-icons">settings</i>Configuration</a></li>
+                        @if ( $privilege == 4)
+                            <li><a href="{{ url('admin/config') }}"class="waves-effect"><i class="material-icons">settings</i>Configuration</a></li>
+                        @endif
                 </div>
             </li> 
         </ul>
         @endif
-        @if ($privilege == 2 || $privilege == 3 )
+        @if ($privilege == 2 || $privilege == 4 )
             <ul class="collapsible collapsible-accordion">
                 <li class="active">
                     <a class="collapsible-header">Pathways</a>

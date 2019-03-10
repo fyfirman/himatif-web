@@ -81,7 +81,7 @@
         @php
             $privilege = Session::get('privilege');
         @endphp
-        @if ($privilege == 2 || $privilege == 3 )
+        @if ($privilege == 2 || $privilege == 3 || $privilege == 4 )
             <a href="{{ url('admin') }}" class="col m4 apps-btn">
                 <img src="{{ asset('svg/logo-admin.svg') }}" alt=""><br>
                 <label>Admin</label>

@@ -31,12 +31,12 @@
                     <span>Front-End Developer, UI/UX Designer</span>
                 </div>
                 <div class="members col s12 m4 bg-dk-sm">
-                    <img class="post-image" src="http://api.himatif.org/data/assets/foto/2017/20.jpg" alt="">
+                    <img class="post-image" src="{{ asset('img/achun.jpg') }}" alt="">
                     <span class="name">Mohamad Achun Armando</span>
                     <span>Front-End Developer, Back-End Developer</span>
                 </div>
                 <div class="members col s12 m4 bg-dk">
-                    <img class="post-image" src="http://api.himatif.org/data/assets/foto/2017/30.jpg" alt=""><br>
+                    <img class="post-image" src="{{ asset('img/argil.png') }}" alt=""><br>
                     <span class="name">Arif Rhizky Gilang Purnama</span>
                     <span>Back-End Developer</span>
                 </div>

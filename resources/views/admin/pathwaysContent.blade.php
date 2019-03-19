@@ -7,7 +7,6 @@
 @section('content')
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 <div class="container">
-{{-- <a href='{{ url('adm_keilmuan') }}' class="waves-effect waves-light btn-large red">New</a> --}}
 <button data-target="modalUpload" class="btn modal-trigger waves-effect waves-light btn-large red">Upload File</button>
     <table>
         <thead>

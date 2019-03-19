@@ -11,7 +11,7 @@
 <button data-target="modalUpload" class="btn modal-trigger waves-effect waves-light btn-large red">Upload File</button>
     <table>
         <thead>
-            <tr>`
+            <tr>
                 <th>Date Uploaded</th>
                 <th>Mata Kuliah</th>
                 <th>Thumbnail Link</th>
@@ -21,18 +21,21 @@
             </tr>
         </thead>
         <tbody>
-            @for ($i = 0; $i < 5; $i++)
-            <tr>
-                <td>17-Feb-19</td>
-                <td>Firmansyah Yanuar</td>
-                <td>drive.google.com/dsasadsadsadsa</td>
-                <td>drive.google.com/dsasadsadsadsa</td>
-                <td>100</td>
-                <td class="input-field">
-                    <a href="#">Edit</a> | <a href="#">Delete</a>
-                </td>
-            </tr>
-            @endfor
+            @foreach ($dataFile as $item)
+            @php
+                $date = explode(' ', $item->updated_at);
+            @endphp
+                <tr>
+                    <td>{{ $date[0] }}</td>
+                    <td>{{ $item->matkul }}</td>
+                    <td>{{ $item->filename }}</td>
+                    <td>{{ $item->location }}</td>
+                    <td>{{ $item->count }}</td>
+                    <td class="input-field">
+                    <a href="#">Edit</a> | <a href="{{ url('/admin/del_pathways/'.$item->filename) }}">Delete</a>
+                    </td>
+                </tr>
+            @endforeach
         </tbody>
     </table>
 </div>
@@ -57,6 +60,7 @@
               <input type="file" name="filename" id="filename" required>
             </div>
             <div class="file-path-wrapper">
+            <input type="hidden" name="baseUrl" value="{{ url('/') }}">
               <input class="file-path validate" type="text">
             </div>
           </div>
@@ -84,6 +88,7 @@ $(document).ready(function(){
             $(".progress").show();
             var formData = new FormData(this);
             var formUrl = $('#formUpload').attr('action');
+            var baseUrl = $('input[name="baseUrl"]').val();
             $.ajax({
                 url: formUrl,
                 type: 'POST',
@@ -92,12 +97,17 @@ $(document).ready(function(){
                 processData: false,
                 success: function(data){
                     if(data == 'failed'){
-                        swal.fire('File tidak berhasil diupload!', '', 'info');    
+                        swal.fire('File tidak berhasil diupload!', 'Silahkan cek kembali nama filenya', 'info');    
                     }else{
-                        swal.fire('File berhasil diupload!', '', 'success');
                         var elem = document.getElementById('modalUpload');
                         var modalUpload = M.Modal.getInstance(elem); 
-                        modalUpload.close();
+                        swal.fire({
+                            title: 'File berhasil diupload',
+                            type: 'success'
+                        }).then(function(){
+                            modalUpload.close();
+                            location.replace(baseUrl + '/admin/pathways');
+                        })
                     }
                 },
                 xhr: function(){

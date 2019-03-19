@@ -27,9 +27,7 @@ Route::get('admin', 'adminController@index');
 Route::get('admin/user', 'adminController@user');
 Route::get('admin/config', 'adminController@config');
 Route::get('admin/pathways', 'keilmuanController@index');
-Route::get('admin/pathways/new', function(){
-    return view('admin.newContent');
-});
+Route::get('admin/del_pathways/{filename}', 'keilmuanController@deleteFile');
 Route::get('admin/djournal', function(){
     return view('admin.djournalContent');
 });

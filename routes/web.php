@@ -26,9 +26,7 @@ Route::post('updateProfile', 'hdaController@edit')->name('update');
 Route::get('admin', 'adminController@index');
 Route::get('admin/user', 'adminController@user');
 Route::get('admin/config', 'adminController@config');
-Route::get('admin/pathways', function(){
-    return view('admin.pathwaysContent');
-});
+Route::get('admin/pathways', 'keilmuanController@index');
 Route::get('admin/pathways/new', function(){
     return view('admin.newContent');
 });
@@ -38,6 +36,7 @@ Route::get('admin/djournal', function(){
 Route::get('keilmuan', function(){
     return view('keilmuan.pathways');
 });
+Route::post('upload_pathways', 'keilmuanController@addFile');
 Route::get('credit', function(){
     return view('content.credit ');
 });

@@ -74,7 +74,7 @@
             <img src="{{ asset('svg/logo-hda.svg') }}" alt=""><br>
             <label>Himatif Database</label>
         </a>
-        <a href="{{ url('/keilmuan') }}" class="col m4 apps-btn">
+        <a href="{{ url('/keilmuan/pathways') }}" class="col m4 apps-btn">
             <img src="{{ asset('svg/logo-keilmuan.svg') }}" alt=""><br>
             <label>Keilmuan</label>
         </a>

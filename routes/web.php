@@ -26,15 +26,13 @@ Route::post('updateProfile', 'hdaController@edit')->name('update');
 Route::get('admin', 'adminController@index');
 Route::get('admin/user', 'adminController@user');
 Route::get('admin/config', 'adminController@config');
-Route::get('admin/pathways', 'keilmuanController@index');
+Route::get('admin/pathways', 'keilmuanController@adminIndex');
 Route::get('admin/del_pathways/{filename}', 'keilmuanController@deleteFile');
+Route::post('upload_pathways', 'keilmuanController@addFile');
+Route::get('keilmuan/pathways', 'keilmuanController@index');
 Route::get('admin/djournal', function(){
     return view('admin.djournalContent');
 });
-Route::get('keilmuan', function(){
-    return view('keilmuan.pathways');
-});
-Route::post('upload_pathways', 'keilmuanController@addFile');
 Route::get('credit', function(){
     return view('content.credit ');
 });

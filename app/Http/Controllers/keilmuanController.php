@@ -15,6 +15,15 @@
         public function index(Request $request){
             if($this->cekSession($request)){
                 $data = $this->getFile();
+                return view('keilmuan.pathways', ['dataFile' => $data]);
+            }else{
+                return redirect('/')->with('message', 'login_first');
+            }
+        }
+
+        public function adminIndex(Request $request){
+            if($this->cekSession($request)){
+                $data = $this->getFile();
                 return view('admin.pathwaysContent', ['dataFile' => $data]);
             }else{
                 return redirect('/')->with('message', 'login_first');

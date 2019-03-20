@@ -30,10 +30,15 @@ class adminController extends hdaController
     }
 
     public function config(Request $request){
+        $endpoint = 'user/search?type=default&q=default';
+        
         if($this->cekSession($request)){
-            return view('admin.config');
+            $data = $this->getDataAPI($endpoint);
+            return view('admin.config', ['data' => $data]);
         }else{
             return redirect('/')->with('message', 'login_first');
         }
     }
+
+
 }

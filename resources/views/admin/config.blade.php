@@ -17,63 +17,34 @@
             </tr>
         </thead>
         <tbody>
-            @for ($i = 0; $i < 5; $i++)
+            <!--
+                1 = member
+                2 = keilmuan
+                3 = superuser
+                4 = admin
+                */
+            -->
+            @foreach ($data as $item)
             <tr>
-                <td>140810170051</td>
-                <td>Firmansyah Yanuar</td>
+                <td>{{ $item->username}}</td>
+                <td>Dummy Name</td>
                 <td>17-Feb-19</td>
                 <td class="input-field">
                     <select>
-                        <option value="updated" selected>Updated</option>
-                        <option value="notupdated">Not Updated</option>
+                        <option value="1" @if($item->active) selected @endif>Updated</option>
+                        <option value="0" @if(!$item->active) selected @endif>Not Updated</option>
                     </select>
                 </td>
                 <td class="input-field">
                     <select>
-                        <option value="admin" selected>Admin</option>
-                        <option value="superuser">Super User</option>
-                        <option value="normalUser">Normal User</option>
-                    </select>
-                </td>
-                {{-- <td>Admin</td> --}}
-            </tr>
-            <tr>
-                <td>140810170026</td>
-                <td>Aci hitam</td>
-                <td>17-Feb-19</td>
-                <td class="input-field">
-                    <select>
-                        <option value="updated" selected>Updated</option>
-                        <option value="notupdated">Not Updated</option>
-                    </select>
-                </td>
-                <td class="input-field">
-                    <select>
-                        <option value="admin">Admin</option>
-                        <option value="superuser" selected>Super User</option>
-                        <option value="normalUser">Normal User</option>
+                        <option value="4" @if($item->active == "3") selected @endif>Administrator</option>
+                        <option value="3" @if($item->active == "2") selected @endif>Superuser</option>
+                        <option value="2" @if($item->active == "1") selected @endif>Keilmuan Admin</option>
+                        <option value="1" @if($item->active == "0") selected @endif>Normal User</option>
                     </select>
                 </td>
             </tr>
-            <tr>
-                <td>140810170061</td>
-                <td>Dani coge</td>
-                <td>17-Feb-19</td>
-                <td class="input-field">
-                    <select>
-                        <option value="updated">Updated</option>
-                        <option value="notupdated" selected>Not Updated</option>
-                    </select>
-                </td>
-                <td class="input-field">
-                    <select>
-                        <option value="admin">Admin</option>
-                        <option value="superuser">Super User</option>
-                        <option value="normalUser" selected>Normal User</option>
-                    </select>
-                </td>
-            </tr>
-            @endfor
+            @endforeach
         </tbody>
     </table>
 </div>

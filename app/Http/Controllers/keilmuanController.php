@@ -90,5 +90,40 @@
             }
             return false;
         }
+
+        public function updateCounter(Request $request, $filename){
+            $client = new Client(['base_uri' => $this->baseUrl]);
+            $token = $request->session()->get('remember_token');
+            $getData = $this->searchCounter('filename', $filename);
+            $getCount = $getData[0]->count;
+            try{
+                $getCount = $getCount + 1;
+                $data = array(
+                    'filename' => $filename,
+                    'count' => $getCount
+                );
+                $response = $client->request('PUT', 'counter/updateCounter', ['form_params' => $data, 'header' => ['remember_token' => $token]]);
+                $result = json_decode($response->getBody()->getContents());
+            }catch(RequestException $req){
+                return $result = NULL;
+            }
+            if($result->status == 'Counter telah ditambah'){
+                return redirect($getData[0]->location);
+            }else{
+                return 'Counter tidak berhasil ditambahkan';
+            }
+        }
+
+        public function searchCounter($type, $key){
+            $client = new Client(['base_uri' => $this->baseUrl]);
+            $endpoint = 'counter/searchCounter?type='.$type.'&q='.$key;
+            $response = $client->get($endpoint);
+            $result = json_decode($response->getBody()->getContents());
+            if($result->status == 'Authorized'){
+                return $result->response;
+            }else{
+                return NULL;
+            }
+        }
     }
 ?>

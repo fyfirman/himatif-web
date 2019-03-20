@@ -10,11 +10,11 @@
                 </div>
             </li> 
         </ul>
-        <ul>
+        {{-- <ul>
             <li>
                 <a href="#">Read Djournal</a>
             </li> 
-        </ul>
+        </ul> --}}
     </li>
 </ul>
 

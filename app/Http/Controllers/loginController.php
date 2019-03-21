@@ -21,7 +21,8 @@ class loginController extends Controller{
                     'username' => $result->user->username,
                     'privilege' => $result->user->privilege, 
                     'remember_token' => $result->user->remember_token, 
-                    'logged_in' => 1
+                    'logged_in' => 1,
+                    'is_updated' => (int) $result->user->active
                 );
                 $request->session()->put($data);
                 $npm = $request->session()->get('username');

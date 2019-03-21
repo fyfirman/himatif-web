@@ -34,9 +34,17 @@ class hdaController extends Controller
         return false;
     }
 
+    public function isUpdated(Request $request){
+        if($request->session()->get('is_updated'))
+            return true;
+        return false;
+    }
+
     public function index(Request $request)
     {
         if($this->cekSession($request)){
+            if(!$this->isUpdated($request))
+                return redirect('/updateProfile')->with('message', 'login_first');
             return view('hda.app');
         }else{
             return redirect('/')->with('message', 'login_first');

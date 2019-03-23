@@ -7,7 +7,7 @@
             var message = "{{ Session::get('message') }}";
             switch(message){
                 case "login_invalid":
-                    swal.fire('NPM dan Password tidak cocok! Coba lagi ya!', '', 'error');
+                    swal.fire('NPM sama Password ga cocok! Coba lagi ya!', '', 'error');
                     break;
                 case "login_first":
                     swal.fire('Login dulu dong!', '', 'warning');
@@ -16,7 +16,7 @@
                     swal.fire('Data berhasil diperbaharui.', '', 'success');
                     break;
                 case "updatedata_failed":
-                    swal.fire('Data gagal diperbaharui!', 'Periksa lagi formnya ya!', 'error');
+                    swal.fire('Data gagal diperbaharui!', 'Periksa lagi formnya ya! Pastiin formnya udah sesuai format', 'error');
                     break;
                 case "updatepw_success":
                     swal.fire('Password berhasil diganti!', '', 'success');
@@ -25,7 +25,7 @@
                     swal.fire('Password gagal diganti!', 'Pastiin password laman & confirm passwordnya bener ya!', 'error');
                     break;
                 case "resetpw_failed":
-                    swal.fire('NPM dan email tidak cocok!', 'Pastiin email sudah terdaftar pada akun ya!','error');
+                    swal.fire('NPM sama email ga cocok!', 'Pastiin email sudah terdaftar pada akun ya!','error');
                     break;
                 case "update_profile_first":
                     swal.fire('Update dulu yak!','Sebelum kamu akses fitur lainnya, minta tolong dong buat update informasi kamu :)','warning');

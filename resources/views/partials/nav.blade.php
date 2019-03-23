@@ -29,6 +29,10 @@
                     break;
                 case "update_profile_first":
                     swal.fire('Update dulu yak!','Sebelum kamu akses fitur lainnya, minta tolong dong buat update informasi kamu :)','warning');
+                    break;
+                case "cant_access_this_page":
+                    swal.fire('Jangan nakal ya!','Kamu ga dizinin akses page ini. Hubungi admin kalo kamu seharusnya diizinin.','error');
+                    break;
             }
         });
     </script>

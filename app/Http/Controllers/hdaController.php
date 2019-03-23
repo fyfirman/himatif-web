@@ -107,7 +107,7 @@ class hdaController extends Controller
         if($admin==4 || $npm == $npmOnSession)
             $anggota = $this->getDataAnggota($npm);
         else
-            return redirect('/updateProfile/'.$npmOnSession)->with('message', 'login_first');
+            return redirect('/updateProfile/'.$npmOnSession)->with('message', 'cant_access_this_page');
 
         if($this->cekSession($request)){
             return view('content.editProfile')->with('anggota',$anggota);

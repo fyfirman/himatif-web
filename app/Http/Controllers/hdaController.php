@@ -99,9 +99,12 @@ class hdaController extends Controller
         return $this->getDataAPI($endpoint);
     }
 
-    public function viewEdit(Request $request){
+    public function viewEdit($npm,Request $request){
+        // $npm = '140810170051';
+        $anggota = $this->getDataAnggota($npm);
+
         if($this->cekSession($request)){
-            return view('content.editProfile');
+            return view('content.editProfile')->with('anggota',$anggota);
         }else{
             return redirect('/')->with('message', 'login_first');
         }
@@ -142,20 +145,25 @@ class hdaController extends Controller
                 'twitter' => Input::get('twitter'),
                 'instagram' => Input::get('instagram'),
                 'hobi' => Input::get('hobi')
-            );  
+            );
             $response = $client->request('PUT', $endpoint, ['form_params' => $data, 'headers' => ['remember_token' => $token]]);
             $result = json_decode($response->getBody()->getContents());
         }catch(RequestException $req){
             $result = NULL;
         }
         if($result != NULL && $result->status == 'Update Success'){
-            $this->replaceSession($request);
-
+            $this->replaceSession($request); //kurang efisen. karena ini dijalanin setiap ubah profile baik diri sendiri MAUPUN ORANG LAIN 
+            $npm = Input::get('npm');
+            
+            return redirect()->route('viewEdit')->with('message', 'updatedata_success');
+            
+            /* OLD CODE -- Gak berani dihapus soalnya old code dia ngerefresh cookies dgn yg baru, sedangkan yg baru enggak.
             \Cookie::forget('anggota');
             $npm = $request->session()->get('username');
             $data = $this->getDataAnggota($npm);
             $data_json = json_encode($data);
             return redirect()->route('viewEdit')->with('message', 'updatedata_success')->withCookie(cookie('anggota', $data_json, 120));
+            */
         }else{
             return redirect()->route('viewEdit')->with('message', 'updatedata_failed');
         }

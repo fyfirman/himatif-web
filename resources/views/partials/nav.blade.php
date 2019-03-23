@@ -145,7 +145,7 @@
     @endforeach
     <div class="row">
         <a href="{{ route('logout') }}" class="btn-small deep-btn logout-btn">Logout</a>
-        <a href="{{ route('viewEdit') }}" class="btn-small deep-btn edit-btn">Edit Profile</a>
+        <a href="{{ route('viewEdit',Session::get('username')) }}" class="btn-small deep-btn edit-btn">Edit Profile</a>
     </div>
 </div>
 @endif

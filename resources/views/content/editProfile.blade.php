@@ -4,7 +4,16 @@
 <div class="container">
     <form action="{{ route('update') }}" method="post">
         @csrf
-        @php $anggota=Cookie::get('anggota');$anggota=json_decode($anggota); @endphp
+        @php
+            // $oranglain = true;
+            // if($oranglain){
+            //     $anggota = App\Http\Controllers\loginController::getDataAnggota('140810170052');
+            // }else{
+            //     $anggota = Cookie::get('anggota');
+            // }
+            // $anggota = json_decode($anggota);
+            // dd($anggota);
+        @endphp
         @foreach ($anggota as $data)
         <input disabled value="{{ Session::get('username') }}" type="hidden" class="validate" name="npm">
         <div id="personal-info" style="margin-top:64px;">

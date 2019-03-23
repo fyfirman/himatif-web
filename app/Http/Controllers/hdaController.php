@@ -42,10 +42,10 @@ class hdaController extends Controller
 
     public function index(Request $request)
     {
-        // dd($this->isUpdated($request));
+        
         if($this->cekSession($request)){
             if(!$this->isUpdated($request))
-                return redirect('/updateProfile')->with('message', 'update_profile_first');
+                return redirect('/updateProfile/'.$request->session()->get('username'))->with('message', 'update_profile_first');
             return view('hda.app');
         }else{
             return redirect('/')->with('message', 'login_first');
@@ -55,7 +55,7 @@ class hdaController extends Controller
     public function admin(Request $request){
         if($this->cekSession($request)){
             if(!$this->isUpdated($request))
-                return redirect('/updateProfile')->with('message', 'update_profile_first');
+                return redirect('/updateProfile/'.$request->session()->get('username'))->with('message', 'update_profile_first');
             return view('admin.userContent');
         }else{
             return redirect('/')->with('message', 'login_first');
@@ -99,13 +99,23 @@ class hdaController extends Controller
         return $this->getDataAPI($endpoint);
     }
 
-    public function viewEdit(Request $request){
+    public function viewEdit($npm,Request $request){
+        $admin = $request->session()->get('privilege');
+        $npmOnSession = $request->session()->get('username');
+        
+        // Mencegah sembarang user ngedit profile orang lain
+        if($admin==4 || $npm == $npmOnSession)
+            $anggota = $this->getDataAnggota($npm);
+        else
+            return redirect('/updateProfile/'.$npmOnSession)->with('message', 'cant_access_this_page');
+
         if($this->cekSession($request)){
             $dataKep = $this->getKepanitiaan($request);
             $dataOrg = $this->getOrganisasi($request);
             $data = array(
                 'kep' => $dataKep,
-                'org' => $dataOrg
+                'org' => $dataOrg,
+                'anggota' => $anggota
             );
             return view('content.editProfile')->with('dataOrgKep', $data);
         }else{
@@ -148,20 +158,25 @@ class hdaController extends Controller
                 'twitter' => Input::get('twitter'),
                 'instagram' => Input::get('instagram'),
                 'hobi' => Input::get('hobi')
-            );  
+            );
             $response = $client->request('PUT', $endpoint, ['form_params' => $data, 'headers' => ['remember_token' => $token]]);
             $result = json_decode($response->getBody()->getContents());
         }catch(RequestException $req){
             $result = NULL;
         }
         if($result != NULL && $result->status == 'Update Success'){
-            $this->replaceSession($request);
-
+            $this->replaceSession($request); //kurang efisen. karena ini dijalanin setiap ubah profile baik diri sendiri MAUPUN ORANG LAIN 
+            $npm = Input::get('npm');
+            
+            return redirect()->route('viewEdit')->with('message', 'updatedata_success');
+            
+            /* OLD CODE -- Gak berani dihapus soalnya old code dia ngerefresh cookies dgn yg baru, sedangkan yg baru enggak.
             \Cookie::forget('anggota');
             $npm = $request->session()->get('username');
             $data = $this->getDataAnggota($npm);
             $data_json = json_encode($data);
             return redirect()->route('viewEdit')->with('message', 'updatedata_success')->withCookie(cookie('anggota', $data_json, 120));
+            */
         }else{
             return redirect()->route('viewEdit')->with('message', 'updatedata_failed');
         }

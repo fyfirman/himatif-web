@@ -29,6 +29,10 @@
                     break;
                 case "update_profile_first":
                     swal.fire('Update dulu yak!','Sebelum kamu akses fitur lainnya, minta tolong dong buat update informasi kamu :)','warning');
+                    break;
+                case "cant_access_this_page":
+                    swal.fire('Jangan nakal ya!','Kamu ga dizinin akses page ini. Hubungi admin kalo kamu seharusnya diizinin.','error');
+                    break;
             }
         });
     </script>
@@ -145,7 +149,7 @@
     @endforeach
     <div class="row">
         <a href="{{ route('logout') }}" class="btn-small deep-btn logout-btn">Logout</a>
-        <a href="{{ route('viewEdit') }}" class="btn-small deep-btn edit-btn">Edit Profile</a>
+        <a href="{{ route('viewEdit',Session::get('username')) }}" class="btn-small deep-btn edit-btn">Edit Profile</a>
     </div>
 </div>
 @endif

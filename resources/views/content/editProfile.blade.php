@@ -4,8 +4,17 @@
 <div class="container">
     <form action="{{ route('update') }}" method="post">
         @csrf
-        @php $anggota=Cookie::get('anggota');$anggota=json_decode($anggota); @endphp
-        @foreach ($anggota as $data)
+        @php
+            // $oranglain = true;
+            // if($oranglain){
+            //     $anggota = App\Http\Controllers\loginController::getDataAnggota('140810170052');
+            // }else{
+            //     $anggota = Cookie::get('anggota');
+            // }
+            // $anggota = json_decode($anggota);
+            // dd($anggota);
+        @endphp
+        @foreach ($dataOrgKep['anggota'] as $data)
         <input disabled value="{{ Session::get('username') }}" type="hidden" class="validate" name="npm">
         <div id="personal-info" style="margin-top:64px;">
             <h5>1. Informasi Pribadi</h5>
@@ -167,7 +176,6 @@
     <form action="#" method="POST">
         @csrf
         <div class="row center">
-            {{-- <span id="baseUrl" style="display:none">{{ url('/') }}</span> --}}
             <input id="baseUrl" type="hidden" value="{{ url('/') }}">
             <h5 class="left-align" id="data_org">4. Data Organisasi dan Kepanitiaan</h5>
             <div class="col m6 s12 collection responsive-table">
@@ -182,7 +190,6 @@
                         </tr>
                     </thead>
                     <tbody>
-                        {{-- @foreach ($dataOrgKep as $data) --}}
                             @foreach ($dataOrgKep['kep'] as $item)
                                 <tr>
                                     <td>{{ $item->nama_kep }}</td>
@@ -191,7 +198,6 @@
                                     <td><a href="#!" class="secondary-content"><i class="material-icons red-text">delete</i></a></td>
                                 </tr>
                             @endforeach
-                        {{-- @endforeach --}}
                     </tbody>
                 </table>
                 <div id="field_inputkepanitiaan"></div>
@@ -211,7 +217,6 @@
                         </tr>
                     </thead>
                     <tbody>
-                        {{-- @foreach ($dataOrgKep as $data) --}}
                             @foreach ($dataOrgKep['org'] as $item)
                                 <tr>
                                     <td>{{ $item->nama_org }}</td>
@@ -220,7 +225,6 @@
                                     <td><a href="#!" class="secondary-content"><i class="material-icons red-text">delete</i></a></td>
                                 </tr>
                             @endforeach
-                        {{-- @endforeach --}}
                     </tbody>
                 </table>
                 <div id="field_inputorganisasi"></div>

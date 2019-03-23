@@ -28,7 +28,7 @@
         public function index(Request $request){
             if($this->cekSession($request)){
                 if(!$this->isUpdated($request))
-                    return redirect('/updateProfile')->with('message', 'update_profile_first');
+                    return redirect('/updateProfile/'.$request->session()->get('username'))->with('message', 'update_profile_first');
                 $data = $this->getFile();
                 return view('keilmuan.pathways', ['dataFile' => $data]);
             }else{

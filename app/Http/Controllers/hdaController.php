@@ -45,7 +45,7 @@ class hdaController extends Controller
         
         if($this->cekSession($request)){
             if(!$this->isUpdated($request))
-                return redirect('/updateProfile'.$request->session()->get('username'))->with('message', 'update_profile_first');
+                return redirect('/updateProfile/'.$request->session()->get('username'))->with('message', 'update_profile_first');
             return view('hda.app');
         }else{
             return redirect('/')->with('message', 'login_first');
@@ -55,7 +55,7 @@ class hdaController extends Controller
     public function admin(Request $request){
         if($this->cekSession($request)){
             if(!$this->isUpdated($request))
-                return redirect('/updateProfile'.$request->session()->get('username'))->with('message', 'update_profile_first');
+                return redirect('/updateProfile/'.$request->session()->get('username'))->with('message', 'update_profile_first');
             return view('admin.userContent');
         }else{
             return redirect('/')->with('message', 'login_first');

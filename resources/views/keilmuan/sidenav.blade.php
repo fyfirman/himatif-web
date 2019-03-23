@@ -10,11 +10,11 @@
                 </div>
             </li> 
         </ul>
-        {{-- <ul>
+        <ul>
             <li>
-                <a href="#">Read Djournal</a>
+                <a style="color: grey">Read Djournal <span style="color: red; text-align:right;">(Coming Soon)</span></a>
             </li> 
-        </ul> --}}
+        </ul>
     </li>
 </ul>
 

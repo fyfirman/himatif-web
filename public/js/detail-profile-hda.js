@@ -10,6 +10,7 @@ function showInfo(npm){
         url: "/data/anggota/"+npm,
         success: function (response) {
             $.each(response, function (index, value) { 
+                $('#update-link').attr('href', '/updateProfile/'+value.npm);
                 $('#photo-link').attr('href', value.url_foto);
                 $('#user-photos').attr('src', value.url_foto);
                 $('#nama').text(value.nama);

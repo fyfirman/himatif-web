@@ -37,10 +37,10 @@
                 </td>
                 <td class="input-field">
                     <select>
-                        <option value="4" @if($item->active == "3") selected @endif>Administrator</option>
-                        <option value="3" @if($item->active == "2") selected @endif>Superuser</option>
-                        <option value="2" @if($item->active == "1") selected @endif>Keilmuan Admin</option>
-                        <option value="1" @if($item->active == "0") selected @endif>Normal User</option>
+                        <option value="4" @if($item->privilege == "4") selected @endif>Administrator</option>
+                        <option value="3" @if($item->privilege == "3") selected @endif>Superuser</option>
+                        <option value="2" @if($item->privilege == "2") selected @endif>Keilmuan Admin</option>
+                        <option value="1" @if($item->privilege == "1") selected @endif>Normal User</option>
                     </select>
                 </td>
             </tr>

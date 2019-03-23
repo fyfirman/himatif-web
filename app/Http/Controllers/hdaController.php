@@ -215,6 +215,15 @@ class hdaController extends Controller
         return $this->getDataAPI($endpoint);
     }
 
+    public function deleteKepanitiaan(Request $request, $id){
+        $client = new Client(['base_uri' => $this->baseUrl]);
+        $token = $request->session()->get('remember_token');
+        $data=array('id'=>$id);
+        $response = $client->request('DELETE', 'panitia', ['form_params' => $data, 'headers' => ['remember_token' => $token]]);
+        $result = json_decode($response->getBody()->getContents());
+        return redirect()->back();
+    }
+
     public function addOrganisasi(Request $request){
         $client = new Client(['base_uri' => $this->baseUrl]);
         $token = $request->session()->get('remember_token');
@@ -242,5 +251,14 @@ class hdaController extends Controller
         $npm = $request->session()->get('username');
         $endpoint = 'organisasi/search?type=npm&q='.$npm;
         return $this->getDataAPI($endpoint);
+    }
+
+    public function deleteOrganisasi(Request $request, $id){
+        $client = new Client(['base_uri' => $this->baseUrl]);
+        $token = $request->session()->get('remember_token');
+        $data=array('id'=>$id);
+        $response = $client->request('DELETE', 'organisasi', ['form_params' => $data, 'headers' => ['remember_token' => $token]]);
+        $result = json_decode($response->getBody()->getContents());
+        return redirect()->back();
     }
 }

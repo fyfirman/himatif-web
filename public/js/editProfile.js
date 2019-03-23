@@ -64,10 +64,34 @@ $(document).ready(function(){
                         }).then(function(){
                             location.replace(baseUrl + '/updateProfile#data_org');
                             location.reload();
-                        })    
+                        });    
                    }
                }
             });
         }
-    });   
+    });
 });
+
+function deleteKep(id){
+    // $.ajax({
+    //     type: 'GET',
+    //     url: '/kepanitiaan/delete/'+id,
+    //     success: function(data){
+    //         alert(data);
+    //         //  if(data == 'success'){
+    //         //      swal.fire({
+    //         //          title: 'Riwayat berhasil ditambahkan',
+    //         //          type: 'success'
+    //         //      }).then(function(){
+    //         //          location.replace(baseUrl + '/updateProfile#data_org');
+    //         //          location.reload();
+    //         //      });    
+    //         // }
+    //     }
+    //  });
+    location.replace()
+}
+
+function deleteOrg(id){
+    alert(id);
+}

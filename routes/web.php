@@ -42,4 +42,6 @@ Route::get('credit', function(){
 Route::post('reset', 'resetPwdController@reset')->name('reset');
 Route::post('update/password', 'resetPwdController@update')->name('updatePwd');
 Route::post('kepanitiaan/add', 'hdaController@addKepanitiaan');
+Route::get('kepanitiaan/delete/{id}', 'hdaController@deleteKepanitiaan');
 Route::post('organisasi/add', 'hdaController@addOrganisasi');
+Route::get('organisasi/delete/{id}', 'hdaController@deleteOrganisasi');

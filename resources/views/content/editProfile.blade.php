@@ -173,9 +173,7 @@
         </div>
     </form>
     
-    <form action="#" method="POST">
-        @csrf
-        <div class="row center">
+    <div class="row center">
             <input id="baseUrl" type="hidden" value="{{ url('/') }}">
             <h5 class="left-align" id="data_org">4. Data Organisasi dan Kepanitiaan</h5>
             <div class="col m6 s12 collection responsive-table">
@@ -195,7 +193,7 @@
                                     <td>{{ $item->nama_kep }}</td>
                                     <td>{{ $item->jabatan }}</td>
                                     <td>{{ $item->tahun }}</td>
-                                    <td><a href="#!" class="secondary-content"><i class="material-icons red-text">delete</i></a></td>
+                                <td><a href="{{ url('/kepanitiaan/delete/'.$item->id) }}" style="cursor:pointer" class="secondary-content"><i class="material-icons red-text">delete</i></a></td>
                                 </tr>
                             @endforeach
                     </tbody>
@@ -222,7 +220,7 @@
                                     <td>{{ $item->nama_org }}</td>
                                     <td>{{ $item->jabatan }}</td>
                                     <td>{{ $item->tahun }}</td>
-                                    <td><a href="#!" class="secondary-content"><i class="material-icons red-text">delete</i></a></td>
+                                    <td><a href="{{ url('/organisasi/delete/'.$item->id) }}" style="cursor:pointer" class="secondary-content"><i class="material-icons red-text">delete</i></a></td>
                                 </tr>
                             @endforeach
                     </tbody>
@@ -233,12 +231,66 @@
                 </div>
             </div>
         </div>
-    </form>
+    <div class="row center">
+            <h5 class="left-align" id="data_org">5. Data Prestasi dan Seminar</h5>
+            <div class="col m6 s12 collection responsive-table">
+                <ul><li class="collection-header"><h5>Prestasi</h5></li></ul>
+                <table class="responsive-table highlight">
+                    <thead>
+                        <tr>
+                            <th>Nama</th>
+                            <th>Tahun</th>
+                            <th style="text-align: right">Options</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                            @foreach ($dataOrgKep['kep'] as $item)
+                                <tr>
+                                    <td>{{ $item->nama_kep }}</td>
+                                    <td>{{ $item->tahun }}</td>
+                                <td><a href="{{ url('/kepanitiaan/delete/'.$item->id) }}" style="cursor:pointer" class="secondary-content"><i class="material-icons red-text">delete</i></a></td>
+                                </tr>
+                            @endforeach
+                    </tbody>
+                </table>
+                <div id="field_inputkepanitiaan"></div>
+                <div style="padding: 10px">
+                    <a id="btn_addKpn" class="btn">Add New</a>
+                </div>
+            </div>
+            <div class="col m6 s12 collection responsive-table">
+                <ul><li class="collection-header"><h5>Seminar</h5></li></ul>
+                <table class="responsive-table highlight">
+                    <thead>
+                        <tr>
+                            <th>Nama</th>
+                            <th>Tingkat</th>
+                            <th>Tahun</th>
+                            <th style="text-align: right">Options</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                            @foreach ($dataOrgKep['org'] as $item)
+                                <tr>
+                                    <td>{{ $item->nama_org }}</td>
+                                    <td>{{ $item->jabatan }}</td>
+                                    <td>{{ $item->tahun }}</td>
+                                    <td><a href="{{ url('/organisasi/delete/'.$item->id) }}" style="cursor:pointer" class="secondary-content"><i class="material-icons red-text">delete</i></a></td>
+                                </tr>
+                            @endforeach
+                    </tbody>
+                </table>
+                <div id="field_inputorganisasi"></div>
+                <div style="padding: 10px">
+                    <a id="btn_addOrg" class="btn">Add New</a>
+                </div>
+            </div>
+        </div>
     <form action="{{ route('updatePwd') }}" method="POST">
         @csrf
         {{-- UPDATE PASSWORD --}}
         <div id="account-info">
-            <h5>5. Update Password</h5>
+            <h5>6. Update Password</h5>
             <div class="row">
                 <div class="input-field col m12 s12 inline">
                     <input type="hidden" name="username" value="{{ $data->npm }}">

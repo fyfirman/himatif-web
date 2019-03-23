@@ -149,6 +149,8 @@ class hdaController extends Controller
             $result = NULL;
         }
         if($result != NULL && $result->status == 'Update Success'){
+            $this->replaceSession($request);
+
             \Cookie::forget('anggota');
             $npm = $request->session()->get('username');
             $data = $this->getDataAnggota($npm);
@@ -159,6 +161,9 @@ class hdaController extends Controller
         }
     }
 
+    public function replaceSession($request){
+        $request->session()->put('is_updated', 1);
+    }
     /**
      * Update the specified resource in storage.
      *

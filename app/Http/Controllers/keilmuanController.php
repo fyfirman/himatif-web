@@ -12,8 +12,23 @@
 
         private $baseUrl = 'http://api.himatif.org/data/v1/';
 
+        public function cekSession(Request $request){
+            if($request->session()->get('logged_in')){
+                return true;
+            }
+            return false;
+        }
+        
+        public function isUpdated(Request $request){
+            if($request->session()->get('is_updated'))
+                return true;
+            return false;
+        }
+
         public function index(Request $request){
             if($this->cekSession($request)){
+                if(!$this->isUpdated($request))
+                    return redirect('/updateProfile')->with('message', 'update_profile_first');
                 $data = $this->getFile();
                 return view('keilmuan.pathways', ['dataFile' => $data]);
             }else{
@@ -82,13 +97,6 @@
             }else{
                 return 'Tidak berhasil dihapus';
             }
-        }
-
-        public function cekSession(Request $request){
-            if($request->session()->get('logged_in')){
-                return true;
-            }
-            return false;
         }
 
         public function updateCounter(Request $request, $filename){

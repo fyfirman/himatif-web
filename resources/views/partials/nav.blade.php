@@ -7,26 +7,28 @@
             var message = "{{ Session::get('message') }}";
             switch(message){
                 case "login_invalid":
-                    swal.fire('NPM/Password is Invalid', '', 'error');
+                    swal.fire('NPM dan Password tidak cocok! Coba lagi ya!', '', 'error');
                     break;
                 case "login_first":
-                    swal.fire('Please Login First', '', 'warning');
+                    swal.fire('Login dulu dong!', '', 'warning');
                     break;
                 case "updatedata_success":
-                    swal.fire('Update Data Success', '', 'success');
+                    swal.fire('Data berhasil diperbaharui.', '', 'success');
                     break;
                 case "updatedata_failed":
-                    swal.fire('Update Data Failed', '', 'error');
+                    swal.fire('Data gagal diperbaharui!', 'Periksa lagi formnya ya!', 'error');
                     break;
                 case "updatepw_success":
-                    swal.fire('Update Password Succesfully!', '', 'success');
+                    swal.fire('Password berhasil diganti!', '', 'success');
                     break;
                 case "updatepw_failed":
-                    swal.fire('Update Password Failed. Please re-check your old/newpassword!', '', 'error');
+                    swal.fire('Password gagal diganti!', 'Pastiin password laman & confirm passwordnya bener ya!', 'error');
                     break;
                 case "resetpw_failed":
-                    swal.fire('NPM/Email for Reset Password is Invalid/Not Registered yet!', '','error');
+                    swal.fire('NPM dan email tidak cocok!', 'Pastiin email sudah terdaftar pada akun ya!','error');
                     break;
+                case "update_profile_first":
+                    swal.fire('Update dulu yak!','Sebelum kamu akses fitur lainnya, minta tolong dong buat update informasi kamu :)','warning');
             }
         });
     </script>

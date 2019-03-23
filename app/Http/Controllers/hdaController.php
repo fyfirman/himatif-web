@@ -101,7 +101,13 @@ class hdaController extends Controller
 
     public function viewEdit(Request $request){
         if($this->cekSession($request)){
-            return view('content.editProfile');
+            $dataKep = $this->getKepanitiaan($request);
+            $dataOrg = $this->getOrganisasi($request);
+            $data = array(
+                'kep' => $dataKep,
+                'org' => $dataOrg
+            );
+            return view('content.editProfile')->with('dataOrgKep', $data);
         }else{
             return redirect('/')->with('message', 'login_first');
         }
@@ -164,26 +170,62 @@ class hdaController extends Controller
     public function replaceSession($request){
         $request->session()->put('is_updated', 1);
     }
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request)
-    {
 
+    public function addKepanitiaan(Request $request){
+        $client = new Client(['base_uri' => $this->baseUrl]);
+        $token = $request->session()->get('remember_token');
+        try{
+            $data = array(
+                'npm' => $request->session()->get('username'),
+                'nama_kep' => Input::get('nama_kep'),
+                'jabatan' => Input::get('jabatan'),
+                'tahun' => Input::get('tahun')
+            );
+    
+            $response = $client->request('POST', 'panitia', ['form_params' => $data, 'headers' => ['remember_token' => $token]]);
+            $result = json_decode($response->getBody()->getContents());
+        }catch(RequestException $req){
+            $result == NULL;
+        }
+        if($result != NULL && $result->status == 'Kepanitiaan berhasil ditambahkan'){
+            return 'success';
+        }else{
+            return 'failed';
+        }
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+    public function getKepanitiaan(Request $request){
+        $npm = $request->session()->get('username');
+        $endpoint = 'panitia/search?type=npm&q='.$npm;
+        return $this->getDataAPI($endpoint);
+    }
+
+    public function addOrganisasi(Request $request){
+        $client = new Client(['base_uri' => $this->baseUrl]);
+        $token = $request->session()->get('remember_token');
+        try{
+            $data = array(
+                'npm' => $request->session()->get('username'),
+                'nama_org' => Input::get('nama_org'),
+                'jabatan' => Input::get('jabatan'),
+                'tahun' => Input::get('tahun')
+            );
+    
+            $response = $client->request('POST', 'organisasi', ['form_params' => $data, 'headers' => ['remember_token' => $token]]);
+            $result = json_decode($response->getBody()->getContents());
+        }catch(RequestException $req){
+            $result == NULL;
+        }
+        if($result != NULL && $result->status == 'Data Organisasi berhasil ditambahkan'){
+            return 'success';
+        }else{
+            return 'failed';
+        }
+    }
+
+    public function getOrganisasi(Request $request){
+        $npm = $request->session()->get('username');
+        $endpoint = 'organisasi/search?type=npm&q='.$npm;
+        return $this->getDataAPI($endpoint);
     }
 }

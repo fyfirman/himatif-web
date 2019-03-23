@@ -1,1 +1,1 @@
-<p>Copyright &copy Nama Team </p>
+<p>Copyright &copy Decoder Team 2019 </p>

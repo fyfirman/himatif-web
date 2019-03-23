@@ -2,12 +2,12 @@
     <li class="no-padding">
         <ul class="collapsible collapsible-accordion">
             <li>
-                <a class="collapsible-header">Pathways</a>
-                <div class="collapsible-body">
+                <a href="{{ url('/keilmuan/pathways') }}" class="collapsible-header">Pathways</a>
+                {{-- <div class="collapsible-body">
                     <ul>
                         <li class="active"><a class="waves-effect">File</a></li>
                         <li><a class="waves-effect">Matkul</a></li>
-                </div>
+                </div> --}}
             </li> 
         </ul>
         <ul>

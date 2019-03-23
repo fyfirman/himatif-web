@@ -5,8 +5,9 @@
             <a class="collapsible-header">Keilmuan</a>
             <div class="collapsible-body">
                 <ul>
-                    <li><a href="{{ url('/keilmuan/pathways') }}" class="waves-effect">Read Djournal</a></li>
                     <li><a href="{{ url('/keilmuan/pathways') }}" class="waves-effect">Pathways</a></li>
+                    <li><a href="#" style="color:grey" class="waves-effect">Read Djournal <span style="color:red">(Coming Soon)</span></a></li>
+                    {{-- <li><a href="{{ url('/keilmuan/djournals') }}" class="waves-effect">Read Djournal</a></li> --}}
                 </ul>
             </div>
         </li> 

@@ -1,8 +1,8 @@
 @extends('keilmuan.app')
 
 @section('content')
-    @foreach ($dataFile as $item)
-        <div class="row">
+    <div class="row">
+        @foreach ($dataFile as $item)
             <div class="col s12 m3">
                 <div class="card">
                     <div class="card-image">
@@ -14,8 +14,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-    @endforeach
+        @endforeach
+    </div>
 @endsection
 
 <script>

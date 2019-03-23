@@ -100,8 +100,14 @@ class hdaController extends Controller
     }
 
     public function viewEdit($npm,Request $request){
-        // $npm = '140810170051';
-        $anggota = $this->getDataAnggota($npm);
+        $admin = $request->session()->get('privilege');
+        $npmOnSession = $request->session()->get('username');
+        
+        // Mencegah sembarang user ngedit profile orang lain
+        if($admin==4 || $npm == $npmOnSession)
+            $anggota = $this->getDataAnggota($npm);
+        else
+            return redirect('/updateProfile/'.$npmOnSession)->with('message', 'login_first');
 
         if($this->cekSession($request)){
             return view('content.editProfile')->with('anggota',$anggota);

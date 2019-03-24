@@ -14,7 +14,7 @@
             // $anggota = json_decode($anggota);
             // dd($anggota);
         @endphp
-        @foreach ($dataOrgKep['anggota'] as $data)
+        @foreach ($dataUser['anggota'] as $data)
         <input disabled value="{{ Session::get('username') }}" type="hidden" class="validate" name="npm">
         <div id="personal-info" style="margin-top:64px;">
             <h5>1. Informasi Pribadi</h5>
@@ -188,12 +188,12 @@
                         </tr>
                     </thead>
                     <tbody>
-                            @foreach ($dataOrgKep['kep'] as $item)
+                            @foreach ($dataUser['kep'] as $item)
                                 <tr>
                                     <td>{{ $item->nama_kep }}</td>
                                     <td>{{ $item->jabatan }}</td>
                                     <td>{{ $item->tahun }}</td>
-                                <td><a href="{{ url('/kepanitiaan/delete/'.$item->id) }}" style="cursor:pointer" class="secondary-content"><i class="material-icons red-text">delete</i></a></td>
+                                <td><a onclick="deleteRiwayat('{{url('/kepanitiaan/delete/'.$item->id)}}')" style="cursor:pointer" class="secondary-content"><i class="material-icons red-text">delete</i></a></td>
                                 </tr>
                             @endforeach
                     </tbody>
@@ -215,12 +215,12 @@
                         </tr>
                     </thead>
                     <tbody>
-                            @foreach ($dataOrgKep['org'] as $item)
+                            @foreach ($dataUser['org'] as $item)
                                 <tr>
                                     <td>{{ $item->nama_org }}</td>
                                     <td>{{ $item->jabatan }}</td>
                                     <td>{{ $item->tahun }}</td>
-                                    <td><a href="{{ url('/organisasi/delete/'.$item->id) }}" style="cursor:pointer" class="secondary-content"><i class="material-icons red-text">delete</i></a></td>
+                                    <td><a onclick="deleteRiwayat('{{url('/organisasi/delete/'.$item->id)}}')" style="cursor:pointer" class="secondary-content"><i class="material-icons red-text">delete</i></a></td>
                                 </tr>
                             @endforeach
                     </tbody>
@@ -232,7 +232,7 @@
             </div>
         </div>
     <div class="row center">
-            <h5 class="left-align" id="data_org">5. Data Prestasi dan Seminar</h5>
+            <h5 class="left-align" id="data_pres">5. Data Prestasi dan Seminar</h5>
             <div class="col m6 s12 collection responsive-table">
                 <ul><li class="collection-header"><h5>Prestasi</h5></li></ul>
                 <table class="responsive-table highlight">
@@ -244,18 +244,18 @@
                         </tr>
                     </thead>
                     <tbody>
-                            @foreach ($dataOrgKep['kep'] as $item)
+                            @foreach ($dataUser['prestasi'] as $item)
                                 <tr>
-                                    <td>{{ $item->nama_kep }}</td>
+                                    <td>{{ $item->nama_prestasi }}</td>
                                     <td>{{ $item->tahun }}</td>
-                                <td><a href="{{ url('/kepanitiaan/delete/'.$item->id) }}" style="cursor:pointer" class="secondary-content"><i class="material-icons red-text">delete</i></a></td>
+                                <td><a onclick="deleteRiwayat('{{url('/prestasi/delete/'.$item->id)}}')" style="cursor:pointer" class="secondary-content"><i class="material-icons red-text">delete</i></a></td>
                                 </tr>
                             @endforeach
                     </tbody>
                 </table>
-                <div id="field_inputkepanitiaan"></div>
+                <div id="field_inputprestasi"></div>
                 <div style="padding: 10px">
-                    <a id="btn_addKpn" class="btn">Add New</a>
+                    <a id="btn_addPres" class="btn">Add New</a>
                 </div>
             </div>
             <div class="col m6 s12 collection responsive-table">
@@ -270,19 +270,19 @@
                         </tr>
                     </thead>
                     <tbody>
-                            @foreach ($dataOrgKep['org'] as $item)
+                            @foreach ($dataUser['seminar'] as $item)
                                 <tr>
-                                    <td>{{ $item->nama_org }}</td>
-                                    <td>{{ $item->jabatan }}</td>
+                                    <td>{{ $item->nama_seminar }}</td>
+                                    <td>{{ $item->tingkat }}</td>
                                     <td>{{ $item->tahun }}</td>
-                                    <td><a href="{{ url('/organisasi/delete/'.$item->id) }}" style="cursor:pointer" class="secondary-content"><i class="material-icons red-text">delete</i></a></td>
+                                    <td><a onclick="deleteRiwayat('{{url('/seminar/delete/'.$item->id)}}')" style="cursor:pointer" class="secondary-content"><i class="material-icons red-text">delete</i></a></td>
                                 </tr>
                             @endforeach
                     </tbody>
                 </table>
-                <div id="field_inputorganisasi"></div>
+                <div id="field_inputseminar"></div>
                 <div style="padding: 10px">
-                    <a id="btn_addOrg" class="btn">Add New</a>
+                    <a id="btn_addSem" class="btn">Add New</a>
                 </div>
             </div>
         </div>

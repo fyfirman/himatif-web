@@ -45,3 +45,7 @@ Route::post('kepanitiaan/add', 'hdaController@addKepanitiaan');
 Route::get('kepanitiaan/delete/{id}', 'hdaController@deleteKepanitiaan');
 Route::post('organisasi/add', 'hdaController@addOrganisasi');
 Route::get('organisasi/delete/{id}', 'hdaController@deleteOrganisasi');
+Route::post('prestasi/add', 'hdaController@addPrestasi');
+Route::get('prestasi/delete/{id}', 'hdaController@deletePrestasi');
+Route::post('seminar/add', 'hdaController@addSeminar');
+Route::get('seminar/delete/{id}', 'hdaController@deleteSeminar');

@@ -112,12 +112,16 @@ class hdaController extends Controller
         if($this->cekSession($request)){
             $dataKep = $this->getKepanitiaan($request);
             $dataOrg = $this->getOrganisasi($request);
+            $dataPres = $this->getPrestasi($request);
+            $dataSem = $this->getSeminar($request);
             $data = array(
                 'kep' => $dataKep,
                 'org' => $dataOrg,
-                'anggota' => $anggota
+                'anggota' => $anggota,
+                'prestasi' => $dataPres,
+                'seminar' => $dataSem
             );
-            return view('content.editProfile')->with('dataOrgKep', $data);
+            return view('content.editProfile')->with('dataUser', $data);
         }else{
             return redirect('/')->with('message', 'login_first');
         }
@@ -221,7 +225,7 @@ class hdaController extends Controller
         $data=array('id'=>$id);
         $response = $client->request('DELETE', 'panitia', ['form_params' => $data, 'headers' => ['remember_token' => $token]]);
         $result = json_decode($response->getBody()->getContents());
-        return redirect()->back();
+        return 'success';
     }
 
     public function addOrganisasi(Request $request){
@@ -259,6 +263,81 @@ class hdaController extends Controller
         $data=array('id'=>$id);
         $response = $client->request('DELETE', 'organisasi', ['form_params' => $data, 'headers' => ['remember_token' => $token]]);
         $result = json_decode($response->getBody()->getContents());
-        return redirect()->back();
+        return 'success';
+    }
+
+    public function addPrestasi(Request $request){
+        $client = new Client(['base_uri' => $this->baseUrl]);
+        $token = $request->session()->get('remember_token');
+        try{
+            $data = array(
+                'npm' => $request->session()->get('username'),
+                'nama_prestasi' => Input::get('nama_prestasi'),
+                'tahun' => Input::get('tahun')
+            );
+    
+            $response = $client->request('POST', 'prestasi', ['form_params' => $data, 'headers' => ['remember_token' => $token]]);
+            $result = json_decode($response->getBody()->getContents());
+        }catch(RequestException $req){
+            $result == NULL;
+        }
+        if($result != NULL && $result->status == 'Data Prestasi berhasil ditambahkan'){
+            return 'success';
+        }else{
+            return 'failed';
+        }
+    }
+
+    public function getPrestasi(Request $request){
+        $npm = $request->session()->get('username');
+        $endpoint = 'prestasi/search?type=npm&q='.$npm;
+        return $this->getDataAPI($endpoint);
+    }
+
+    public function deletePrestasi(Request $request, $id){
+        $client = new Client(['base_uri' => $this->baseUrl]);
+        $token = $request->session()->get('remember_token');
+        $data=array('id'=>$id);
+        $response = $client->request('DELETE', 'prestasi', ['form_params' => $data, 'headers' => ['remember_token' => $token]]);
+        $result = json_decode($response->getBody()->getContents());
+        return 'success';
+    }
+
+    public function addSeminar(Request $request){
+        $client = new Client(['base_uri' => $this->baseUrl]);
+        $token = $request->session()->get('remember_token');
+        try{
+            $data = array(
+                'npm' => $request->session()->get('username'),
+                'nama_seminar' => Input::get('nama_seminar'),
+                'tingkat' => Input::get('tingkat'),
+                'tahun' => Input::get('tahun')
+            );
+    
+            $response = $client->request('POST', 'seminar', ['form_params' => $data, 'headers' => ['remember_token' => $token]]);
+            $result = json_decode($response->getBody()->getContents());
+        }catch(RequestException $req){
+            $result == NULL;
+        }
+        if($result != NULL && $result->status == 'Data Seminar berhasil ditambahkan'){
+            return 'success';
+        }else{
+            return 'failed';
+        }
+    }
+
+    public function getSeminar(Request $request){
+        $npm = $request->session()->get('username');
+        $endpoint = 'seminar/search?type=npm&q='.$npm;
+        return $this->getDataAPI($endpoint);
+    }
+
+    public function deleteSeminar(Request $request, $id){
+        $client = new Client(['base_uri' => $this->baseUrl]);
+        $token = $request->session()->get('remember_token');
+        $data=array('id'=>$id);
+        $response = $client->request('DELETE', 'seminar', ['form_params' => $data, 'headers' => ['remember_token' => $token]]);
+        $result = json_decode($response->getBody()->getContents());
+        return 'success';
     }
 }

@@ -43,11 +43,11 @@ class resetPwdController extends Controller
             }catch(RequestException $req){
                 $result = NULL;
             }
-    
+            $npm = $request->input('username');
             if($result != NULL && $result->status == 'Password berhasil diganti'){
-                return redirect()->route('viewEdit')->with('message', 'updatepw_success');
+                return redirect()->route('viewEdit',$npm)->with('message', 'updatepw_success');
             }else{
-                return redirect()->route('viewEdit')->with('message', 'updatepw_failed');
+                return redirect()->route('viewEdit',$npm)->with('message', 'updatepw_failed');
             }
         }else{
             return redirect()->route('viewEdit')->with('message', 'updatepw_failed');

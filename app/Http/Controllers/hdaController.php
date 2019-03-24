@@ -172,7 +172,7 @@ class hdaController extends Controller
             $this->replaceSession($request); //kurang efisen. karena ini dijalanin setiap ubah profile baik diri sendiri MAUPUN ORANG LAIN 
             $npm = Input::get('npm');
             
-            return redirect()->route('viewEdit')->with('message', 'updatedata_success');
+            return redirect()->route('viewEdit',$request->session()->get('username'))->with('message', 'updatedata_success');
             
             /* OLD CODE -- Gak berani dihapus soalnya old code dia ngerefresh cookies dgn yg baru, sedangkan yg baru enggak.
             \Cookie::forget('anggota');

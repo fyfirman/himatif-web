@@ -36,7 +36,6 @@
                 <div class="input-field col m4 s12 inline">
                     <select name="agama" id="agama" required>
                         <option value="Islam" @if ($data->agama == 'Islam' || $data->agama == 'islam') selected="selected" @endif>Islam</option>
-                        <option value="Kristen" @if ($data->agama == 'Kristen') selected="selected" @endif >Kristen</option>
                         <option value="Protestan" @if ($data->agama == 'Protestan') selected="selected" @endif >Protestan</option>
                         <option value="Katolik" @if ($data->agama == 'Katolik') selected="selected" @endif >Katholik</option>
                         <option value="Buddha" @if ($data->agama == 'Buddha') selected="selected" @endif >Buddha</option>
@@ -181,18 +180,18 @@
                 <table class="responsive-table highlight">
                     <thead>
                         <tr>
+                            <th>Tahun</th>
                             <th>Nama</th>
                             <th>Jabatan</th>
-                            <th>Tahun</th>
                             <th style="text-align: right">Options</th>
                         </tr>
                     </thead>
                     <tbody>
                             @foreach ($dataUser['kep'] as $item)
                                 <tr>
+                                    <td>{{ $item->tahun }}</td>
                                     <td>{{ $item->nama_kep }}</td>
                                     <td>{{ $item->jabatan }}</td>
-                                    <td>{{ $item->tahun }}</td>
                                 <td><a onclick="deleteRiwayat('{{url('/kepanitiaan/delete/'.$item->id)}}')" style="cursor:pointer" class="secondary-content"><i class="material-icons red-text">delete</i></a></td>
                                 </tr>
                             @endforeach
@@ -208,18 +207,18 @@
                 <table class="responsive-table highlight">
                     <thead>
                         <tr>
+                            <th>Tahun</th>
                             <th>Nama</th>
                             <th>Jabatan</th>
-                            <th>Tahun</th>
                             <th style="text-align: right">Options</th>
                         </tr>
                     </thead>
                     <tbody>
                             @foreach ($dataUser['org'] as $item)
                                 <tr>
+                                    <td>{{ $item->tahun }}</td>
                                     <td>{{ $item->nama_org }}</td>
                                     <td>{{ $item->jabatan }}</td>
-                                    <td>{{ $item->tahun }}</td>
                                     <td><a onclick="deleteRiwayat('{{url('/organisasi/delete/'.$item->id)}}')" style="cursor:pointer" class="secondary-content"><i class="material-icons red-text">delete</i></a></td>
                                 </tr>
                             @endforeach
@@ -238,16 +237,16 @@
                 <table class="responsive-table highlight">
                     <thead>
                         <tr>
-                            <th>Nama</th>
                             <th>Tahun</th>
+                            <th>Nama</th>
                             <th style="text-align: right">Options</th>
                         </tr>
                     </thead>
                     <tbody>
                             @foreach ($dataUser['prestasi'] as $item)
                                 <tr>
-                                    <td>{{ $item->nama_prestasi }}</td>
                                     <td>{{ $item->tahun }}</td>
+                                    <td>{{ $item->nama_prestasi }}</td>
                                 <td><a onclick="deleteRiwayat('{{url('/prestasi/delete/'.$item->id)}}')" style="cursor:pointer" class="secondary-content"><i class="material-icons red-text">delete</i></a></td>
                                 </tr>
                             @endforeach
@@ -263,18 +262,18 @@
                 <table class="responsive-table highlight">
                     <thead>
                         <tr>
+                            <th>Tahun</th>
                             <th>Nama</th>
                             <th>Tingkat</th>
-                            <th>Tahun</th>
                             <th style="text-align: right">Options</th>
                         </tr>
                     </thead>
                     <tbody>
                             @foreach ($dataUser['seminar'] as $item)
                                 <tr>
+                                    <td>{{ $item->tahun }}</td>
                                     <td>{{ $item->nama_seminar }}</td>
                                     <td>{{ $item->tingkat }}</td>
-                                    <td>{{ $item->tahun }}</td>
                                     <td><a onclick="deleteRiwayat('{{url('/seminar/delete/'.$item->id)}}')" style="cursor:pointer" class="secondary-content"><i class="material-icons red-text">delete</i></a></td>
                                 </tr>
                             @endforeach

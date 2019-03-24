@@ -110,10 +110,10 @@ class hdaController extends Controller
             return redirect('/updateProfile/'.$npmOnSession)->with('message', 'cant_access_this_page');
 
         if($this->cekSession($request)){
-            $dataKep = $this->getKepanitiaan($request);
-            $dataOrg = $this->getOrganisasi($request);
-            $dataPres = $this->getPrestasi($request);
-            $dataSem = $this->getSeminar($request);
+            $dataKep = $this->getKepanitiaan($npm);
+            $dataOrg = $this->getOrganisasi($npm);
+            $dataPres = $this->getPrestasi($npm);
+            $dataSem = $this->getSeminar($npm);
             $data = array(
                 'kep' => $dataKep,
                 'org' => $dataOrg,
@@ -213,8 +213,8 @@ class hdaController extends Controller
         }
     }
 
-    public function getKepanitiaan(Request $request){
-        $npm = $request->session()->get('username');
+    public function getKepanitiaan($npm){
+        // $npm = $request->session()->get('username');
         $endpoint = 'panitia/search?type=npm&q='.$npm;
         return $this->getDataAPI($endpoint);
     }
@@ -251,8 +251,8 @@ class hdaController extends Controller
         }
     }
 
-    public function getOrganisasi(Request $request){
-        $npm = $request->session()->get('username');
+    public function getOrganisasi($npm){
+        // $npm = $request->session()->get('username');
         $endpoint = 'organisasi/search?type=npm&q='.$npm;
         return $this->getDataAPI($endpoint);
     }
@@ -288,8 +288,8 @@ class hdaController extends Controller
         }
     }
 
-    public function getPrestasi(Request $request){
-        $npm = $request->session()->get('username');
+    public function getPrestasi($npm){
+        // $npm = $request->session()->get('username');
         $endpoint = 'prestasi/search?type=npm&q='.$npm;
         return $this->getDataAPI($endpoint);
     }
@@ -326,8 +326,8 @@ class hdaController extends Controller
         }
     }
 
-    public function getSeminar(Request $request){
-        $npm = $request->session()->get('username');
+    public function getSeminar($npm){
+        // $npm = $request->session()->get('username');
         $endpoint = 'seminar/search?type=npm&q='.$npm;
         return $this->getDataAPI($endpoint);
     }

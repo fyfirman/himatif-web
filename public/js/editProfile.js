@@ -3,16 +3,16 @@ $(document).ready(function(){
 
     function addInput(key){
         if(key == 'prestasi'){
-            $('#field_input'+key).append('<input type="text" name="namaPrestasi" placeholder="Masukan Nama '+key+'mu" required>');
             $('#field_input'+key).append('<input type="text" name="tahunPrestasi" placeholder="Masukan Tahun" required>');
+            $('#field_input'+key).append('<input type="text" name="namaPrestasi" placeholder="Masukan Nama '+key+'mu" required>');
         }else if(key == 'seminar'){
+            $('#field_input'+key).append('<input type="text" name="tahunSeminar" placeholder="Masukan Tahun" required>');
             $('#field_input'+key).append('<input type="text" name="namaSeminar" placeholder="Masukan Nama '+key+'mu" required>');
             $('#field_input'+key).append('<input type="text" name="tingkat" placeholder="Masukan Tingkat" required>')
-            $('#field_input'+key).append('<input type="text" name="tahunSeminar" placeholder="Masukan Tahun" required>');
         }else{
+            $('#field_input'+key).append('<input type="text" name="tahun" placeholder="Masukan Tahun" required>')
             $('#field_input'+key).append('<input type="text" name="namaRiwayat" placeholder="Masukan Nama '+key+'mu" required>');
             $('#field_input'+key).append('<input type="text" name="jabatan" placeholder="Masukan Jabatan" required>')
-            $('#field_input'+key).append('<input type="text" name="tahun" placeholder="Masukan Tahun" required>')
         }
     }
 

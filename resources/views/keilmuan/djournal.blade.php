@@ -10,7 +10,7 @@
                     <a href="{{ url('keilmuan/addCounter/'.$item->filename) }}" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">file_download</i></a>
                     </div>
                     <div class="card-content">
-                        <!-- <p>{{ $item->matkul }}</p> -->
+                        <p>{{ $item->matkul }}</p>
                     </div>
                 </div>
             </div>

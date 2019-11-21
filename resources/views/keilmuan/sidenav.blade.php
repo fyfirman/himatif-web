@@ -12,7 +12,7 @@
         </ul>
         <ul>
             <li>
-                <a style="color: grey">Read Djournal <span style="color: red; text-align:right;">(Coming Soon)</span></a>
+                <a href="{{ url('/keilmuan/djournal') }}">Read Djournal <span style="color: green; text-align:right;">(New!)</span></a>
             </li> 
         </ul>
     </li>

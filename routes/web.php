@@ -31,7 +31,7 @@ Route::get('admin/pathways', 'keilmuanController@adminIndex');
 Route::get('admin/del_pathways/{filename}', 'keilmuanController@deleteFile');
 Route::post('upload_pathways', 'keilmuanController@addFile');
 Route::get('keilmuan/pathways', 'keilmuanController@index');
-Route::get('keilmuan/djournal', 'keilmuanController@index');
+Route::get('keilmuan/djournal', 'keilmuanController@showDjournal');
 Route::get('keilmuan/addCounter/{filename}', 'keilmuanController@updateCounter');
 Route::get('admin/djournal', function(){
     return view('admin.djournalContent');

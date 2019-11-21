@@ -36,6 +36,17 @@
             }
         }
 
+        public function showDjournal(Request $request){
+            if($this->cekSession($request)){
+                if(!$this->isUpdated($request))
+                    return redirect('/updateProfile/'.$request->session()->get('username'))->with('message', 'update_profile_first');
+                $data = $this->getFile();
+                return view('keilmuan.djournal', ['dataFile' => $data]);
+            }else{
+                return redirect('/')->with('message', 'login_first');
+            }
+        }
+
         public function adminIndex(Request $request){
             if($this->cekSession($request)){
                 $data = $this->getFile();

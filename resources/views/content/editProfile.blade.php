@@ -95,7 +95,7 @@
                     <select name="bidang_minat" id="bidang_minat" required>
                         <option value="-" @if ($data->bidang_minat == '-') selected @endif>-</option>
                         <option value="Sistem Informasi" @if ($data->bidang_minat == 'Sistem Informasi') selected @endif>Sistem Informasi</option>
-                        <option value="Jaringan Komunikasi" @if ($data->bidang_minat == 'Jaringan Komunikasi') selected @endif>Jaringan Komunikasi</option>
+                        <option value="Jaringan Komputer" @if ($data->bidang_minat == 'Jaringan Komputer') selected @endif>Jaringan Komputer</option>
                         <option value="Artificial Intelligence" @if ($data->bidang_minat == 'Artificial Intelligence') selected @endif>Artificial Intelligence</option>
                     </select>
                     <label for="bidang_minat">Bidang Minat</label>
@@ -171,7 +171,7 @@
             <button class="btn deep-btn" type="submit">Update Data Profile</button>
         </div>
     </form>
-    
+
     <div class="row center">
             <input id="baseUrl" type="hidden" value="{{ url('/') }}">
             <h5 class="left-align" id="data_org">4. Data Organisasi dan Kepanitiaan</h5>

@@ -10,6 +10,7 @@ $(document).ready(function () {
     $('#btn2016').on('click', function(){if(requesting){return;}var key = "2016"; var jenisData = "angkatan";getData(key, jenisData);toogleSideBtn($(this).attr('id'))});
     $('#btn2017').on('click', function(){if(requesting){return;}var key = "2017"; var jenisData = "angkatan";getData(key, jenisData);toogleSideBtn($(this).attr('id'))});
     $('#btn2018').on('click', function(){if(requesting){return;}var key = "2018"; var jenisData = "angkatan";getData(key, jenisData);toogleSideBtn($(this).attr('id'))});
+    $('#btn2019').on('click', function(){if(requesting){return;}var key = "2019"; var jenisData = "angkatan";getData(key, jenisData);toogleSideBtn($(this).attr('id'))});
     $('#btnBE').on('click', function(){if(requesting){return;}var key = "be"; var jenisData = "anggota";getData(key, jenisData);toogleSideBtn($(this).attr('id'))});
     $('#btnDPA').on('click', function(){if(requesting){return;}var key = "dpa"; var jenisData = "anggota";getData(key, jenisData);toogleSideBtn($(this).attr('id'))});
     $('#btnMubes').on('click', function(){if(requesting){return;}var key = "mubes"; var jenisData = "anggota";getData(key, jenisData);toogleSideBtn($(this).attr('id'))});

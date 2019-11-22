@@ -27,15 +27,16 @@ Route::post('updateProfile', 'hdaController@edit')->name('update');
 Route::get('admin', 'adminController@index');
 Route::get('admin/user', 'adminController@user');
 Route::get('admin/config', 'adminController@config');
-Route::get('admin/pathways', 'keilmuanController@adminIndex');
-Route::get('admin/del_pathways/{filename}', 'keilmuanController@deleteFile');
-Route::post('upload_pathways', 'keilmuanController@addFile');
+Route::get('admin/pathways', 'keilmuanController@adminPathways');
+Route::get('admin/djournal', 'keilmuanController@adminDjournal');
+Route::get('admin/del_pathways/{filename}', 'keilmuanController@deletePathways');
+Route::get('admin/del_djournal/{filename}', 'keilmuanController@deleteDjournal');
+Route::post('upload_pathways', 'keilmuanController@addPathways');
+Route::post('upload_djournal', 'keilmuanController@addDjournal');
 Route::get('keilmuan/pathways', 'keilmuanController@index');
 Route::get('keilmuan/djournal', 'keilmuanController@showDjournal');
 Route::get('keilmuan/addCounter/{filename}', 'keilmuanController@updateCounter');
-Route::get('admin/djournal', function(){
-    return view('admin.djournalContent');
-});
+Route::get('keilmuan/addCounterDjournal/{filename}', 'keilmuanController@updateDjournal');
 Route::get('credit', function(){
     return view('content.credit ');
 });

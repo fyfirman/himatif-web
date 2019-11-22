@@ -2,15 +2,15 @@
 
 @section('content')
     <div class="row">
-        @foreach ($dataFile as $item)
+        @foreach ($djournals as $djournal)
             <div class="col s12 m3">
                 <div class="card">
                     <div class="card-image">
                     <img src="{{asset('svg/djournal-thumbnail.svg')}}">
-                    <a href="{{ url('keilmuan/addCounter/'.$item->filename) }}" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">file_download</i></a>
+                    <a href="{{ url('keilmuan/addCounterDjournal/'.$djournal->filename) }}" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">file_download</i></a>
                     </div>
                     <div class="card-content">
-                        <p>{{ $item->matkul }}</p>
+                        <p>{{ $djournal->filename }}</p>
                     </div>
                 </div>
             </div>

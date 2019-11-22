@@ -1,86 +1,123 @@
 @extends('admin.app')
-@section('nav')    
+@section('nav')
     {{-- Top Navigation --}}
     @include('partials.nav')
 @endsection
 
 @section('content')
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 <div class="container">
+  <button data-target="modalUpload" class="btn modal-trigger waves-effect waves-light btn-large red">Upload File</button>
     <table>
         <thead>
             <tr>
-                <th>NPM</th>
-                <th>Nama</th>
-                <th>Last Updated</th>
-                <th>Update Status</th>
-                <th>User Level</th>
+                <th>Date Uploaded</th>
+                <th>Judul</th>
+                <th>Filename</th>
+                <th>Download Link</th>
+                <th>Jumlah Download</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
-            @for ($i = 0; $i < 5; $i++)
-            <tr>
-                <td>140810170051</td>
-                <td>Firmansyah Yanuar</td>
-                <td>17-Feb-19</td>
+            @foreach($djournals as $djournal)
+              <tr>
+                <td>{{ $djournal->created_at }}</td>
+                <td>{{ $djournal->judul }}</td>
+                <td>{{ $djournal->filename }}</td>
+                <td>{{ $djournal->location }}</td>
+                <td>{{ $djournal->count }}</td>
                 <td class="input-field">
-                    <select>
-                        <option value="updated" selected>Updated</option>
-                        <option value="notupdated">Not Updated</option>
-                    </select>
+                <a href="#">Edit</a> | <a href="{{ url('/admin/del_djournal/'.$djournal->filename) }}">Delete</a>
                 </td>
-                <td class="input-field">
-                    <select>
-                        <option value="admin" selected>Admin</option>
-                        <option value="superuser">Super User</option>
-                        <option value="normalUser">Normal User</option>
-                    </select>
-                </td>
-                {{-- <td>Admin</td> --}}
-            </tr>
-            <tr>
-                <td>140810170026</td>
-                <td>Aci hitam</td>
-                <td>17-Feb-19</td>
-                <td class="input-field">
-                    <select>
-                        <option value="updated" selected>Updated</option>
-                        <option value="notupdated">Not Updated</option>
-                    </select>
-                </td>
-                <td class="input-field">
-                    <select>
-                        <option value="admin">Admin</option>
-                        <option value="superuser" selected>Super User</option>
-                        <option value="normalUser">Normal User</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td>140810170061</td>
-                <td>Dani coge</td>
-                <td>17-Feb-19</td>
-                <td class="input-field">
-                    <select>
-                        <option value="updated">Updated</option>
-                        <option value="notupdated" selected>Not Updated</option>
-                    </select>
-                </td>
-                <td class="input-field">
-                    <select>
-                        <option value="admin">Admin</option>
-                        <option value="superuser">Super User</option>
-                        <option value="normalUser" selected>Normal User</option>
-                    </select>
-                </td>
-            </tr>
-            @endfor
+              </tr>
+            @endforeach
         </tbody>
     </table>
+</div>
+<div id="modalUpload" class="modal">
+    <div class="modal-content">
+      <h4>Upload New File</h4>
+      <br>
+      <div class="progress" style="display:none">
+        <div class="determinate" style="width: 70%"></div>
+      </div>
+      <form id="formUpload" action="{{ url('upload_djournal') }}" enctype="multipart/form-data" method="POST">
+        @csrf
+        <div class="row">
+            <div class="input-field col m12 inline">
+                <input type="text" name="judul" id="judul" required>
+                <label for="nama">Judul Jurnal</label>
+            </div>
+        </div>
+        <div class="file-field input-field">
+            <div class="btn">
+              <span>BROWSE</span>
+              <input type="file" name="filename" id="filename" required>
+            </div>
+            <div class="file-path-wrapper">
+            <input type="hidden" name="baseUrl" value="{{ url('/') }}">
+              <input class="file-path validate" type="text">
+            </div>
+          </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn-small blue" type="submit">Upload</button>
+    </form>
+    </div>
 </div>
 
 <script>
 $(document).ready(function(){
     $('select').formSelect();
+    $('.modal').modal();
+
+    $(document).on('ajaxComplete ajaxReady', function(){
+        $(".progress").hide();
+        $.ajaxSetup({
+            headers:{
+                'X-CSRF-Token': $('input[name="_token"]').val()
+            }
+        });
+
+        $('#formUpload').on('submit', function(e){
+            $(".progress").show();
+            var formData = new FormData(this);
+            var formUrl = $('#formUpload').attr('action');
+            var baseUrl = $('input[name="baseUrl"]').val();
+            $.ajax({
+                url: formUrl,
+                type: 'POST',
+                data: formData,
+                contentType: false,
+                processData: false,
+                success: function(data){
+                    if(data == 'failed'){
+                        swal.fire('File tidak berhasil diupload!', 'Silahkan cek kembali nama filenya', 'info');
+                    }else{
+                        var elem = document.getElementById('modalUpload');
+                        var modalUpload = M.Modal.getInstance(elem);
+                        swal.fire({
+                            title: 'File berhasil diupload',
+                            type: 'success'
+                        }).then(function(){
+                            modalUpload.close();
+                            location.replace(baseUrl + '/admin/djournal');
+                        })
+                    }
+                },
+                xhr: function(){
+                    var xhr = $.ajaxSettings.xhr();
+                    xhr.upload.onprogress = function(e){
+                        $(".determinate").attr("style", "width:" + Math.floor(e.loaded / e.total * 100) + "%");
+                        $(".determinate").html(Math.floor(e.loaded / e.total * 100) + "%");
+                    };
+                    return xhr;
+                },
+            });
+            e.preventDefault();
+        });
+    });
 });
 </script>
 @endsection

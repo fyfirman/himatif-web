@@ -1,5 +1,5 @@
 @extends('admin.app')
-@section('nav')    
+@section('nav')
     {{-- Top Navigation --}}
     @include('partials.nav')
 @endsection
@@ -16,7 +16,7 @@
                 <th>Thumbnail Link</th>
                 <th>Download Link</th>
                 <th>Jumlah Download</th>
-                <th></th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
@@ -45,7 +45,7 @@
       <div class="progress" style="display:none">
         <div class="determinate" style="width: 70%"></div>
       </div>
-      <form id="formUpload" action="{{ url('upload_pathways') }}" enctype="multipart/form-data" method="POST">    
+      <form id="formUpload" action="{{ url('upload_pathways') }}" enctype="multipart/form-data" method="POST">
         @csrf
         <div class="row">
             <div class="input-field col m12 inline">
@@ -96,10 +96,10 @@ $(document).ready(function(){
                 processData: false,
                 success: function(data){
                     if(data == 'failed'){
-                        swal.fire('File tidak berhasil diupload!', 'Silahkan cek kembali nama filenya', 'info');    
+                        swal.fire('File tidak berhasil diupload!', 'Silahkan cek kembali nama filenya', 'info');
                     }else{
                         var elem = document.getElementById('modalUpload');
-                        var modalUpload = M.Modal.getInstance(elem); 
+                        var modalUpload = M.Modal.getInstance(elem);
                         swal.fire({
                             title: 'File berhasil diupload',
                             type: 'success'

@@ -1,6 +1,6 @@
 $(document).ready(function () {
     getData('2012','angkatan');
-    
+
     var requesting = false;
 
     $('#btn2012').on('click', function(){if(requesting){return;}var key = "2012"; var jenisData = "angkatan";getData(key, jenisData);toogleSideBtn($(this).attr('id'));});
@@ -17,17 +17,17 @@ $(document).ready(function () {
     function toogleSideBtn(id)
     {
         clearActiveBtn();
-        
+
         let a = document.getElementById(id);
         a.parentElement.classList.add("active");
     }
-    
+
     function clearActiveBtn(){
         //on colapsible button
         $(".collapsible-body li").each(function(){
             $(this).removeClass("active");
         })
-        
+
         //on menu (tentang) button
         $(".sidenav > li").each(function(){
             $(this).removeClass("active");
@@ -101,7 +101,7 @@ $(document).ready(function () {
                     if(response == ''){
                         $('#contentHda').html('<span id="center-align">Tidak ada data yang cocok</span>');
                     }else{
-                        $.each(response, function (index, value) { 
+                        $.each(response, function (index, value) {
                             if(typeof value.jabatan == 'undefined'){value.jabatan = '';value.posisi = '';}
                             else if(typeof value.posisi == 'undefined'){value.posisi = '';}
                             $('#contentHda').append(
@@ -146,6 +146,19 @@ $(document).ready(function () {
             });
             return false;
         }
+    });
+
+    $('.cards-container').on('mouseover', function(){
+        // $(.defaultState).hide();
+        // $(this).attr('.defaultState').hide();
+        // $('.onHoverState').removeClass('hide');
+        $(this).find('.defaultState').hide();
+        $(this).find('.onHoverState').removeClass('hide');
+    });
+
+    $('.cards-container').on('mouseleave', function(){
+        $('.defaultState').show();
+        $('.onHoverState').addClass('hide');
     });
 });
 $(document).ajaxStart(function(){$('#loading').removeClass('hide');});
